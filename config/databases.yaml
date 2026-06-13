@@ -1,0 +1,126 @@
+# config/databases.yaml  — database registry
+# Register all source databases here. The adapter key maps to adapters/<key>.py
+
+databases:
+  Weydt2020:
+    adapter: weydt
+    file: "Weydt_et_al_2020_Petrophysical and mechanical rock property database_Version_1_2_20201208.xlsx"
+    sheet: "Petrophysical rock properties"
+    header_row: 5
+    description: "Weydt et al. (2020) petrophysical and mechanical rock property database"
+    citation: "Weydt2020"
+    meta_columns:
+      sample_id: "Sample ID"
+      lithology: "Rock Type (field)"
+      region: "Location"
+      depth: "Elevation [m] masl"
+    notes: "GEMex project; volcanic and sedimentary rocks from Los Humeros & Acoculco geothermal fields, Mexico"
+
+  AMPEDEK:
+    adapter: ampedek
+    file: "AMPEDEK_Database.xlsx"
+    sheet: "MetaData_RockProperties"
+    header_row: 3
+    description: "AMPEDEK multi-source petrophysical database"
+    citation: "AMPEDEK"
+    meta_columns:
+      sample_id: "Sample ID"
+      lithology: "Petrographic term"
+      rock_group: "Rock Classification ID"
+      country: "Country"
+      region: "State/Region"
+      depth: "Sample depth Z (TVD) (m below location elevation)"
+    notes: "Broad petrophysical coverage; multiple countries"
+
+  GlobalDB:
+    adapter: global_db
+    file: "Global_Petrophysical_DatabaseV5.xlsx"
+    sheet: "Data"
+    header_row: 0
+    format: "long"
+    description: "Global Petrophysical Database V5 (long format)"
+    citation: "GlobalDB"
+    long_format:
+      property_col: "Property and units"
+      value_col: "Value"
+      sample_id_col: "Sample ID"
+    meta_columns:
+      sample_id: "Sample ID"
+      lithology: "Lithology descriptive"
+      rock_group: "Lithology category"
+      country: "Country"
+      region: "Region"
+    notes: "Long-format database; requires pivot to wide before use; broad global coverage"
+
+  MidGerman:
+    adapter: midgerman
+    file: "MidGerman_Crystalline_Rise.csv"
+    header_row: 2
+    description: "Mid-German Crystalline Rise petrophysical database (TU Darmstadt / TUdatalib)"
+    citation: "MidGerman"
+    meta_columns:
+      sample_id: "Sample ID"
+      lithology: "Petrography"
+      country: "Country"
+      region: "Location"
+      depth: "Depth [b. g. l. if applicable]"
+    notes: "German crystalline basement; thermal, elastic, mechanical, and petrophysical properties"
+
+  GenevaBasin:
+    adapter: geneva_basin
+    file: "Geneva_Basin_CERN.xlsx"
+    sheet: "Geomechanical_data_COMBINED"
+    header_row: 0
+    description: "Geneva Basin CERN geomechanical dataset (Zenodo 4725585)"
+    citation: "GenevaBasin"
+    meta_columns:
+      sample_id: "sample_ID"
+      lithology: "rock_type"
+    notes: "318 samples; Vp, Vs, UCS, Brazilian tensile strength; Geneva Basin drill cores"
+
+  NorwayNPD:
+    adapter: norway_npd
+    file: "Norway_NPD_PorPerm.xlsx"
+    sheet: "Combined all wells"
+    description: "Norwegian Petroleum Directorate PorPerm database (Zenodo 4419060)"
+    citation: "NorwayNPD"
+    notes: "387k plug measurements; porosity, Klinkenberg permeability (mD converted to m2), grain density; Norwegian shelf sandstones"
+
+  CentralApennines:
+    adapter: central_apennines
+    file: "central_apennines_italy.xlsx"
+    sheet: "Parameters"
+    description: "Central Apennines Italy rock mechanics database (90 specimens)"
+    citation: "CentralApennines"
+    meta_columns:
+      sample_id: 1
+      lithology: 7
+      country: 2
+      region: 3
+    notes: "Limestone/carbonate specimens; unit weight, porosity, Vp, E_dyn, E_stat, UCS, tensile, cohesion, friction angle"
+
+  Mielke2017:
+    adapter: mielke2017
+    file: "Mielke2017_PANGAEA_tc_vp.tab"
+    skip_rows: 42
+    description: "Mielke et al. (2017) thermal conductivity and Vp dataset (PANGAEA 874146)"
+    citation: "Mielke2017"
+    meta_columns:
+      lithology: "Rock"
+      country: "Country"
+      region: "Area (region)"
+    notes: "1430 samples; tc dry/sat, Vp dry/sat, porosity; global coverage; clastic/carbonate/crystalline"
+
+  P3:
+    adapter: p3
+    file: "P3_PetroPhysicalProperty Database_V1.zip"
+    description: "P3 PetroPhysical Property Database V1 (GFZ Potsdam, Bär et al. 2019)"
+    citation: "P3DB"
+    notes: "75k samples, wide format, two-level header; grain/bulk density, porosity, tc, cp, td, Vp, Vs, E_dyn, E_stat, UCS, tensile, cohesion, Poisson"
+
+  Valgarður:
+    adapter: valgarður
+    file: "Valgarður_Database.zip"
+    description: "Valgarður petrophysical database (zipped)"
+    citation: "Valgarður"
+    notes: "Specialized database; zipped format"

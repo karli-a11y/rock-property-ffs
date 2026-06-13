@@ -1,0 +1,171 @@
+# config/mappings.yaml  — column mapping registry
+# Format: raw_column_name: [standardized_name, unit_factor, standardized_unit, semantic_class, risk_class]
+# semantic_class: dry | saturated | static | dynamic | total | connected | bulk | grain |
+#                 measured | derived | intrinsic | apparent | optical | needle | destructive | non_destructive
+# risk_class: low | moderate | high
+
+mappings:
+  # ── Porosity ──────────────────────────────────────────────────────────────
+  "porosity measured [%]":            [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity interpreted [%]":         [porosity_pct, 1.0, "%", derived, moderate]
+  "porosity calculated [%]":          [porosity_pct, 1.0, "%", derived, moderate]
+  "value total porosity\n(%)":        [porosity_pct, 1.0, "%", total, moderate]
+  "value total porosity\r\n(%)":      [porosity_pct, 1.0, "%", total, moderate]
+  "total porosity (-)":               [porosity_pct, 100.0, "%", total, moderate]
+  "connected porosity (-)":           [porosity_connected_pct, 100.0, "%", connected, low]
+  "porosity - effective (%)":         [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity (%)":                     [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity - total (%)":             [porosity_pct, 1.0, "%", total, moderate]
+  "total porosity\n(%)":              [porosity_pct, 1.0, "%", total, moderate]
+
+  # ── Bulk density ──────────────────────────────────────────────────────────
+  "bulk density [g/cm³]":             [bulk_density_gcm3, 1.0, "g/cm³", dry, low]
+  "value bulk density\n(kg/m?)":      [bulk_density_gcm3, 0.001, "g/cm³", bulk, low]
+  "value bulk density\r\n(kg/m3)":    [bulk_density_gcm3, 0.001, "g/cm³", bulk, low]
+  "density - bulk (kg/m3)":           [bulk_density_gcm3, 0.001, "g/cm³", bulk, low]
+  "density - bulk dry (kg/m3)":       [bulk_density_gcm3, 0.001, "g/cm³", dry, low]
+  "density - bulk wet (kg/m3)":       [bulk_density_gcm3_wet, 0.001, "g/cm³", saturated, moderate]
+
+  # ── Grain / particle density ──────────────────────────────────────────────
+  "particle density [g/cm³]":         [grain_density_gcm3, 1.0, "g/cm³", grain, low]
+  "value grain density\n(kg/m?)":     [grain_density_gcm3, 0.001, "g/cm³", grain, low]
+  "value grain density\r\n(kg/m3)":   [grain_density_gcm3, 0.001, "g/cm³", grain, low]
+  "density - grain (kg/m3)":          [grain_density_gcm3, 0.001, "g/cm³", grain, low]
+  "density - matrix (kg/m3)":         [grain_density_gcm3, 0.001, "g/cm³", grain, low]
+  "grain density (g cm-3)":           [grain_density_gcm3, 1.0, "g/cm³", grain, low]
+
+  # ── Permeability ──────────────────────────────────────────────────────────
+  "intrinsic permeability [m²]":      [permeability_m2, 1.0, "m²", intrinsic, high]
+  "value intrinsic permeability\n(m?)": [permeability_m2, 1.0, "m²", intrinsic, high]
+  "intrinsic permeability (m2)":      [permeability_m2, 1.0, "m²", intrinsic, high]
+  "permeability (m2)":                [permeability_m2, 1.0, "m²", intrinsic, high]
+  "permeability - intrinsic (m2)":    [permeability_m2, 1.0, "m²", intrinsic, high]
+  "permeability - apparent (m2)":     [permeability_m2, 1.0, "m²", apparent, high]
+
+  # ── Thermal conductivity ──────────────────────────────────────────────────
+  "mean value thermal conductivity dry [w/mk]":  [tc_dry_WmK, 1.0, "W/(m·K)", dry, moderate]
+  "mean thermal conductivity sat [w/mk] ":       [tc_sat_WmK, 1.0, "W/(m·K)", saturated, moderate]
+  "thermal conductivity (w m-1 k-1)":            [tc_dry_WmK, 1.0, "W/(m·K)", dry, moderate]
+  "thermal conductivity - bulk (w/m/k)":         [tc_dry_WmK, 1.0, "W/(m·K)", bulk, moderate]
+  "thermal conductivity - bulk dry (w/m/k)":     [tc_dry_WmK, 1.0, "W/(m·K)", dry, moderate]
+  "thermal conductivity - bulk wet (w/m/k)":     [tc_sat_WmK, 1.0, "W/(m·K)", saturated, moderate]
+
+  # ── Thermal diffusivity ───────────────────────────────────────────────────
+  "mean value thermal diffusivity dry [*106 m²/s]": [td_dry_1e6m2s, 1.0, "1e-6 m²/s", dry, moderate]
+  "thermal diffusivity (m2/s)":                     [td_dry_1e6m2s, 1000000.0, "1e-6 m²/s", dry, moderate]
+
+  # ── Specific heat ─────────────────────────────────────────────────────────
+  "specific heat capacity measured per sample [j/kg/k] ": [cp_JkgK, 1.0, "J/(kg·K)", measured, low]
+  "heat capacity - specific (j/kg/k)":                    [cp_JkgK, 1.0, "J/(kg·K)", measured, low]
+  "volumetric heat capacity calculated per sample [j/m³/k]": [cv_jm3k, 1.0, "J/(m³·K)", derived, moderate]
+  "heat capacity - volumetric (j/m3/k)":                  [cv_jm3k, 1.0, "J/(m³·K)", derived, moderate]
+
+  # ── P-wave velocity ───────────────────────────────────────────────────────
+  "mean p-wave veolcity dry [m/s]":         [vp_dry_ms, 1.0, "m/s", dry, moderate]
+  "mean p-wave veolcity sat [m/s]":         [vp_sat_ms, 1.0, "m/s", saturated, moderate]
+  "p-wave velocity\n dry (km s-1)":         [vp_dry_ms, 1000.0, "m/s", dry, moderate]
+  "p-wave velocity\n saturated (km s-1)":   [vp_sat_ms, 1000.0, "m/s", saturated, moderate]
+  "p-wave velocity, dry (km s-1)":          [vp_dry_ms, 1000.0, "m/s", dry, moderate]
+  "p-wave velocity, saturated (km s-1)":    [vp_sat_ms, 1000.0, "m/s", saturated, moderate]
+
+  # ── S-wave velocity ───────────────────────────────────────────────────────
+  "mean s-wave veolcity dry [m/s]":         [vs_dry_ms, 1.0, "m/s", dry, moderate]
+  "mean s-wave veolcity sat [m/s]":         [vs_sat_ms, 1.0, "m/s", saturated, moderate]
+  "s-wave velocity\n dry (km s-1)":         [vs_dry_ms, 1000.0, "m/s", dry, moderate]
+  "s-wave velocity\n saturated (km s-1)":   [vs_sat_ms, 1000.0, "m/s", saturated, moderate]
+  "s-wave velocity, dry (km s-1)":          [vs_dry_ms, 1000.0, "m/s", dry, moderate]
+  "s-wave velocity, saturated (km s-1)":    [vs_sat_ms, 1000.0, "m/s", saturated, moderate]
+
+  # ── UCS ───────────────────────────────────────────────────────────────────
+  "ucs [mpa]":                             [ucs_MPa, 1.0, "MPa", destructive, high]
+  "uniaxial compressive strength (mpa)":   [ucs_MPa, 1.0, "MPa", destructive, high]
+
+  # ── Young's modulus ───────────────────────────────────────────────────────
+  "young's modulus [gpa]":                 [E_static_GPa, 1.0, "GPa", static, high]
+  "young modulus coef. (gpa)":             [E_static_GPa, 1.0, "GPa", static, high]
+  "mean dyn youngs modulus dry [n/mm²]":   [E_dyn_GPa, 0.001, "GPa", dynamic, moderate]
+
+  # ── Poisson ratio ─────────────────────────────────────────────────────────
+  "poisson ratio [-]":                     [poisson_ratio, 1.0, "-", static, high]
+  "mean poisson ratio dry [-]":            [poisson_ratio, 1.0, "-", dynamic, moderate]
+  "poisson's ratio (-)":                   [poisson_ratio, 1.0, "-", static, high]
+
+  # ── Tensile strength ──────────────────────────────────────────────────────
+  "tensile strength [mpa]":                [tensile_MPa, 1.0, "MPa", destructive, high]
+  "tensile strength (mpa)":                [tensile_MPa, 1.0, "MPa", destructive, high]
+
+  # ── Friction angle / Cohesion ─────────────────────────────────────────────
+  "friction angle φ":                      [friction_angle_deg, 1.0, "°", destructive, high]
+  "cohesion c":                            [cohesion_MPa, 1.0, "MPa", destructive, high]
+
+  # ── MidGerman / new database additions ───────────────────────────────────
+  "grain density [g/cm³]":             [grain_density_gcm3, 1.0, "g/cm³", grain, low]
+  "porosity [%]":                      [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity helium":                   [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity. horizontal plug":         [porosity_pct, 1.0, "%", measured, moderate]
+  "porosity best of available":        [porosity_pct, 1.0, "%", measured, moderate]
+  "gain density gr/cm3":               [grain_density_gcm3, 1.0, "g/cm³", grain, low]
+  "thermal conductivity, sample average [w/(m·k)]":   [tc_dry_WmK, 1.0, "W/(m·K)", dry, moderate]
+  "thermal diffusivity, sample average [1e-6 m²/s]":  [td_dry_1e6m2s, 1.0, "1e-6 m²/s", dry, moderate]
+  "specific heat capacity [j/(kg·k)]": [cp_JkgK, 1.0, "J/(kg·K)", measured, low]
+  "permeability, apparent [m²]":       [permeability_m2, 1.0, "m²", apparent, high]
+  "permeability, intrinsic [m²]":      [permeability_m2, 1.0, "m²", intrinsic, high]
+  "compressive wave velocity , sample average [m/s]": [vp_dry_ms, 1.0, "m/s", dry, moderate]
+  "compressive wave velocity [m/s]":   [vp_dry_ms, 1.0, "m/s", dry, moderate]
+  "shear wave velocity, sample average [m/s]": [vs_dry_ms, 1.0, "m/s", dry, moderate]
+  "shear wave velocity [m/s]":         [vs_dry_ms, 1.0, "m/s", dry, moderate]
+  "unconfined compressive strength [mn/m²]": [ucs_MPa, 1.0, "MPa", destructive, high]
+  "cohesion [mpa]":                    [cohesion_MPa, 1.0, "MPa", destructive, high]
+  "angle of friction [°]":             [friction_angle_deg, 1.0, "°", destructive, high]
+  "mean value thermal diffusivity sat [*106 m²/s]": [td_sat_1e6m2s, 1.0, "1e-6 m²/s", saturated, moderate]
+  "k [w/m/k] (unsaturated)":           [tc_dry_WmK, 1.0, "W/(m·K)", dry, moderate]
+  "k [w/m/k] (saturated)":             [tc_sat_WmK, 1.0, "W/(m·K)", saturated, moderate]
+  "vp [m/s] (unsaturated)":            [vp_dry_ms, 1.0, "m/s", dry, moderate]
+  "vp [m/s] (saturated)":              [vp_sat_ms, 1.0, "m/s", saturated, moderate]
+  "poros [% vol]":                     [porosity_pct, 1.0, "%", measured, moderate]
+  "ucs_mpa":                           [ucs_MPa, 1.0, "MPa", destructive, high]
+  "bra_tensile_mpa":                   [tensile_MPa, 1.0, "MPa", destructive, high]
+  "ultrasonic_vp_m_per_s":             [vp_dry_ms, 1.0, "m/s", dry, moderate]
+  "ultrasonic_vs_m_per_s":             [vs_dry_ms, 1.0, "m/s", dry, moderate]
+
+  # ── Magnetic susceptibility ───────────────────────────────────────────────
+  "mean magnetic susceptibility  [x10-3 si]": [mag_susc_1e3si, 1.0, "1e-3 SI", non_destructive, low]
+
+  # ── Electric resistivity ──────────────────────────────────────────────────
+  "mean electric resistivity dry [Ωm]":    [resistivity_dry_Ohm, 1.0, "Ω·m", dry, moderate]
+  "mean electric resistivity sat [Ωm]":    [resistivity_sat_Ohm, 1.0, "Ω·m", saturated, moderate]
+  "bulk resistivity (?m)":                 [resistivity_dry_Ohm, 1.0, "Ω·m", bulk, moderate]
+
+# Measurement cost classes (1=cheap/fast, 7=expensive/destructive)
+measurement_costs:
+  porosity_pct: 1
+  porosity_connected_pct: 1
+  bulk_density_gcm3: 1
+  grain_density_gcm3: 1
+  permeability_m2: 3
+  tc_dry_WmK: 2
+  tc_sat_WmK: 3
+  td_dry_1e6m2s: 2
+  cp_JkgK: 3
+  cv_jm3k: 3
+  vp_dry_ms: 2
+  vs_dry_ms: 2
+  vp_sat_ms: 3
+  vs_sat_ms: 3
+  ucs_MPa: 5
+  E_static_GPa: 5
+  E_dyn_GPa: 2
+  poisson_ratio: 5
+  tensile_MPa: 4
+  friction_angle_deg: 7
+  cohesion_MPa: 7
+  mag_susc_1e3si: 1
+  resistivity_dry_Ohm: 2
+  resistivity_sat_Ohm: 3
+  bulk_density_gcm3_wet: 1
+
+# Log-scale features (for display and diagnostics)
+log_scale_features:
+  - permeability_m2
+  - resistivity_dry_Ohm
+  - resistivity_sat_Ohm

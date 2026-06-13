@@ -1,0 +1,65 @@
+# config/scenarios.yaml  — measurement scenario definitions
+# Each scenario constrains which predictors are admissible based on
+# acquisition stage, cost class, and destructive character.
+# These are screening-level candidate panels, NOT universal measurement sets.
+
+scenarios:
+  minimum_effort:
+    label: "Minimum Effort"
+    description: "Most cost-constrained; only cheap, non-destructive measurements"
+    max_cost_per_feature: 2
+    allow_destructive: false
+    allow_saturated: false
+    note: "Exploration stage; minimal equipment; suitable for rapid site screening"
+
+  balanced:
+    label: "Balanced"
+    description: "Practical routine panel; moderate cost; avoids highly destructive tests"
+    max_cost_per_feature: 3
+    allow_destructive: false
+    allow_saturated: true
+    note: "Standard field + basic lab campaign; most common operational context"
+
+  high_accuracy:
+    label: "High Accuracy"
+    description: "Broader effort allowed; all non-destructive + some destructive"
+    max_cost_per_feature: 5
+    allow_destructive: true
+    allow_saturated: true
+    note: "Detailed characterisation; accepts higher cost for better predictions"
+
+  early_campaign:
+    label: "Early Campaign"
+    description: "Measurements plausibly available after initial sampling"
+    max_cost_per_feature: 2
+    allow_destructive: false
+    allow_saturated: false
+    prioritized_features:
+      - porosity_pct
+      - bulk_density_gcm3
+      - grain_density_gcm3
+      - vp_dry_ms
+      - tc_dry_WmK
+      - mag_susc_1e3si
+    note: "Post-initial-sampling; routine basic lab; prioritises fast-turnaround measurements"
+
+  lab_supported:
+    label: "Lab Supported"
+    description: "Full measurement suite; all techniques available"
+    max_cost_per_feature: 7
+    allow_destructive: true
+    allow_saturated: true
+    note: "Comprehensive laboratory campaign; no constraint on technique"
+
+# Scenario-specific notes for manuscript (R6 reframing)
+panel_validity_notes:
+  general: >
+    All campaign panels are scenario-specific screening outputs within harmonised domains.
+    They are NOT universal minimum measurement sets. Panel validity is conditional on:
+    (1) working within a comparable geological and measurement domain,
+    (2) accepting the harmonisation strategy described in the data section,
+    (3) the availability of the scenario-appropriate predictor set.
+  vp_dry_failure: >
+    Dry P-wave velocity does NOT reach the 90% performance threshold under minimum-effort,
+    balanced, or early-campaign scenarios. Only high-accuracy and lab-supported modes
+    provide sufficient predictor variety for this target.

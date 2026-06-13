@@ -1,0 +1,54 @@
+# config/models.yaml  — model family definitions and hyperparameters
+
+models:
+  LinearRegression:
+    class: "sklearn.linear_model.LinearRegression"
+    params: {}
+    description: "Ordinary least squares linear regression baseline"
+
+  Ridge:
+    class: "sklearn.linear_model.Ridge"
+    params:
+      alpha: 1.0
+    description: "L2-regularized linear regression"
+
+  Lasso:
+    class: "sklearn.linear_model.Lasso"
+    params:
+      alpha: 0.01
+      max_iter: 5000
+    description: "L1-regularized linear regression (feature selection built in)"
+
+  RandomForest:
+    class: "sklearn.ensemble.RandomForestRegressor"
+    params:
+      n_estimators: 100
+      random_state: 42
+      n_jobs: -1
+    description: "Random forest ensemble"
+
+  GradientBoosting:
+    class: "sklearn.ensemble.GradientBoostingRegressor"
+    params:
+      n_estimators: 100
+      random_state: 42
+    description: "Gradient boosting ensemble"
+
+# Baselines (P2.5)
+baselines:
+  DummyMean:
+    class: "sklearn.dummy.DummyRegressor"
+    params:
+      strategy: "mean"
+    description: "Mean predictor baseline (lower bound)"
+
+  LinearBaseline:
+    class: "sklearn.linear_model.LinearRegression"
+    params: {}
+    description: "Single best linear predictor baseline"
+
+# Primary model for feature relevance and reduced-panel analysis
+primary_model: "RandomForest"
+
+# Model used for feature importance extraction
+importance_model: "RandomForest"

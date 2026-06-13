@@ -1,0 +1,38 @@
+# config/project.yaml  — v9 master project configuration
+# All critical scientific logic lives here, not in ad hoc scripts.
+
+project:
+  name: "Rock Property Feature Relevance Study"
+  version: "v9"
+  random_seed: 42
+  min_valid_samples: 30   # minimum non-NaN required to include a column
+
+paths:
+  data_dir: "."
+  output_dir: "output"
+  figures_dir: "output/figures"
+  tables_dir: "output/tables"
+  reports_dir: "output/reports"
+  provenance_dir: "output/provenance"
+  release_dir: "output/release"
+
+validation:
+  n_cv_folds: 5
+  n_repeated_seeds: 5     # for uncertainty estimation (P2.3)
+  repeated_seeds: [42, 7, 13, 99, 123]
+  lodo_min_sources: 2     # minimum sources required to run LODO
+
+modelling:
+  max_features_forward_selection: 10
+  imputer_strategy: "median"
+  scaler: "standard"
+
+figures:
+  dpi: 150
+  grayscale_safe: true    # ensure figures readable in grayscale
+  uncertainty_ribbons: true
+
+logging:
+  log_file: "output/run_log.txt"
+  manifest_file: "output/run_manifest.json"
+  artifact_registry: "output/artifact_registry.csv"

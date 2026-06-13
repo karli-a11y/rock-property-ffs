@@ -1,0 +1,170 @@
+# config/targets.yaml  — target variable definitions
+
+targets:
+  main:
+    - name: porosity_pct
+      label: "Porosity (%)"
+      unit: "%"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Multiple porosity sub-types pooled (total, effective, connected)"
+
+    - name: bulk_density_gcm3
+      label: "Bulk Density (g/cm³)"
+      unit: "g/cm³"
+      min_samples: 30
+      harmonization_risk: low
+      notes: "Comparatively robust; dry and wet pooled with flag"
+
+    - name: vp_dry_ms
+      label: "Dry P-wave velocity (m/s)"
+      unit: "m/s"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Dry-state P-wave velocity; method differences possible"
+
+    - name: ucs_MPa
+      label: "UCS (MPa)"
+      unit: "MPa"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "High risk: loading rate, specimen prep, geometry vary across sources"
+
+    - name: E_static_GPa
+      label: "Static Young's modulus (GPa)"
+      unit: "GPa"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "Static (destructive) vs dynamic (ultrasonic) pooled in some sources"
+
+    - name: tc_dry_WmK
+      label: "Dry thermal conductivity (W/(m·K))"
+      unit: "W/(m·K)"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Method differences: optical scanning, needle probe, divided bar"
+
+  secondary:
+    - name: grain_density_gcm3
+      label: "Grain Density (g/cm³)"
+      unit: "g/cm³"
+      min_samples: 30
+      harmonization_risk: low
+      notes: "Mineral grain density; directly linked to bulk density and porosity"
+
+    - name: permeability_m2
+      label: "Permeability (m²)"
+      unit: "m²"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "High variability; measurement method and confining pressure vary strongly"
+
+    - name: td_dry_1e6m2s
+      label: "Thermal diffusivity dry (1e-6 m²/s)"
+      unit: "1e-6 m²/s"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Derived from tc, cp, density; circular with tc_dry"
+
+    - name: cp_JkgK
+      label: "Specific heat capacity (J/(kg·K))"
+      unit: "J/(kg·K)"
+      min_samples: 30
+      harmonization_risk: low
+      notes: "Comparatively low risk; limited database coverage"
+
+    - name: vs_dry_ms
+      label: "Dry S-wave velocity (m/s)"
+      unit: "m/s"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Shear velocity; physically linked to Vp, circular with acoustic suite"
+
+    - name: E_dyn_GPa
+      label: "Dynamic Young's modulus (GPa)"
+      unit: "GPa"
+      min_samples: 30
+      harmonization_risk: moderate
+      notes: "Derived from velocity; circular with acoustic suite and static moduli"
+
+    - name: poisson_ratio
+      label: "Poisson ratio (–)"
+      unit: "–"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "High variability; derived statically or dynamically"
+
+    - name: tensile_MPa
+      label: "Tensile strength (MPa)"
+      unit: "MPa"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "Brazilian test most common; circular with UCS strength suite"
+
+    - name: mag_susc_1e3si
+      label: "Magnetic susceptibility (10⁻³ SI)"
+      unit: "10⁻³ SI"
+      min_samples: 30
+      harmonization_risk: low
+      notes: "Magnetic susceptibility; well-defined units across compendia"
+
+    - name: friction_angle_deg
+      label: "Friction angle (°)"
+      unit: "°"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "Mohr-Coulomb φ as published; sparse globally (n~160), high method variability"
+
+    - name: cohesion_MPa
+      label: "Cohesion (MPa)"
+      unit: "MPa"
+      min_samples: 30
+      harmonization_risk: high
+      notes: "Mohr-Coulomb c as published; sparse globally (n~160)"
+
+# Circularity exclusion rules: for each target, list features that are
+# directly derived from or physically equivalent to the target
+circularity_rules:
+  porosity_pct: []
+  bulk_density_gcm3:
+    - grain_density_gcm3
+  grain_density_gcm3:
+    - bulk_density_gcm3
+  E_static_GPa:
+    - E_dyn_GPa
+    - poisson_ratio
+  E_dyn_GPa:
+    - E_static_GPa
+    - poisson_ratio
+    - vp_dry_ms
+    - vs_dry_ms
+  poisson_ratio:
+    - E_dyn_GPa
+    - E_static_GPa
+  ucs_MPa:
+    - tensile_MPa
+    - cohesion_MPa
+    - friction_angle_deg
+  tensile_MPa:
+    - ucs_MPa
+    - cohesion_MPa
+    - friction_angle_deg
+  tc_dry_WmK:
+    - td_dry_1e6m2s
+  td_dry_1e6m2s:
+    - tc_dry_WmK
+  vp_dry_ms:
+    - vs_dry_ms
+    - E_dyn_GPa
+  vs_dry_ms:
+    - vp_dry_ms
+    - E_dyn_GPa
+  mag_susc_1e3si: []
+  friction_angle_deg:
+    - cohesion_MPa
+    - ucs_MPa
+    - tensile_MPa
+  cohesion_MPa:
+    - friction_angle_deg
+    - ucs_MPa
+    - tensile_MPa

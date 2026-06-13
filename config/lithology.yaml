@@ -1,0 +1,194 @@
+# config/lithology.yaml — Lithology classification scheme
+#
+# Maps the ~2100 raw lithology labels in the harmonised master table to a
+# two-level hierarchy:
+#   lithology_class  (broad, 8 classes + "Unclassified")
+#   lithology_group  (finer, ~25–35 groups)
+#
+# Mapping is applied in order: first exact (case-insensitive) matches, then
+# substring/regex rules.  Ambiguous labels that cannot be confidently mapped
+# are assigned "Unclassified".
+
+# ── Level 1: broad classes ────────────────────────────────────────────────────
+classes:
+  - Plutonic
+  - Volcanic
+  - Clastic sedimentary
+  - Carbonate sedimentary
+  - Evaporite
+  - Metamorphic
+  - Pyroclastic
+  - Unconsolidated
+  - Unclassified
+
+# ── Level 2: groups within each class ─────────────────────────────────────────
+groups:
+  Plutonic:
+    - Granite
+    - Granodiorite
+    - Diorite
+    - Gabbro
+    - Syenite
+    - Peridotite / Ultramafic
+    - Other plutonic
+
+  Volcanic:
+    - Basalt
+    - Andesite
+    - Rhyolite
+    - Dacite
+    - Trachyte / Phonolite
+    - Other volcanic
+
+  Clastic sedimentary:
+    - Sandstone
+    - Siltstone
+    - Shale / Mudstone
+    - Conglomerate / Breccia
+    - Greywacke
+    - Other clastic
+
+  Carbonate sedimentary:
+    - Limestone
+    - Dolostone / Dolomite
+    - Marl
+    - Other carbonate
+
+  Evaporite:
+    - Gypsum / Anhydrite
+    - Halite
+    - Other evaporite
+
+  Metamorphic:
+    - Gneiss
+    - Schist
+    - Amphibolite
+    - Quartzite
+    - Marble
+    - Slate / Phyllite
+    - Granulite
+    - Eclogite
+    - Serpentinite
+    - Other metamorphic
+
+  Pyroclastic:
+    - Tuff
+    - Ignimbrite
+    - Other pyroclastic
+
+  Unconsolidated:
+    - Sand / Gravel
+    - Clay / Silt
+    - Other unconsolidated
+
+  Unclassified:
+    - Unclassified
+
+# ── Mapping rules ─────────────────────────────────────────────────────────────
+# Applied in listed order.  Each rule has:
+#   pattern:  regex (case-insensitive, applied to full lithology string)
+#   class:    lithology_class assignment
+#   group:    lithology_group assignment
+#
+# First matching rule wins.  Rules are ordered from specific to broad.
+
+mapping_rules:
+
+  # ── Evaporites (before carbonates — "anhydrite" contains no rock ambiguity) ─
+  - {pattern: "halite|steinsalz|rock.?salt",     class: Evaporite, group: "Halite"}
+  - {pattern: "anhydrit",                         class: Evaporite, group: "Gypsum / Anhydrite"}
+  - {pattern: "gypsum|gips",                      class: Evaporite, group: "Gypsum / Anhydrite"}
+  - {pattern: "sulphate|evaporit",                class: Evaporite, group: "Other evaporite"}
+  - {pattern: "sylvinit|sylvite|^sylvin",         class: Evaporite, group: "Other evaporite"}
+  - {pattern: "^salz$|^salt$|hartsalz",            class: Evaporite, group: "Halite"}
+  - {pattern: "sylvenit",                          class: Evaporite, group: "Other evaporite"}
+
+  # ── Unconsolidated (before clastic — catch "sand", "clay" only when truly loose)
+  - {pattern: "alluvium|Alluvium|Alluvial",       class: Unconsolidated, group: "Sand / Gravel"}
+  - {pattern: "^sand$|^sand,|^Sand$|^Sand,|^gravel$|^kies$|^Kies$|^Kies,|^Sand, Ton$|^Ton, Sand$|^Sand, Kies$|^Ton, Kies$|^Ton, Sand, Kies$|^Kieskonglomerat$", class: Unconsolidated, group: "Sand / Gravel"}
+  - {pattern: "^clay$|^Clay$|^ton$|^Ton$|^Ton,|^silt$|^Silt$|^schluff$|^mud$|tonig bis schluffig|tonig.*feinstsandig|feinstsandig.*feinsandig", class: Unconsolidated, group: "Clay / Silt"}
+  - {pattern: "^Seeschlamm$|unconsolidated|^Feinsand ohne",  class: Unconsolidated, group: "Other unconsolidated"}
+  - {pattern: "silty.sand|sandy.silt|sandy.clay|clay.?sand|silt.?sand|clay.?plastic|clayey.?sand|sandiger.kies|sandiger.schlamm|^till$|glazialer.drift|saprock|regolith|^blauton$|kies.mit.ton|^ton/", class: Unconsolidated, group: "Sand / Gravel"}
+
+  # ── Pyroclastic (before volcanic — tuff/ignimbrite are pyroclastic, not lava)
+  - {pattern: "ignimbrit",                        class: Pyroclastic, group: "Ignimbrite"}
+  - {pattern: "tuff|Tuff|ash.?tuff|lapilli",      class: Pyroclastic, group: "Tuff"}
+  - {pattern: "pyroclast|pumice|Bimsstein",       class: Pyroclastic, group: "Other pyroclastic"}
+  - {pattern: "vulkanoklast|volcanoclast|ash.?fall|fall.?out.?deposit|agglomerate|schlammflow", class: Pyroclastic, group: "Other pyroclastic"}
+  - {pattern: "vulkanische",                       class: Volcanic, group: "Other volcanic"}
+
+  # ── Chert (siliceous sedimentary, mapped to clastic catch-all) ───────────────
+  - {pattern: "chert|Chert|Hornstein",            class: "Clastic sedimentary", group: "Other clastic"}
+  - {pattern: "argillit",                          class: "Clastic sedimentary", group: "Shale / Mudstone"}
+  - {pattern: "hemipelagic|pelagic.?clay|pelagic.?mud|silty.?clay|clay.?mud|sandiger.?ton|clay.?-?\\s*lime|tillit", class: "Clastic sedimentary", group: "Shale / Mudstone"}
+  - {pattern: "lakustrin|lacustrine",              class: "Clastic sedimentary", group: "Other clastic"}
+  - {pattern: "kongomerat|^breccie\\b|kiesstein|brekkzie|gompholite",   class: "Clastic sedimentary", group: "Conglomerate / Breccia"}
+  - {pattern: "^klast$|^coal$|^kohle$|radiolarit|phosphorite|siderolith|^sediemnt$", class: "Clastic sedimentary", group: "Other clastic"}
+  - {pattern: "schlammstein",                                            class: "Clastic sedimentary", group: "Shale / Mudstone"}
+
+  # ── Carbonate sedimentary ───────────────────────────────────────────────────
+  - {pattern: "marl|Marl|Mergel|mergel",          class: "Carbonate sedimentary", group: "Marl"}
+  - {pattern: "dolost|Dolost|Dolomit|dolomit|Dolomite|dolostone", class: "Carbonate sedimentary", group: "Dolostone / Dolomite"}
+  - {pattern: "limestone|Limestone|Kalkstein|kalkstein|lime.?stone|Kalk$|^Kalk[^s]|mikrit|Mikrit|micrite|bioclastic.?lime|chalk|Kreide|carbonate|Carbonate|wackestone|packstone|grainstone|rudstone|floatstone|bafflestone|biolithit|oosparit|biosparit|biomicrit|intramicrit|sparit|ooid", class: "Carbonate sedimentary", group: "Limestone"}
+  - {pattern: "^carbonate$|carbonat",             class: "Carbonate sedimentary", group: "Other carbonate"}
+  - {pattern: "coquina|wackstone|travertin",      class: "Carbonate sedimentary", group: "Limestone"}
+  - {pattern: "^karbonat$",                       class: "Carbonate sedimentary", group: "Other carbonate"}
+
+  # ── Clastic sedimentary ─────────────────────────────────────────────────────
+  - {pattern: "sandst|Sandst|sandstone|Sandstone|Arenite|arenite|Arkose|arkose|Litharenit|Quarz-Arenit|Psammite|Feinsand|Mittelsand|Grobsand|Fein-Sst|Mitt.-Sst|Grob-Sst|Fine.?Sand|Medium.?Sand|Coarse.?Sand|Kalksandstein|Tonsandstein|Quarzsand|Roter Sandstein|rötlicher.*(S|s)andstein|series.predominantly.sandstone|Feldspar.bearing.Sandstone", class: "Clastic sedimentary", group: "Sandstone"}
+  - {pattern: "siltst|Siltst|siltstone|Siltstone|Schluff|schluff|Schl.-Siltst|Schlamm-Silt", class: "Clastic sedimentary", group: "Siltstone"}
+  - {pattern: "shale|Shale|mudstone|Mudstone|mudrock|Mudrock|Tonstein|tonstein|Schieferton|Claystone|claystone|Silicate-\\s*Claystone|pelite|Pelite|Black.?shale|Tonschiefer", class: "Clastic sedimentary", group: "Shale / Mudstone"}
+  - {pattern: "conglomerat|Conglomerat|Konglomerat|konglomerat|breccia|Breccia|Brekzie|brekzie|kies.*konglomerat|Latitandesit-Konglomerat", class: "Clastic sedimentary", group: "Conglomerate / Breccia"}
+  - {pattern: "greywacke|Greywacke|graywacke|Graywacke|Grauwacke|grauwacke|Wacke", class: "Clastic sedimentary", group: "Greywacke"}
+  - {pattern: "clastic|siliciclastic|detritic|turbidite", class: "Clastic sedimentary", group: "Other clastic"}
+
+  # ── Metamorphic ─────────────────────────────────────────────────────────────
+  - {pattern: "eclogit|Eclogit|Eklogit",           class: Metamorphic, group: "Eclogite"}
+  - {pattern: "granulit|Granulit|Granoblas",      class: Metamorphic, group: "Granulite"}
+  - {pattern: "serpentinit|Serpentinit|serpentinite", class: Metamorphic, group: "Serpentinite"}
+  - {pattern: "amphibolit|Amphibolit",            class: Metamorphic, group: "Amphibolite"}
+  - {pattern: "quartzit|Quartzit|Quarzit|quarzit|quartzite", class: Metamorphic, group: "Quartzite"}
+  - {pattern: "marble|Marble|Marmor|marmor|Marbl$|Calcite-?\\s*[Mm]arble|Dolomite-?\\s*[Mm]arble", class: Metamorphic, group: "Marble"}
+  - {pattern: "schist|Schist|Schiefer|schiefer|Glimmerschiefer|Pierreschiefer", class: Metamorphic, group: "Schist"}
+  - {pattern: "slate|Slate|phyllite|Phyllite|Phyllit", class: Metamorphic, group: "Slate / Phyllite"}
+  - {pattern: "gneiss|Gneiss|Gneis|gneis|migmatit|Migmatit|Charnockite|charnockite|Leptite|leptite|paragneiss", class: Metamorphic, group: "Gneiss"}
+  - {pattern: "skarn|Skarn",                      class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "hornfels|Hornfels|Buchite|buchite|meta-?\\s*greywacke|Meta-?\\s*Greywacke", class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "meta-?\\s*sediment|metasediment|Metasediment|meta-?\\s*pelite|metapelite|meta-?\\s*sandstone|metasandstone", class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "meta-?\\s*basalt|metabasalt|Meta-?\\s*Basalt|meta-?\\s*andesite|Meta-?\\s*Andesite|meta-?\\s*rhyolite|Meta-?\\s*Rhyolite|meta-?\\s*igneous|Metaigneous|meta-?\\s*dolerite|Meta-?\\s*Dolerite|meta-?\\s*trachyte|Meta-?\\s*Trachyte|meta-?\\s*pikrite|Meta-?\\s*Pikrite|Metamafic|metamafic", class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "metamorphic|Metamorphic|low.?grade|tectonite|mylonit|Mylonit|cataclast|Cataclast|cataclasite|Cataclasite|Übergangsmagmatit", class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "Metamorphe.Wechsel|schistose|Quermuskovit|Metamorphit|Pelit$|Grünstein|granophyre|Porphyr$|Kuselit|Kakirit|Melange|melange", class: Metamorphic, group: "Other metamorphic"}
+  - {pattern: "greisen|phyllonit|kontaktmetasomat|metasomatit|metabasit|metamorpher.plutonit|metasomatic.rock", class: Metamorphic, group: "Other metamorphic"}
+
+  # ── Plutonic ────────────────────────────────────────────────────────────────
+  - {pattern: "dunite|Dunite|Dunit|lherzolite|Lherzolite|harzburgite|Harzburgite|peridotite|Peridotite|Peridotit|peridotit|pyroxenite|Pyroxenite|Pyroxenit|Orthopyroxenite|hornblendite|Hornblendite|Hornblendit|olivine.?gabbro|Olivine.?gabbro|ultramafic|ultramafisch|Ultrabasisch|Bronzitit|hypersthenit", class: Plutonic, group: "Peridotite / Ultramafic"}
+  - {pattern: "gabbro|Gabbro|Gabbronorite|gabbronorite|norite|Norite|^norit$|^bronzit$|Quarz-Gabbro", class: Plutonic, group: "Gabbro"}
+  - {pattern: "^plutonit$",                        class: Plutonic, group: "Other plutonic"}
+  - {pattern: "diorit|Diorit|diorite|Diorite|Quartz.?[Dd]iorit|Quarzdiorit|tonalite|Tonalite|Tonalit|Microdiorite", class: Plutonic, group: "Diorite"}
+  - {pattern: "syenit|Syenit|syenite|Syenite|monzonit|Monzonit|monzodiorit|Monzodiorit|Quarzmonzonit|Quarzmonzanit|nepheline.?syenite|Syenitporphyr|Iolite|Ijolite|Urtite|Nephelinolite", class: Plutonic, group: "Syenite"}
+  - {pattern: "granodiorit|Granodiorit|granodiorite|Granodiorite|Bt-Granodiorit|Leukogranodiorit", class: Plutonic, group: "Granodiorite"}
+  - {pattern: "granit|Granit|granite|Granite|Leukogranit|Monzogranit|monzogranit|Syenogranit|Ruhlaer|Graphophyrgranit|Flasergranitoid|granitoid|Granitoid|Porphyric.Granite|SparnbergGranit|Idahobatholit", class: Plutonic, group: "Granite"}
+  - {pattern: "pegmatit|Pegmatit|pegmatite|Aplit|aplit",  class: Plutonic, group: "Other plutonic"}
+  - {pattern: "plutonic|Plutonic|intrusive|Intrusive|lamprophyr|Lamprophyr|Kersantite|kersantite|Kersanite|Dioriteporphyrite|porphyry|Dolerit|dolerit|dolerite|Dolerite|Diabas|diabas|Diabase|dyke.rock|Dike.rock|Anorthosit|anorthosit|Anorthosite", class: Plutonic, group: "Other plutonic"}
+
+  # ── Volcanic ────────────────────────────────────────────────────────────────
+  - {pattern: "hyaloclastite|Hyaloclastite",      class: Volcanic, group: "Basalt"}
+  - {pattern: "basalt|Basalt|basanite|Basanite|hawaiite|Hawaiite|mugearite|Mugearite|tholei|Tholei|alkali.*basalt|Alkali.*basalt|olivine.*basalt|Olivine.*basalt|picrit|Picrit|Pillow.basalt|Basaltic.intrusion|Basaltic.volcanic|Basaltic.andesite|Basaltic.trachyandesite|Lava.flow", class: Volcanic, group: "Basalt"}
+  - {pattern: "andesit|Andesit|andesite|Andesite", class: Volcanic, group: "Andesite"}
+  - {pattern: "dacit|Dacit|dacite|Dacite|^dazit$|rhyodazit", class: Volcanic, group: "Dacite"}
+  - {pattern: "^latit$|^spilit$|^boninite$|silicic.rock|mafic.rock|porphyrit|granophyr|^porphyr,", class: Volcanic, group: "Other volcanic"}
+  - {pattern: "rhyolit|Rhyolit|rhyolite|Rhyolite|Ryolith|obsidian|Obsidian|Silicic.volcanic", class: Volcanic, group: "Rhyolite"}
+  - {pattern: "trachyt|Trachyt|trachyte|Trachyte|trachite|Trachite|phonolit|Phonolit|phonolite|Phonolite|[Nn]ephelinite|nehpelinite", class: Volcanic, group: "Trachyte / Phonolite"}
+  - {pattern: "volcanic|Volcanic|Vulkanit|vulkanit|igneous|Igneous|lava|Lava|Magmatic|magmatic|Intermediate.volcanic|Intermediate.intrusion|Extrusive|Silicic.intrusion|volcaniclastic|Volcanoclastic", class: Volcanic, group: "Other volcanic"}
+
+  # ── Sedimentary catch-all ───────────────────────────────────────────────────
+  - {pattern: "sediment|Sediment|Sedimente",      class: "Clastic sedimentary", group: "Other clastic"}
+
+  # ── Fallback ────────────────────────────────────────────────────────────────
+  - {pattern: ".*",                               class: Unclassified, group: "Unclassified"}
+
+# ── Minimum samples per lithology class for analysis ──────────────────────────
+analysis:
+  min_samples_per_class: 30       # for LOLO and stratified analyses
+  min_samples_per_group: 20       # for group-level analyses
+  min_classes_for_lolo:  3        # minimum lithology classes for Leave-One-Lithology-Out

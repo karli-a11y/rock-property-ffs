@@ -1,0 +1,122 @@
+# config/risk_rules.yaml  — harmonization risk classification rules
+# Risk class is assigned per variable based on semantic compatibility across sources.
+# Classes: low | moderate | high | excluded
+
+risk_classes:
+  low:
+    description: >
+      Units and measurement meaning are consistent across all sources.
+      Safe to pool without flag. Minor method differences may exist but
+      are not expected to introduce systematic offsets.
+    examples:
+      - bulk_density_gcm3
+      - grain_density_gcm3
+      - porosity_connected_pct
+      - cp_JkgK
+      - mag_susc_1e3si
+
+  moderate:
+    description: >
+      Measurement method, moisture conditioning, or property definition
+      may differ across sources. Pooling is acceptable but requires explicit
+      note in results interpretation. Source-specific offsets possible.
+    examples:
+      - porosity_pct
+      - vp_dry_ms
+      - vs_dry_ms
+      - vp_sat_ms
+      - vs_sat_ms
+      - tc_dry_WmK
+      - tc_sat_WmK
+      - td_dry_1e6m2s
+      - E_dyn_GPa
+      - resistivity_dry_Ohm
+      - resistivity_sat_Ohm
+      - cv_jm3k
+
+  high:
+    description: >
+      Strong protocol heterogeneity or semantic ambiguity across sources.
+      Loading rate, specimen preparation, geometry, or definition vary.
+      Pooled values may reflect systematic between-source offsets rather
+      than only material property variation.
+    examples:
+      - ucs_MPa
+      - E_static_GPa
+      - poisson_ratio
+      - permeability_m2
+      - tensile_MPa
+      - friction_angle_deg
+      - cohesion_MPa
+
+  excluded:
+    description: >
+      Variables excluded from pooled analysis due to irreconcilable semantic
+      conflicts or insufficient cross-source coverage.
+    examples: []
+
+# Semantic conflict detection rules
+semantic_conflicts:
+  dry_vs_saturated:
+    - [bulk_density_gcm3, bulk_density_gcm3_wet]
+    - [tc_dry_WmK, tc_sat_WmK]
+    - [vp_dry_ms, vp_sat_ms]
+    - [vs_dry_ms, vs_sat_ms]
+    - [resistivity_dry_Ohm, resistivity_sat_Ohm]
+
+  static_vs_dynamic:
+    - [E_static_GPa, E_dyn_GPa]
+    - [poisson_ratio, E_dyn_GPa]
+
+  total_vs_connected_porosity:
+    - [porosity_pct, porosity_connected_pct]
+
+  bulk_vs_grain_density:
+    - [bulk_density_gcm3, grain_density_gcm3]
+
+  intrinsic_vs_apparent_permeability:
+    description: >
+      Intrinsic permeability (true Darcy) vs apparent (Klinkenberg-corrected or
+      effective) permeability pooled; log-scale differences can be large.
+
+  measured_vs_derived:
+    description: >
+      Measured values (direct laboratory determination) vs derived/calculated values
+      (e.g. from empirical relations or sonic logs) may introduce systematic bias.
+
+# Variable-level semantic status registry
+variable_semantics:
+  porosity_pct:
+    pooled_subtypes: [total, effective, measured, calculated]
+    status: moderate_risk
+    note: "Multiple porosity definitions pooled; verify which sub-type is relevant"
+
+  bulk_density_gcm3:
+    pooled_subtypes: [dry, bulk]
+    status: low_risk
+    note: "Dry and wet bulk density tracked separately; dry used for mechanical models"
+
+  grain_density_gcm3:
+    pooled_subtypes: [grain, matrix]
+    status: low_risk
+    note: "Grain density (pycnometer) vs matrix density may differ slightly"
+
+  permeability_m2:
+    pooled_subtypes: [intrinsic, apparent, effective]
+    status: high_risk
+    note: "Intrinsic, apparent, and effective permeability pooled; log-scale differences can be large"
+
+  E_static_GPa:
+    pooled_subtypes: [static, dynamic]
+    status: high_risk
+    note: "Static Young's modulus (destructive) may be pooled with dynamic modulus in some sources"
+
+  poisson_ratio:
+    pooled_subtypes: [static, dynamic]
+    status: high_risk
+    note: "Static (strain-gauge) and dynamic (ultrasonic) values may be pooled"
+
+  tc_dry_WmK:
+    pooled_subtypes: [optical_scanning, needle_probe, divided_bar]
+    status: moderate_risk
+    note: "Different measurement methods pooled; method-specific offsets possible"
