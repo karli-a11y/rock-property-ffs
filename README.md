@@ -80,7 +80,7 @@ a desktop machine) because they re-run the full FFS pipeline many times.
 | 4 | `python lithology_analysis.py` | Per-class FFS, per-class best-model search, best-model heatmap | `lithology/tables/best_model_by_lithology.csv`, `lithology/tables/*.csv`, `lithology/figures/*.png` |
 | 5 | `python loso_validation.py` | Leave-one-source-out transfer experiment over the 149 eligible sub-sources | `tables/loso_validation.csv` |
 | 6 | `python holdout_validation.py` | Per-target hold-out check with the canonical best family | `tables/holdout_validation.csv` |
-| 7 | `python bootstrap_ranking.py` | Bootstrap stability intervals of the global ranking | `tables/bootstrap_ranking.csv` |
+| 7 | `python bootstrap_ranking.py` | Bootstrap stability intervals of the global ranking | `tables/feature_relevance_bootstrap.csv` |
 | 8 | `python minimal_set_check.py` | Non-destructive minimal-set check (six-property backbone) | `tables/minimal_set_check.csv` |
 
 Optional imputation-sensitivity run (paper Supplementary Table SF): re-run
