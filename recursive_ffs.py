@@ -177,31 +177,120 @@ def forward_feature_selection(X_df: pd.DataFrame, y: np.ndarray,
     return steps
 
 
-# ── Aggregation Eq. (1) ───────────────────────────────────────────────────────
+# ── Per-target iterated-exclusion driver ──────────────────────────────────────
 
-def aggregate_S(ffs_rows: list, all_features: list) -> pd.DataFrame:
-    """Sum Δ-R^2 across (target, model) and normalise so Σ S_j = 1."""
-    by_feat: dict[str, float] = {f: 0.0 for f in all_features}
-    for row in ffs_rows:
-        d = max(float(row.get("r2_delta", 0.0)), 0.0)
-        by_feat[row["feature"]] = by_feat.get(row["feature"], 0.0) + d
-    s = pd.Series(by_feat, name="S")
-    total = s.sum()
-    if total > 0:
-        s = s / total
-    out = (pd.DataFrame({"feature": s.index, "S": s.values})
-             .merge(pd.DataFrame({"feature": list(FEATURE_LABELS.keys()),
-                                   "label": list(FEATURE_LABELS.values())}),
-                    on="feature", how="left")
-             .sort_values("S", ascending=False)
-             .reset_index(drop=True))
-    out["rank"] = np.arange(1, len(out) + 1)
-    return out
+def run_pertarget_recursive(master: pd.DataFrame, analyzed_targets: list,
+                             registry, single_target: str | None = None,
+                             verbose: bool = False) -> pd.DataFrame:
+    """Run iterated-exclusion FFS **independently for each (target, family)**.
+
+    For one (target, family) pair the recursion is:
+      iteration 1: full FFS over the target's admissible predictor set,
+                   recording every step's Δ-R^2; the step-1 winner is the
+                   pair's own iteration winner.
+      iteration 2: remove that winner from this target's pool and re-run FFS.
+      ... until fewer than two candidates remain.
+
+    Each target removes *its own* winners (not a global one), so the
+    substitution structure is resolved target by target. Returns a long-form
+    DataFrame with columns: target, model, iteration, step, feature, r2_delta.
+    """
+    targets = [single_target] if single_target else analyzed_targets
+    records: list[dict] = []
+    for target in targets:
+        sub, orig_preds = registry.build_target_subset(master, target)
+        if sub.empty or len(orig_preds) < 2:
+            continue
+        y_full = sub[target].values
+        X_full = sub[orig_preds].copy()
+        if target in LOG_TARGETS:
+            pos = y_full > 0
+            X_full = X_full[pos].reset_index(drop=True)
+            y_full = np.log10(y_full[pos])
+        t0 = time.time()
+        for fam in MODEL_NAMES:
+            tpool = list(orig_preds)
+            it = 0
+            while len(tpool) >= 2:
+                it += 1
+                try:
+                    steps = forward_feature_selection(X_full[tpool], y_full,
+                                                       tpool, fam)
+                except Exception as exc:
+                    if verbose:
+                        print(f"    [fail] {fam}/{target} it{it}: {exc}")
+                    break
+                if not steps:
+                    break
+                for s in steps:
+                    records.append({
+                        "target":    target,
+                        "model":     fam,
+                        "iteration": it,
+                        "step":      s["step"],
+                        "feature":   s["feature"],
+                        "r2_delta":  float(s["r2_delta"]),
+                    })
+                winner = steps[0]["feature"]          # this pair's own winner
+                tpool = [p for p in tpool if p != winner]
+                if verbose:
+                    print(f"    {target:20s} {fam:10s} it{it:2d}: "
+                          f"remove {winner}  (pool now {len(tpool)})")
+        if verbose or not single_target:
+            print(f"  [done] {target:20s} "
+                  f"[{(time.time()-t0)/60:.1f} min]")
+    return pd.DataFrame(records)
+
+
+def summarise(records: pd.DataFrame):
+    """Build the two output tables from the long-form step records.
+
+    Ranking (S_mean column): each predictor's total positive Δ-R^2 summed over
+    *all* loops (targets, families, exclusion iterations, steps), normalised by
+    the grand total so Σ_j S_j = 1. This is the parameter-ranking contribution.
+
+    Per-iteration shares (S_iter, and the derived S_iter1 / S_max): within each
+    exclusion-depth i the positive Δ-R^2 is aggregated across (target, family)
+    and normalised so Σ_j S_j^(i) = 1, giving the substitution heatmap, the
+    greedy depth-1 score S_iter1, and the latent maximum S_max.
+    """
+    rec = records.copy()
+    rec["pos"] = rec["r2_delta"].clip(lower=0.0)
+
+    # ranking: sum over all loops / grand total
+    grand = rec["pos"].sum()
+    rank = rec.groupby("feature")["pos"].sum()
+    rank = rank / grand if grand > 0 else rank
+
+    # per-depth normalised shares
+    per_iter = rec.groupby(["iteration", "feature"], as_index=False)["pos"].sum()
+    per_iter["S_iter"] = per_iter.groupby("iteration")["pos"].transform(
+        lambda s: s / s.sum() if s.sum() > 0 else 0.0)
+
+    long = per_iter[["iteration", "feature", "S_iter"]].copy()
+    long["label"] = long["feature"].map(FEATURE_LABELS)
+    long = long.sort_values(["iteration", "S_iter"], ascending=[True, False])
+
+    s_iter1 = per_iter[per_iter["iteration"] == 1].set_index("feature")["S_iter"]
+    s_max = per_iter.groupby("feature")["S_iter"].max()
+    n_present = per_iter.groupby("feature")["iteration"].nunique()
+
+    summary = pd.DataFrame({"feature": rank.index, "S_mean": rank.values})
+    summary["S_max"] = summary["feature"].map(s_max).fillna(0.0)
+    summary["S_iter1"] = summary["feature"].map(s_iter1).fillna(0.0)
+    summary["n_iterations_present"] = (summary["feature"].map(n_present)
+                                       .fillna(0).astype(int))
+    summary["label"] = summary["feature"].map(FEATURE_LABELS)
+    summary = summary.sort_values("S_mean", ascending=False).reset_index(drop=True)
+    return long, summary
 
 
 # ── Main driver ───────────────────────────────────────────────────────────────
 
 def main() -> None:
+    import os as _os
+    test_target = _os.environ.get("TEST_TARGET")
+
     print("Loading master table …")
     master = pd.read_csv(MASTER_CSV, low_memory=False)
     master = master[~master["source_db"].isin(EXCLUDE_SOURCES)].reset_index(drop=True)
@@ -212,82 +301,39 @@ def main() -> None:
     analyzed_targets = registry.get_all_analyzed()
     print(f"  Analyzed targets: {len(analyzed_targets)}")
 
-    # Build candidate pool: all qualified features minus permeability target log-transform handled inside
-    # We use the union of every per-target predictor set, which is the standardised pool.
-    pool = list(set().union(*[set(registry.build_target_subset(master, t)[1])
-                              for t in analyzed_targets]))
-    pool.sort()
-    print(f"  Initial pool: {len(pool)} features")
+    if test_target:
+        print(f"\n=== TEST MODE: single target '{test_target}' ===")
+        rec = run_pertarget_recursive(master, analyzed_targets, registry,
+                                      single_target=test_target, verbose=True)
+        long, summary = summarise(rec)
+        print(f"\n  records: {len(rec)} rows, "
+              f"{rec['iteration'].max()} exclusion iterations")
+        print("\n  Ranking contribution (S_mean) for this single target:")
+        print(summary[["feature", "S_mean", "S_iter1", "S_max",
+                       "n_iterations_present"]].to_string(index=False))
+        return
 
-    all_rows = []
-    excluded: list[str] = []
-    iter_idx = 0
-
-    while len(pool) >= 2:
-        iter_idx += 1
-        t0 = time.time()
-        print(f"\n{'='*70}")
-        print(f"ITERATION {iter_idx}  |  pool size = {len(pool)}  |  "
-              f"excluded so far: {excluded}")
-        print('='*70)
-
-        ffs_rows = []
-        for target in analyzed_targets:
-            sub, _orig_preds = registry.build_target_subset(master, target)
-            if sub.empty:
-                continue
-            # Restrict to the iteration's candidate pool (and intersect with the
-            # target's admissible predictor set, which respects circularity rules).
-            preds = [p for p in _orig_preds if p in pool]
-            if len(preds) < 2:
-                continue
-            y = sub[target].values
-            X = sub[preds].copy()
-            if target in LOG_TARGETS:
-                pos = y > 0
-                X, y = X[pos].reset_index(drop=True), np.log10(y[pos])
-            for fam in MODEL_NAMES:
-                try:
-                    steps = forward_feature_selection(X, y, preds, fam)
-                except Exception as exc:
-                    print(f"  [fail] {fam}/{target}: {exc}")
-                    continue
-                for row in steps:
-                    row["target"] = target
-                    row["model"]  = fam
-                    ffs_rows.extend([row])
-
-        S_df = aggregate_S(ffs_rows, pool)
-        S_df["iteration"] = iter_idx
-        S_df["excluded_so_far"] = ",".join(excluded) if excluded else "(none)"
-        all_rows.append(S_df)
-
-        winner = str(S_df.iloc[0]["feature"])
-        winner_S = float(S_df.iloc[0]["S"])
-        dt = time.time() - t0
-        print(f"\n  → winner #{iter_idx}: {winner}  (S = {winner_S:.4f})  "
-              f"[iter took {dt/60:.1f} min]")
-        excluded.append(winner)
-        pool = [p for p in pool if p != winner]
-
-        # Save running results so a crash doesn't lose progress
-        pd.concat(all_rows, ignore_index=True).to_csv(
-            OUT_TAB / "feature_relevance_recursive.csv", index=False)
-
-    # Derived aggregate: mean S per feature across iterations
-    full = pd.concat(all_rows, ignore_index=True)
-    agg = (full.groupby("feature")
-                .agg(S_mean=("S", "mean"),
-                     S_max=("S", "max"),
-                     S_iter1=("S", lambda s: float(s.iloc[0])),
-                     n_iterations_present=("S", "size"))
-                .reset_index()
-                .merge(pd.DataFrame({"feature": list(FEATURE_LABELS.keys()),
-                                      "label": list(FEATURE_LABELS.values())}),
-                       on="feature", how="left")
-                .sort_values("S_mean", ascending=False))
-    agg.to_csv(OUT_TAB / "feature_relevance_recursive_mean.csv", index=False)
-    print("\nDone. Wrote feature_relevance_recursive[.csv|_mean.csv]")
+    t0 = time.time()
+    parts: list = []
+    for ti, tgt in enumerate(analyzed_targets, 1):
+        print(f"\n[{ti}/{len(analyzed_targets)}] target {tgt} …", flush=True)
+        r = run_pertarget_recursive(master, analyzed_targets, registry,
+                                    single_target=tgt)
+        if not r.empty:
+            parts.append(r)
+            # checkpoint after every target so a long run survives a crash
+            pd.concat(parts, ignore_index=True).to_csv(
+                OUT_TAB / "feature_relevance_recursive_steps.csv", index=False)
+            print(f"  [checkpoint] {sum(len(p) for p in parts)} step rows saved",
+                  flush=True)
+    rec = pd.concat(parts, ignore_index=True)
+    long, summary = summarise(rec)
+    long.to_csv(OUT_TAB / "feature_relevance_recursive.csv", index=False)
+    summary.to_csv(OUT_TAB / "feature_relevance_recursive_mean.csv", index=False)
+    print(f"\nDone in {(time.time()-t0)/60:.1f} min. "
+          f"Wrote feature_relevance_recursive[_steps|.csv|_mean.csv]")
+    print("\nFull ranking:")
+    print(summary[["feature", "S_mean", "S_iter1", "S_max"]].to_string(index=False))
 
 
 if __name__ == "__main__":

@@ -75,8 +75,8 @@ a desktop machine) because they re-run the full FFS pipeline many times.
 | # | Script | What it does | Main outputs (in `results/`) |
 |---|--------|--------------|------------------------------|
 | 1 | `python run_pipeline.py` | Target qualification, per-family greedy FFS, nested-CV model-family comparison, global best-model table | `tables/qualification_report.csv`, `tables/ffs_selection_order.csv`, `tables/model_family_comparison.csv`, `tables/best_model_global.csv`, `tables/feature_relevance.csv` |
-| 2 | `python recursive_ffs.py` | Iterated-exclusion FFS on the global pool (relevance ranking S̃ⱼ) | `tables/feature_relevance_recursive.csv`, `tables/feature_relevance_recursive_mean.csv` |
-| 3 | `python recursive_ffs_per_lithology.py` | Iterated-exclusion FFS within each of the five lithology classes | `tables/feature_relevance_recursive_per_lithology.csv`, `..._mean.csv` |
+| 2 | `python recursive_ffs.py` | Per-target iterated-exclusion FFS (each target removes its own leading predictor each round); gains summed over all loops give the relevance ranking S̃ⱼ | `tables/feature_relevance_recursive_steps.csv`, `tables/feature_relevance_recursive.csv`, `tables/feature_relevance_recursive_mean.csv` |
+| 3 | `python recursive_ffs_per_lithology.py` | The same per-target iterated-exclusion within each of the five lithology classes | `tables/feature_relevance_recursive_per_lithology.csv`, `..._mean.csv` |
 | 4 | `python lithology_analysis.py` | Per-class FFS, per-class best-model search, best-model heatmap | `lithology/tables/best_model_by_lithology.csv`, `lithology/tables/*.csv`, `lithology/figures/*.png` |
 | 5 | `python loso_validation.py` | Leave-one-source-out transfer experiment over the 149 eligible sub-sources | `tables/loso_validation.csv` |
 | 6 | `python holdout_validation.py` | Per-target hold-out check with the canonical best family | `tables/holdout_validation.csv` |

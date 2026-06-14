@@ -37,7 +37,7 @@ FEATURE_LABELS = {
     "permeability_m2":         r"Permeability $k$ (m²)",
     "tc_dry_WmK":              r"Thermal conductivity $\lambda$ (W/m·K)",
     "td_dry_1e6m2s":           r"Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s)",
-    "cp_JkgK":                 r"Specific heat $c_p$ (J/kg·K)",
+    "cp_JkgK":                 r"Specific heat capacity $c_p$ (J/kg·K)",
     "vp_dry_ms":               r"P-wave velocity $V_P$ (m/s)",
     "vs_dry_ms":               r"S-wave velocity $V_S$ (m/s)",
     "ucs_MPa":                 r"UCS (MPa)",
