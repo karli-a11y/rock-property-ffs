@@ -1,15 +1,16 @@
 """
 bootstrap_ranking.py — Bootstrap confidence intervals on the global
-                        FFS-aggregated parameter ranking.
+                        per-target iterated-exclusion parameter ranking.
 
-For B bootstrap resamples of the (target, model) FFS rows, we re-aggregate
-Eq. 1 of the paper and record the per-feature normalised score S_j. We
-then report mean, 5th and 95th percentile per feature, plus the rank
-distribution (median rank, IQR).
+For B bootstrap resamples of the (target, model) units, we re-aggregate
+the relevance ranking S_tilde_j (the realised Δ-R² summed over all
+exclusion iterations and selection steps, normalised by the grand total)
+and record the per-feature score. We then report mean, 5th and 95th
+percentile per feature, plus the rank distribution (median rank, IQR).
 
 This is computationally cheap because it operates on the already-cached
-ffs_selection_order.csv: each bootstrap resample is just a re-aggregation
-across resampled (target, model) groups, not a re-fit.
+feature_relevance_recursive_steps.csv: each bootstrap resample is just a
+re-aggregation across resampled (target, model) groups, not a re-fit.
 """
 from __future__ import annotations
 
@@ -21,36 +22,30 @@ import pandas as pd
 BASE = Path(__file__).parent
 import os
 _V14 = BASE / os.environ.get("OUT_DIR_NAME", "results")
-FFS_CSV = _V14 / "tables" / "ffs_selection_order.csv"
+STEPS_CSV = _V14 / "tables" / "feature_relevance_recursive_steps.csv"
 OUT_CSV = _V14 / "tables" / "feature_relevance_bootstrap.csv"
 
 from variables import FEATURE_LABELS, HARMONIZATION_RISK
 
 
-def aggregate_to_S(ffs: pd.DataFrame) -> pd.Series:
-    """Aggregate Δ-R² across (target, model) and normalise → Σ S_j = 1."""
-    agg = {}
-    for _, r in ffs.iterrows():
-        d = float(r["r2_delta"])
-        if not np.isfinite(d):
-            d = float(r["r2_cumulative"])
-        d = max(d, 0.0)
-        agg[r["feature"]] = agg.get(r["feature"], 0.0) + d
-    s = pd.Series(agg)
+def aggregate_to_S(steps: pd.DataFrame) -> pd.Series:
+    """Sum positive Δ-R² per feature over all loops, normalise → Σ S_j = 1."""
+    pos = steps["r2_delta"].clip(lower=0.0)
+    s = pos.groupby(steps["feature"]).sum()
     total = s.sum()
     return s / total if total > 0 else s
 
 
 def main(B: int = 500, seed: int = 42):
-    ffs = pd.read_csv(FFS_CSV)
-    pairs = ffs[["target", "model"]].drop_duplicates().reset_index(drop=True)
+    steps = pd.read_csv(STEPS_CSV)
+    pairs = steps[["target", "model"]].drop_duplicates().reset_index(drop=True)
     n_pairs = len(pairs)
 
-    print(f"Loaded {len(ffs)} FFS rows across {n_pairs} (target, model) pairs.")
+    print(f"Loaded {len(steps)} step rows across {n_pairs} (target, model) pairs.")
     print(f"Running B={B} bootstrap resamples …")
 
     rng = np.random.default_rng(seed)
-    all_features = sorted(ffs["feature"].unique())
+    all_features = sorted(steps["feature"].unique())
     boot_S = np.zeros((B, len(all_features)))
     boot_rank = np.zeros((B, len(all_features)), dtype=int)
 
@@ -60,7 +55,7 @@ def main(B: int = 500, seed: int = 42):
         idx = rng.integers(0, n_pairs, size=n_pairs)
         sampled_pairs = pairs.iloc[idx]
         # Merge to keep all rows of each sampled (target, model) pair
-        merged = sampled_pairs.merge(ffs, on=["target", "model"], how="left")
+        merged = sampled_pairs.merge(steps, on=["target", "model"], how="left")
         s_vec = aggregate_to_S(merged)
         for f in all_features:
             v = float(s_vec.get(f, 0.0))
