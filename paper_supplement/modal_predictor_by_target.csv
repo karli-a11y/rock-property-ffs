@@ -1,0 +1,18 @@
+﻿Target,Modal top predictor,Stability
+Porosity (%),Bulk density ρ_b (g/cm^3),stable
+Bulk density (g/cm^3),Porosity φ (%),stable
+Grain density (g/cm^3),Bulk density ρ_b (g/cm^3),stable
+Permeability (m^2),Porosity φ (%),stable
+Thermal conductivity (W/(m·K)),Thermal diffusivity α (× 10^-6 m^2/s),stable
+Thermal diffusivity (10^-6 m^2/s),Thermal conductivity λ (W/m·K),stable
+Specific heat (J/(kg·K)),Thermal diffusivity α (× 10^-6 m^2/s),variable
+P-wave velocity (m/s),S-wave velocity V_S (m/s),stable
+S-wave velocity (m/s),P-wave velocity V_P (m/s),stable
+UCS (MPa),Porosity φ (%),stable
+Static Young's modulus (GPa),UCS (MPa),stable
+Dynamic Young's modulus (GPa),Porosity φ (%),stable
+Poisson ratio (-),S-wave velocity V_S (m/s),stable
+Tensile strength (MPa),S-wave velocity V_S (m/s),stable
+Friction angle (^),Thermal diffusivity α (× 10^-6 m^2/s),variable
+Cohesion (MPa),UCS (MPa),stable
+Magnetic susceptibility (10^-3 SI),Grain density ρ_g (g/cm^3),stable

@@ -1,0 +1,16 @@
+﻿Target,R^2_median,R^2_KNN,Δ
+Tensile strength,0.644,0.607,-0.037
+Thermal conductivity,0.196,0.174,-0.022
+Poisson ratio,0.245,0.225,-0.020
+Permeability,0.311,0.299,-0.012
+Grain density,0.243,0.231,-0.012
+Porosity,0.334,0.323,-0.011
+E_static,0.175,0.164,-0.011
+UCS,0.282,0.273,-0.009
+Specific heat capacity,0.028,0.026,-0.002
+Thermal diffusivity,0.021,0.021,-0.000
+Bulk density,0.330,0.335,+0.005
+V_P,0.231,0.237,+0.006
+E_dyn,0.336,0.344,+0.008
+V_S,0.292,0.303,+0.011
+Median better in,"µlticolumn3c9 of 14 targets, max |Δ| = 0.037",,

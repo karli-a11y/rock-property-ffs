@@ -1,0 +1,14 @@
+﻿Variable,Admissible range,Basis
+Porosity φ,0-100 %,pore fraction
+Poisson ratio ν,0-0.5,isotropic elasticity
+Friction angle,0-90^,Mohr-Coulomb angle
+"Bulk / grain density ρ_b,ρ_g",>0,positive magnitude
+"P- / S-wave velocity V_P,V_S",>0,positive magnitude
+"Static / dynamic Young's modulus E_s,E_d",>0,positive magnitude
+"UCS, tensile strength, cohesion",>0,positive magnitude
+"Thermal conductivity / diffusivity λ,α",>0,positive magnitude
+Specific heat capacity c_p,>0,positive magnitude
+Permeability k,>0,positive magnitude (log-modelled)
+Electrical resistivity ρ_e,>0,positive magnitude
+Magnetic susceptibility χ,finite,physical measurement
+Depth z,0,non-negative

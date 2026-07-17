@@ -1,0 +1,6 @@
+﻿Lithology,Dry S-wave velocity,Bulk Density,Dry P-wave velocity,Porosity,Thermal diffusivity dry,Dry thermal conductivity,Grain Density,Poisson ratio,Static Young's modulus,UCS,Specific heat capacity,Cohesion,Permeability,Dynamic Young's modulus,Tensile strength,Friction angle,Magnetic susceptibility
+Global,0.96 ET,0.92 ET,0.91 RF,0.84 XGBo,0.85 ET,0.71 KNN,0.74 RF,0.82 RF,0.81 RF,0.76 RF,0.63 RF,0.63 XGBo,0.68 KNN,0.46 RF,0.69 ET,0.48 RF,0.31 XGBo
+Carbonate sedimentary,0.98 ET,0.98 ET,0.87 ET,0.93 ET,0.61 ET,0.72 RF,0.71 XGBo,0.65 ET,0.58 XGBo,0.57 XGBo,0.62 RF,,0.67 RF,0.33 XGBo,0.57 ET,,0.46 RF
+Clastic sedimentary,0.97 XGBo,0.90 RF,0.82 RF,0.86 ET,0.70 RF,0.72 KNN,0.58 RF,0.63 XGBo,0.85 ET,0.75 XGBo,0.70 RF,,0.65 RF,0.67 ET,0.31 KNN,,0.32 SVR
+Magmatic,0.94 RF,0.94 ET,0.94 RF,0.80 XGBo,0.92 ET,0.89 ET,0.81 RF,0.86 ET,0.83 RF,0.76 KNN,0.81 XGBo,0.68 ET,0.64 KNN,0.69 ET,0.68 MLP,0.46 ET,0.57 XGBo
+Metamorphic,0.98 ET,0.96 GAM,0.94 ET,0.83 ET,0.80 ET,0.78 ET,0.96 ET,0.82 ET,0.71 ET,0.73 ET,0.69 XGBo,,0.54 ET,0.59 RF,0.42 RF,,0.59 XGBo
