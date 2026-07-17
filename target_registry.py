@@ -31,6 +31,14 @@ class TargetRegistry:
     MIN_PREDICTORS: int = 2
     MIN_LODO_GROUPS: int = 2
     MIN_LODO_GROUP_SIZE: int = 5
+    # Dynamic Young's modulus is computed from V_P, V_S, and density, so it is
+    # kept as a target but never used as a predictor (otherwise it trivially
+    # reconstructs its own constituents and tops the ranking). The Poisson
+    # ratio is NOT excluded: its column mixes statically measured and
+    # dynamically derived values, it is only a dimensionless velocity ratio,
+    # and empirically it ranks mid-pack rather than as an artefact
+    # (2026-06-29 decision).
+    NEVER_PREDICTOR = {"E_dyn_GPa"}
 
     def __init__(self, master: pd.DataFrame, targets_yaml: Path):
         self._master = master
@@ -112,6 +120,7 @@ class TargetRegistry:
             f for f in NUMERIC_FEATURES
             if f != target
             and f not in circular
+            and f not in self.NEVER_PREDICTOR
             and f in sub.columns
             and int(sub[f].notna().sum()) >= min_valid
         ]

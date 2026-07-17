@@ -122,49 +122,23 @@ targets:
       harmonization_risk: high
       notes: "Mohr-Coulomb c as published; sparse globally (n~160)"
 
-# Circularity exclusion rules: for each target, list features that are
-# directly derived from or physically equivalent to the target
+# Circularity exclusion rules (minimal, evidence-based — 2026-06-26).
+# Only the DYNAMIC elastic moduli are excluded, because they are not measured
+# independently but computed algebraically from the P/S-wave velocities and
+# density (E_dyn = rho_b*Vs^2*(3Vp^2-4Vs^2)/(Vp^2-Vs^2); nu = (Vp^2-2Vs^2)/
+# (2(Vp^2-Vs^2))). Using a derived modulus to predict its own constituents, or
+# vice versa, restates a definition rather than an empirical relationship.
+# Everything else (the two velocities, densities, porosity, thermal properties,
+# strength measures, static Young's modulus) is an independent laboratory
+# measurement and is NOT excluded.
+# NOTE (2026-06-29): the only quantity that is, by construction, always
+# computed from other columns is the dynamic Young's modulus E_dyn
+# (= f(Vp, Vs, rho_b)). It is kept as a target but never used as a predictor
+# (target_registry.NEVER_PREDICTOR); and when it is the target, its
+# constituents Vp, Vs, bulk density are removed from its predictor pool via
+# the rule below so they cannot trivially reconstruct it. The Poisson ratio is
+# NOT excluded: its column mixes statically measured and dynamically derived
+# values, so it is treated as an ordinary measured variable. No rows are
+# dropped and no other relationship is removed by hand.
 circularity_rules:
-  porosity_pct: []
-  bulk_density_gcm3:
-    - grain_density_gcm3
-  grain_density_gcm3:
-    - bulk_density_gcm3
-  E_static_GPa:
-    - E_dyn_GPa
-    - poisson_ratio
-  E_dyn_GPa:
-    - E_static_GPa
-    - poisson_ratio
-    - vp_dry_ms
-    - vs_dry_ms
-  poisson_ratio:
-    - E_dyn_GPa
-    - E_static_GPa
-  ucs_MPa:
-    - tensile_MPa
-    - cohesion_MPa
-    - friction_angle_deg
-  tensile_MPa:
-    - ucs_MPa
-    - cohesion_MPa
-    - friction_angle_deg
-  tc_dry_WmK:
-    - td_dry_1e6m2s
-  td_dry_1e6m2s:
-    - tc_dry_WmK
-  vp_dry_ms:
-    - vs_dry_ms
-    - E_dyn_GPa
-  vs_dry_ms:
-    - vp_dry_ms
-    - E_dyn_GPa
-  mag_susc_1e3si: []
-  friction_angle_deg:
-    - cohesion_MPa
-    - ucs_MPa
-    - tensile_MPa
-  cohesion_MPa:
-    - friction_angle_deg
-    - ucs_MPa
-    - tensile_MPa
+  E_dyn_GPa: [vp_dry_ms, vs_dry_ms, bulk_density_gcm3]

@@ -26,6 +26,7 @@ from sklearn.ensemble import (
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import r2_score
 from sklearn.model_selection import KFold
+from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
@@ -62,6 +63,8 @@ def make_model(family: str):
                              learning_rate=0.1, subsample=0.8,
                              objective="reg:squarederror",
                              random_state=SEED, n_jobs=-1, verbosity=0)
+    if family == "KNN":
+        return KNeighborsRegressor(n_neighbors=5, weights="distance")
     return ExtraTreesRegressor(n_estimators=150, random_state=SEED, n_jobs=-1)
 
 
