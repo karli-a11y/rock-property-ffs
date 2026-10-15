@@ -11,8 +11,10 @@ pipeline for the paper
 The pipeline runs greedy forward feature selection (FFS) for 17 rock-property
 targets with nine regression model families, aggregates the incremental R²
 gains into a model-family-robust predictor ranking, repeats the analysis in an
-iterated-exclusion variant and within five lithology classes, and validates
-out-of-source transfer with a leave-one-source-out (LOSO) experiment.
+iterated-exclusion variant and within five lithology classes, validates
+out-of-source transfer with a leave-one-source-out (LOSO) experiment, and
+searches all combinations of nine laboratory measurement procedures for the
+minimal measurement set.
 
 ## Repository layout
 
@@ -31,6 +33,7 @@ out-of-source transfer with a leave-one-source-out (LOSO) experiment.
 ├── target_registry.py         # target qualification (rules R1–R3) and predictor pools
 ├── lithology_mapper.py        # regex-based lithology classifier
 ├── master_split.py            # compendium split into primary-reference sub-sources
+├── paper_supplement/          # machine-readable data behind the supplementary tables
 └── *.py                       # analysis stages, see below
 ```
 
@@ -71,6 +74,8 @@ exactly how each source was mapped into the master table.
 
 Run the stages in the order below. Stages 2–4 are compute-intensive (hours on
 a desktop machine) because they re-run the full FFS pipeline many times.
+Stage 8 takes about an hour (`N_WORKERS` sets the number of parallel
+processes, default 8) and stage 9 several hours.
 
 | # | Script | What it does | Main outputs (in `results/`) |
 |---|--------|--------------|------------------------------|
@@ -81,7 +86,9 @@ a desktop machine) because they re-run the full FFS pipeline many times.
 | 5 | `python loso_validation.py` | Leave-one-source-out transfer experiment over the 149 eligible sub-sources | `tables/loso_validation.csv` |
 | 6 | `python holdout_validation.py` | Per-target hold-out check with the canonical best family | `tables/holdout_validation.csv` |
 | 7 | `python bootstrap_ranking.py` | Bootstrap stability intervals of the global ranking | `tables/feature_relevance_bootstrap.csv` |
-| 8 | `python minimal_set_check.py` | Non-destructive minimal-set check (six-property backbone) | `tables/minimal_set_check.csv` |
+| 8 | `python minimal_set_search.py` | Scores all 511 combinations of the nine laboratory procedures over the 17 targets (measured or exactly computed = 1, otherwise CV R²) and finds the knee of score vs. effort; repeats the leading combinations with CV seeds 7 and 13 and without the Poisson ratio as predictor | `tables/minimal_set_search.csv`, `tables/minimal_set_search_checks.csv` |
+| 9 | `python minimal_set_accuracy.py` | Tuned best-model comparison of stages 1 and 4 with only the seven properties of the minimal set as predictors, global and per lithology class | `tables/minimal_set_accuracy.csv` |
+| 10 | `python minimal_set_figures.py` | Figures and table of the minimal-set analysis | `figures/Fig_minimal_set_search.png`, `figures/Fig_BM_minimal_set.png`, `tables/tableSG_minimal_set.tex` |
 
 Optional imputation-sensitivity run (paper Supplementary Table SF): re-run
 stage 1 with KNN imputation into a second output directory, then compare:
@@ -93,9 +100,12 @@ python compare_imputers.py
 
 (On Windows PowerShell: `$env:OUT_DIR_NAME="results_knn"; $env:IMPUTER="knn"; python run_pipeline.py`.)
 
-All random seeds are fixed (seed 42 for primary runs, seed 7 for
-fold-stability checks), so repeated runs reproduce the published numbers up to
-hardware-level nondeterminism in the tree ensembles.
+All random seeds are fixed (seed 42 for primary runs, seeds 7 and 13 for
+stability checks), so repeated runs reproduce the published numbers up to
+hardware-level nondeterminism in the tree ensembles. Other library versions
+can shift single cells slightly, mostly where XGBoost is the best family. The
+minimal-set runs (stages 8 and 9) used Python 3.11, scikit-learn 1.5.2,
+XGBoost 2.1.4 and pygam 0.9.1.
 
 ## Mapping outputs to the paper
 
@@ -107,9 +117,10 @@ hardware-level nondeterminism in the tree ensembles.
 | Fig. 6 (iterated exclusion) | `feature_relevance_recursive.csv`, `..._per_lithology.csv` |
 | Fig. 7 (cross-family rank spread) | `results/tables/ffs_selection_order.csv` |
 | Fig. 8 (model-family comparison) | `results/tables/model_family_comparison.csv` |
-| Fig. 9 / Table 2 (best-model heatmap) | `best_model_global.csv`, `lithology/tables/best_model_by_lithology.csv` |
-| Fig. 10 (LOSO transfer gaps) | `results/tables/loso_validation.csv` |
-| Supplementary Tables SA–SG | stages 1–8 as listed above |
+| Fig. 9 / Table 3 (best-model heatmap, class priorities) | `best_model_global.csv`, `lithology/tables/best_model_by_lithology.csv` |
+| Table 2, Figs. 10–11, Supplementary Table SD (minimal measurement set) | `results/tables/minimal_set_search*.csv`, `results/tables/minimal_set_accuracy.csv` |
+| Fig. 12 (LOSO transfer gaps) | `results/tables/loso_validation.csv` |
+| Supplementary Tables SA–SD | stages 1–9 as listed above |
 
 ## License
 

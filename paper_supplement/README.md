@@ -12,3 +12,9 @@ Regenerate with `python _export_supp_data.py`.
 - `best_model_map.csv` — Best CV R^2 and winning model per target and lithology class (was Supplementary Table SK; the figure stays in the paper). (5 data rows)
 - `ffs_selection_order.csv` — Forward-feature-selection entry order for all 17 targets (was Supplementary Tables SE1+SE2). (138 data rows)
 - `SE_loso.csv` — full per-(held-out source, target) LOSO transferability (summary stays as Supplementary Table SC).
+
+Minimal measurement set (written by `minimal_set_search.py` and `minimal_set_accuracy.py`):
+
+- `minimal_set_search.csv` — Score of all 511 combinations of the nine laboratory procedures and the R^2 of every property in each combination (1 = measured or computed exactly), CV seed 42 (Fig. 10). (511 data rows)
+- `minimal_set_search_checks.csv` — The leading combinations scored again with CV seeds 7 and 13 and without the Poisson ratio as predictor. (76 data rows)
+- `minimal_set_accuracy.csv` — Tuned best-model R^2 with the seven minimal-set properties as the only predictors, per target and lithology class, with the full-predictor ceiling and the retained share (Fig. 11, Supplementary Table SD). (79 data rows)

@@ -4,3 +4,4 @@ scikit-learn>=1.4
 xgboost>=2.0
 matplotlib>=3.8
 PyYAML>=6.0
+pygam>=0.9
