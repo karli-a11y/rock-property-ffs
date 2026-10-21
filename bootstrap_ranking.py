@@ -11,9 +11,15 @@ percentile per feature, plus the rank distribution (median rank, IQR).
 This is computationally cheap because it operates on the already-cached
 feature_relevance_recursive_steps.csv: each bootstrap resample is just a
 re-aggregation across resampled (target, model) groups, not a re-fit.
+
+With --per-lithology the same is done within each lithology class, from
+feature_relevance_recursive_per_lithology_steps.csv
+(recursive_ffs_per_lithology.py), and written to
+feature_relevance_bootstrap_per_lithology.csv with a top_class column.
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -24,6 +30,8 @@ import os
 _V14 = BASE / os.environ.get("OUT_DIR_NAME", "results")
 STEPS_CSV = _V14 / "tables" / "feature_relevance_recursive_steps.csv"
 OUT_CSV = _V14 / "tables" / "feature_relevance_bootstrap.csv"
+LITH_STEPS_CSV = _V14 / "tables" / "feature_relevance_recursive_per_lithology_steps.csv"
+LITH_OUT_CSV = _V14 / "tables" / "feature_relevance_bootstrap_per_lithology.csv"
 
 from variables import FEATURE_LABELS, HARMONIZATION_RISK
 
@@ -36,8 +44,7 @@ def aggregate_to_S(steps: pd.DataFrame) -> pd.Series:
     return s / total if total > 0 else s
 
 
-def main(B: int = 500, seed: int = 42):
-    steps = pd.read_csv(STEPS_CSV)
+def bootstrap(steps: pd.DataFrame, B: int, seed: int) -> pd.DataFrame:
     pairs = steps[["target", "model"]].drop_duplicates().reset_index(drop=True)
     n_pairs = len(pairs)
 
@@ -87,11 +94,25 @@ def main(B: int = 500, seed: int = 42):
             "harmonization_risk": HARMONIZATION_RISK.get(f, "moderate"),
         })
 
-    out_df = (pd.DataFrame(rows)
-              .sort_values("S_mean", ascending=False)
-              .reset_index(drop=True))
-    out_df.to_csv(OUT_CSV, index=False)
-    print(f"\nSaved {OUT_CSV} ({len(out_df)} rows).")
+    return (pd.DataFrame(rows)
+            .sort_values("S_mean", ascending=False)
+            .reset_index(drop=True))
+
+
+def main(B: int = 500, seed: int = 42, per_lithology: bool = False):
+    if not per_lithology:
+        out_df = bootstrap(pd.read_csv(STEPS_CSV), B, seed)
+        out_csv = OUT_CSV
+    else:
+        steps = pd.read_csv(LITH_STEPS_CSV)
+        parts = []
+        for cls, g in steps.groupby("top_class", sort=False):
+            print(f"\n=== {cls}")
+            parts.append(bootstrap(g, B, seed).assign(top_class=cls))
+        out_df = pd.concat(parts, ignore_index=True)
+        out_csv = LITH_OUT_CSV
+    out_df.to_csv(out_csv, index=False)
+    print(f"\nSaved {out_csv} ({len(out_df)} rows).")
     print()
     try:
         print(out_df.head(12).to_string(index=False))
@@ -100,4 +121,6 @@ def main(B: int = 500, seed: int = 42):
 
 
 if __name__ == "__main__":
-    main(B=500)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--per-lithology", action="store_true")
+    main(B=500, per_lithology=ap.parse_args().per_lithology)

@@ -1,0 +1,71 @@
+﻿lithology,feature,label,S_mean,S_p05,S_p95,rank_median,rank_p05,rank_p95
+Magmatic,porosity_pct,Porosity φ (%),0.1273,0.0971,0.1573,1,1,3
+Magmatic,grain_density_gcm3,Grain density ρ_g (g/cm³),0.1014,0.0815,0.1261,2,1,4
+Magmatic,vs_dry_ms,S-wave velocity V_S (m/s),0.087,0.0641,0.1122,3,2,8
+Magmatic,vp_dry_ms,P-wave velocity V_P (m/s),0.0825,0.0713,0.0948,4,3,7
+Magmatic,ucs_MPa,UCS (MPa),0.0787,0.0663,0.0905,5,3,8
+Magmatic,bulk_density_gcm3,Bulk density ρ_b (g/cm³),0.078,0.0689,0.087,6,3,8
+Magmatic,tc_dry_WmK,Thermal conductivity λ (W/m·K),0.0732,0.061,0.0866,7,3,8
+Magmatic,td_dry_1e6m2s,Thermal diffusivity α (× 10^-6 m²/s),0.0711,0.0586,0.0833,7,3,8
+Magmatic,mag_susc_1e3si,Magnetic susceptibility χ (× 10^-3 SI),0.0515,0.033,0.0745,9,6,13
+Magmatic,poisson_ratio,Poisson ratio ν,0.0497,0.0406,0.0588,10,9,11
+Magmatic,cp_JkgK,Specific heat capacity c_p (J/kg·K),0.043,0.035,0.0518,11,9,13
+Magmatic,E_static_GPa,Static Young's modulus E_s (GPa),0.0384,0.031,0.047,12,10,14
+Magmatic,tensile_MPa,Tensile strength σ_t (MPa),0.0354,0.0285,0.0426,13,11,14
+Magmatic,permeability_m2,Permeability k (m²),0.0322,0.0236,0.0408,14,11,14
+Magmatic,depth_m,Depth (m),0.0204,0.0136,0.0287,15,15,17
+Magmatic,friction_angle_deg,Friction angle (°),0.016,0.0104,0.023,16,15,17
+Magmatic,cohesion_MPa,Cohesion c (MPa),0.014,0.0094,0.0191,17,15,17
+Clastic sedimentary,vp_dry_ms,P-wave velocity V_P (m/s),0.121,0.0893,0.1534,2,1,6
+Clastic sedimentary,bulk_density_gcm3,Bulk density ρ_b (g/cm³),0.1156,0.0919,0.1423,3,1,6
+Clastic sedimentary,porosity_pct,Porosity φ (%),0.1111,0.092,0.1301,3,1,6
+Clastic sedimentary,tc_dry_WmK,Thermal conductivity λ (W/m·K),0.1104,0.0849,0.1382,3,1,6
+Clastic sedimentary,grain_density_gcm3,Grain density ρ_g (g/cm³),0.0999,0.0817,0.1174,5,2,7
+Clastic sedimentary,cp_JkgK,Specific heat capacity c_p (J/kg·K),0.0975,0.0725,0.1249,5,2,6
+Clastic sedimentary,td_dry_1e6m2s,Thermal diffusivity α (× 10^-6 m²/s),0.0731,0.0443,0.1111,7,3,10
+Clastic sedimentary,vs_dry_ms,S-wave velocity V_S (m/s),0.0546,0.0416,0.0668,8,7,10
+Clastic sedimentary,depth_m,Depth (m),0.0441,0.0267,0.0689,10,7,13
+Clastic sedimentary,ucs_MPa,UCS (MPa),0.044,0.0281,0.064,10,7,13
+Clastic sedimentary,poisson_ratio,Poisson ratio ν,0.0408,0.0306,0.052,10,8,12
+Clastic sedimentary,permeability_m2,Permeability k (m²),0.0351,0.0265,0.0449,12,10,13
+Clastic sedimentary,E_static_GPa,Static Young's modulus E_s (GPa),0.0287,0.0186,0.041,13,11,13
+Clastic sedimentary,mag_susc_1e3si,Magnetic susceptibility χ (× 10^-3 SI),0.0139,0.0083,0.0208,14,14,15
+Clastic sedimentary,tensile_MPa,Tensile strength σ_t (MPa),0.01,0.0069,0.0132,15,14,15
+Carbonate sedimentary,porosity_pct,Porosity φ (%),0.1484,0.1113,0.1828,1,1,3
+Carbonate sedimentary,tc_dry_WmK,Thermal conductivity λ (W/m·K),0.126,0.1047,0.1468,2,1,4
+Carbonate sedimentary,vp_dry_ms,P-wave velocity V_P (m/s),0.1141,0.0937,0.1378,3,1,5
+Carbonate sedimentary,grain_density_gcm3,Grain density ρ_g (g/cm³),0.1031,0.0758,0.1294,4,1,6
+Carbonate sedimentary,bulk_density_gcm3,Bulk density ρ_b (g/cm³),0.0865,0.0734,0.1009,5,4,7
+Carbonate sedimentary,td_dry_1e6m2s,Thermal diffusivity α (× 10^-6 m²/s),0.0777,0.0666,0.0896,6,4,7
+Carbonate sedimentary,cp_JkgK,Specific heat capacity c_p (J/kg·K),0.0721,0.0488,0.0999,7,5,9
+Carbonate sedimentary,poisson_ratio,Poisson ratio ν,0.0552,0.0332,0.0819,8,5,11
+Carbonate sedimentary,vs_dry_ms,S-wave velocity V_S (m/s),0.0491,0.0344,0.0661,9,8,10
+Carbonate sedimentary,mag_susc_1e3si,Magnetic susceptibility χ (× 10^-3 SI),0.0491,0.0339,0.0661,9,7,11
+Carbonate sedimentary,permeability_m2,Permeability k (m²),0.0312,0.0209,0.0425,11,9,13
+Carbonate sedimentary,depth_m,Depth (m),0.0257,0.0165,0.035,12,11,15
+Carbonate sedimentary,ucs_MPa,UCS (MPa),0.0233,0.0146,0.0345,13,11,15
+Carbonate sedimentary,E_static_GPa,Static Young's modulus E_s (GPa),0.0199,0.0112,0.0297,14,12,15
+Carbonate sedimentary,tensile_MPa,Tensile strength σ_t (MPa),0.0186,0.0122,0.0263,14,13,15
+Metamorphic,bulk_density_gcm3,Bulk density ρ_b (g/cm³),0.1178,0.0957,0.1387,2,1,4
+Metamorphic,grain_density_gcm3,Grain density ρ_g (g/cm³),0.1143,0.0965,0.1316,2,1,4
+Metamorphic,tc_dry_WmK,Thermal conductivity λ (W/m·K),0.1101,0.0906,0.1332,3,1,5
+Metamorphic,td_dry_1e6m2s,Thermal diffusivity α (× 10^-6 m²/s),0.1018,0.0766,0.1251,4,1,6
+Metamorphic,porosity_pct,Porosity φ (%),0.0993,0.0839,0.1155,4,2,6
+Metamorphic,vp_dry_ms,P-wave velocity V_P (m/s),0.0834,0.0693,0.0974,6,4,7
+Metamorphic,vs_dry_ms,S-wave velocity V_S (m/s),0.064,0.0453,0.0851,8,6,11
+Metamorphic,cp_JkgK,Specific heat capacity c_p (J/kg·K),0.0561,0.0398,0.0755,9,7,12
+Metamorphic,permeability_m2,Permeability k (m²),0.0547,0.0404,0.0723,9,7,11
+Metamorphic,mag_susc_1e3si,Magnetic susceptibility χ (× 10^-3 SI),0.0511,0.0363,0.0643,10,7,12
+Metamorphic,poisson_ratio,Poisson ratio ν,0.049,0.0375,0.0626,10,8,12
+Metamorphic,depth_m,Depth (m),0.0367,0.0177,0.0576,12,8,14
+Metamorphic,ucs_MPa,UCS (MPa),0.0276,0.0163,0.0435,13,12,14
+Metamorphic,E_static_GPa,Static Young's modulus E_s (GPa),0.0199,0.0102,0.0324,14,13,15
+Metamorphic,tensile_MPa,Tensile strength σ_t (MPa),0.0143,0.0093,0.0201,15,14,15
+Evaporite,porosity_pct,Porosity φ (%),0.2412,0.2077,0.2724,1,1,2
+Evaporite,bulk_density_gcm3,Bulk density ρ_b (g/cm³),0.2256,0.187,0.2601,2,1,2
+Evaporite,grain_density_gcm3,Grain density ρ_g (g/cm³),0.1774,0.1435,0.2109,3,3,4
+Evaporite,tc_dry_WmK,Thermal conductivity λ (W/m·K),0.1286,0.1015,0.1551,4,3,4
+Evaporite,cp_JkgK,Specific heat capacity c_p (J/kg·K),0.0834,0.0644,0.1055,5,5,6
+Evaporite,tensile_MPa,Tensile strength σ_t (MPa),0.0726,0.0495,0.0999,6,5,7
+Evaporite,ucs_MPa,UCS (MPa),0.0496,0.031,0.0712,7,6,7
+Evaporite,vp_dry_ms,P-wave velocity V_P (m/s),0.0216,0.0089,0.0365,8,8,8

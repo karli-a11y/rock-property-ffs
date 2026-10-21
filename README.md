@@ -57,13 +57,16 @@ databases (one row per specimen/measurement record). Relevant columns:
 * the 19 standardised variables listed in `variables.py`,
 * `source_db`, `parent_db`, `primary_reference`, `subsource` — row-level
   provenance,
-* `top_class` — the lithology class assigned by `lithology_mapper.py`.
+* `top_class` — a lithology class from the original harmonisation. The
+  analyses assign the five lithology classes of the paper with
+  `lithology_mapper.py` instead.
 
 The NorwayNPD porosity–permeability database is contained in the table but is
 excluded from all analyses at load time (it would dominate the multi-target
 merge with two-variable rows). After this exclusion and cross-compendium
-deduplication the analyses operate on 28,612 effective rows from 267 primary
-references.
+deduplication the analyses operate on 28,604 effective rows from 267 primary
+references. Corrections to the master table are listed at the end of
+[`data/SOURCES.md`](data/SOURCES.md).
 
 The original source databases are **not** redistributed in this repository.
 Their provenance, licences, and DOIs are listed in
@@ -75,22 +78,24 @@ exactly how each source was mapped into the master table.
 Run the stages in the order below. Stages 2–4 are compute-intensive (hours on
 a desktop machine) because they re-run the full FFS pipeline many times.
 Stage 8 takes about an hour (`N_WORKERS` sets the number of parallel
-processes, default 8) and stage 9 several hours.
+processes, default 8), stages 9 and 10 several hours each.
 
 | # | Script | What it does | Main outputs (in `results/`) |
 |---|--------|--------------|------------------------------|
 | 1 | `python run_pipeline.py` | Target qualification, per-family greedy FFS, nested-CV model-family comparison, global best-model table | `tables/qualification_report.csv`, `tables/ffs_selection_order.csv`, `tables/model_family_comparison.csv`, `tables/best_model_global.csv`, `tables/feature_relevance.csv` |
 | 2 | `python recursive_ffs.py` | Per-target iterated-exclusion FFS (each target removes its own leading predictor each round); gains summed over all loops give the relevance ranking S̃ⱼ | `tables/feature_relevance_recursive_steps.csv`, `tables/feature_relevance_recursive.csv`, `tables/feature_relevance_recursive_mean.csv` |
-| 3 | `python recursive_ffs_per_lithology.py` | The same per-target iterated-exclusion within each of the five lithology classes | `tables/feature_relevance_recursive_per_lithology.csv`, `..._mean.csv` |
+| 3 | `python recursive_ffs_per_lithology.py` | The same per-target iterated-exclusion within each of the five lithology classes of `lithology_mapper.py` | `tables/feature_relevance_recursive_per_lithology.csv`, `..._mean.csv`, `..._steps.csv` |
 | 4 | `python lithology_analysis.py` | Per-class FFS, per-class best-model search, best-model heatmap | `lithology/tables/best_model_by_lithology.csv`, `lithology/tables/*.csv`, `lithology/figures/*.png` |
 | 5 | `python loso_validation.py` | Leave-one-source-out transfer experiment over the 149 eligible sub-sources | `tables/loso_validation.csv` |
 | 6 | `python holdout_validation.py` | Per-target hold-out check with the canonical best family | `tables/holdout_validation.csv` |
-| 7 | `python bootstrap_ranking.py` | Bootstrap stability intervals of the global ranking | `tables/feature_relevance_bootstrap.csv` |
+| 7 | `python bootstrap_ranking.py` and `python bootstrap_ranking.py --per-lithology` | Bootstrap stability intervals of the global ranking and of the five class rankings | `tables/feature_relevance_bootstrap.csv`, `tables/feature_relevance_bootstrap_per_lithology.csv` |
 | 8 | `python minimal_set_search.py` | Scores all 511 combinations of the nine laboratory procedures over the 17 targets (measured or exactly computed = 1, otherwise CV R²) and finds the knee of score vs. effort; repeats the leading combinations with CV seeds 7 and 13 and without the Poisson ratio as predictor | `tables/minimal_set_search.csv`, `tables/minimal_set_search_checks.csv` |
 | 9 | `python minimal_set_accuracy.py` | Tuned best-model comparison of stages 1 and 4 with only the seven properties of the minimal set as predictors, global and per lithology class | `tables/minimal_set_accuracy.csv` |
-| 10 | `python minimal_set_figures.py` | Figures and table of the minimal-set analysis | `figures/Fig_minimal_set_search.png`, `figures/Fig_BM_minimal_set.png`, `tables/tableSG_minimal_set.tex` |
+| 10 | `python best_model_uncertainty.py` | All nine families re-run in every best-model cell, with all predictors and with the minimal set, keeping fold R² and out-of-fold predictions: standard deviation of R² over the folds, RMSE, 90 % prediction interval, runner-up family | `tables/best_model_uncertainty.csv` |
+| 11 | `python minimal_set_figures.py` | Figures and table of the minimal-set analysis | `figures/Fig_minimal_set_search.png`, `figures/Fig_BM_minimal_set.png`, `tables/tableSG_minimal_set.tex` |
+| 12 | `python loso_family_sensitivity.py` | LOSO of stage 5 repeated with the runner-up family for the targets whose winning family is a near tie (UCS, Poisson ratio, grain density, thermal conductivity, permeability) | `tables/loso_family_sensitivity.csv` |
 
-Optional imputation-sensitivity run (paper Supplementary Table SF): re-run
+Optional imputation-sensitivity run (`paper_supplement/imputer_sensitivity.csv`): re-run
 stage 1 with KNN imputation into a second output directory, then compare:
 
 ```bash
@@ -102,10 +107,10 @@ python compare_imputers.py
 
 All random seeds are fixed (seed 42 for primary runs, seeds 7 and 13 for
 stability checks), so repeated runs reproduce the published numbers up to
-hardware-level nondeterminism in the tree ensembles. Other library versions
-can shift single cells slightly, mostly where XGBoost is the best family. The
-minimal-set runs (stages 8 and 9) used Python 3.11, scikit-learn 1.5.2,
-XGBoost 2.1.4 and pygam 0.9.1.
+hardware-level nondeterminism in the tree ensembles. The published numbers
+were produced with Python 3.11, scikit-learn 1.8.0, XGBoost 2.1.1, pygam
+0.12.0, pandas 2.3.1 and NumPy 2.2.6. Other library versions can shift single
+cells slightly, mostly where XGBoost is the best family.
 
 ## Mapping outputs to the paper
 
@@ -117,10 +122,10 @@ XGBoost 2.1.4 and pygam 0.9.1.
 | Fig. 6 (iterated exclusion) | `feature_relevance_recursive.csv`, `..._per_lithology.csv` |
 | Fig. 7 (cross-family rank spread) | `results/tables/ffs_selection_order.csv` |
 | Fig. 8 (model-family comparison) | `results/tables/model_family_comparison.csv` |
-| Fig. 9 / Table 3 (best-model heatmap, class priorities) | `best_model_global.csv`, `lithology/tables/best_model_by_lithology.csv` |
-| Table 2, Figs. 10–11, Supplementary Table SD (minimal measurement set) | `results/tables/minimal_set_search*.csv`, `results/tables/minimal_set_accuracy.csv` |
-| Fig. 12 (LOSO transfer gaps) | `results/tables/loso_validation.csv` |
-| Supplementary Tables SA–SD | stages 1–9 as listed above |
+| Fig. 9 / Table 3 (best-model heatmap, class priorities) | `best_model_global.csv`, `lithology/tables/best_model_by_lithology.csv`, `results/tables/best_model_uncertainty.csv` |
+| Table 2, Figs. 10–11, Supplementary Table SD (minimal measurement set) | `results/tables/minimal_set_search*.csv`, `results/tables/minimal_set_accuracy.csv`, `results/tables/best_model_uncertainty.csv` |
+| Fig. 12 (LOSO transfer gaps) | `results/tables/loso_validation.csv`, `results/tables/loso_family_sensitivity.csv` |
+| Supplementary Tables SA–SD | stages 1–12 as listed above |
 
 ## License
 

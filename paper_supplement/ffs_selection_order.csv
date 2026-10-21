@@ -1,104 +1,105 @@
 ﻿Target,Step,Feature added,Cum. R^2,Δ R^2
-Porosity (%),1,Bulk density ρ_b (g/cm^3),0.6151,0.6151
-,2,Grain density ρ_g (g/cm^3),0.6851,0.0700
-,3,Depth (m),0.7485,0.0634
-,4,UCS (MPa),0.7864,0.0380
-,5,P-wave velocity V_P (m/s),0.8032,0.0167
-,6,Thermal conductivity λ (W/m·K),0.8182,0.0150
-,7,Static Young's modulus E_s (GPa),0.8235,0.0053
-,8,Tensile strength σ_t (MPa),0.8262,0.0027
-Bulk density (g/cm^3),1,Porosity φ (%),0.5019,0.5019
-,2,Grain density ρ_g (g/cm^3),0.8228,0.3209
-,3,Permeability k (m^2),0.8503,0.0275
-,4,P-wave velocity V_P (m/s),0.8708,0.0206
-,5,Thermal conductivity λ (W/m·K),0.8881,0.0173
-,6,UCS (MPa),0.9001,0.0120
-,7,Depth (m),0.9113,0.0112
-,8,Specific heat capacity c_p (J/kg·K),0.9167,0.0055
-,9,S-wave velocity V_S (m/s),0.9197,0.0029
-Grain density (g/cm^3),1,Bulk density ρ_b (g/cm^3),0.3876,0.3876
-,2,Porosity φ (%),0.5458,0.1581
-,3,Depth (m),0.7389,0.1931
-,4,Specific heat capacity c_p (J/kg·K),0.7766,0.0377
-,5,Permeability k (m^2),0.8065,0.0299
-,6,Thermal conductivity λ (W/m·K),0.8149,0.0085
-,7,Thermal diffusivity α (× 10^-6 m^2/s),0.8162,0.0013
-Permeability (m^2),1,Porosity φ (%),0.2916,0.2916
-,2,Bulk density ρ_b (g/cm^3),0.4362,0.1446
-,3,Depth (m),0.5536,0.1174
-,4,Grain density ρ_g (g/cm^3),0.6353,0.0817
-,5,Thermal diffusivity α (× 10^-6 m^2/s),0.6747,0.0394
-,6,Specific heat capacity c_p (J/kg·K),0.6952,0.0205
-,7,P-wave velocity V_P (m/s),0.7078,0.0126
-,8,Thermal conductivity λ (W/m·K),0.7160,0.0082
-,9,Static Young's modulus E_s (GPa),0.7218,0.0058
-,10,UCS (MPa),0.7282,0.0064
-,11,Magnetic susceptibility χ (× 10^-3 SI),0.7247,-0.0035
-Thermal conductivity (W/(m·K)),1,Thermal diffusivity α (× 10^-6 m^2/s),0.4151,0.4151
-,2,Bulk density ρ_b (g/cm^3),0.5371,0.1220
-,3,Specific heat capacity c_p (J/kg·K),0.6208,0.0837
-,4,Grain density ρ_g (g/cm^3),0.6864,0.0656
-,5,Depth (m),0.7143,0.0279
-,6,Porosity φ (%),0.7375,0.0232
-,7,P-wave velocity V_P (m/s),0.7661,0.0286
-,8,Magnetic susceptibility χ (× 10^-3 SI),0.7686,0.0025
-Thermal diffusivity (10^-6 m^2/s),1,Specific heat capacity c_p (J/kg·K),0.4921,0.4921
-,2,Thermal conductivity λ (W/m·K),0.6132,0.1211
-,3,Bulk density ρ_b (g/cm^3),0.7351,0.1220
-,4,Grain density ρ_g (g/cm^3),0.7789,0.0438
-,5,S-wave velocity V_S (m/s),0.8080,0.0291
-,6,Permeability k (m^2),0.8080,-0.0000
-Specific heat (J/(kg·K)),1,Depth (m),0.0015,0.0015
-,2,Static Young's modulus E_s (GPa),0.0019,0.0004
-,3,UCS (MPa),0.0420,0.0401
-,4,Grain density ρ_g (g/cm^3),0.0654,0.0234
-,5,Thermal diffusivity α (× 10^-6 m^2/s),0.3122,0.2468
-,6,Thermal conductivity λ (W/m·K),0.5280,0.2158
-,7,Porosity φ (%),0.6825,0.1545
-,8,Bulk density ρ_b (g/cm^3),0.7157,0.0332
-,9,S-wave velocity V_S (m/s),0.7290,0.0133
-,10,Magnetic susceptibility χ (× 10^-3 SI),0.7349,0.0059
-,11,Tensile strength σ_t (MPa),0.7354,0.0005
-P-wave velocity (m/s),1,S-wave velocity V_S (m/s),0.6168,0.6168
-,2,Poisson ratio ν,0.7522,0.1354
-,3,Porosity φ (%),0.8224,0.0702
-,4,Grain density ρ_g (g/cm^3),0.8721,0.0498
-,5,Thermal conductivity λ (W/m·K),0.8951,0.0230
-,6,UCS (MPa),0.9114,0.0163
-,7,Bulk density ρ_b (g/cm^3),0.9149,0.0036
-S-wave velocity (m/s),1,P-wave velocity V_P (m/s),0.8392,0.8392
-,2,Poisson ratio ν,0.9491,0.1099
-,3,Grain density ρ_g (g/cm^3),0.9567,0.0077
-,4,Thermal conductivity λ (W/m·K),0.9603,0.0036
-UCS (MPa),1,Porosity φ (%),0.3081,0.3081
-,2,Static Young's modulus E_s (GPa),0.5464,0.2384
-,3,P-wave velocity V_P (m/s),0.6568,0.1103
-,4,Grain density ρ_g (g/cm^3),0.7203,0.0635
-,5,S-wave velocity V_S (m/s),0.7482,0.0279
-,6,Specific heat capacity c_p (J/kg·K),0.7686,0.0204
-,7,Bulk density ρ_b (g/cm^3),0.7796,0.0110
-,8,Thermal conductivity λ (W/m·K),0.7948,0.0152
-,9,Permeability k (m^2),0.7992,0.0044
-Static Young's modulus (GPa),1,UCS (MPa),0.4392,0.4392
-,2,Bulk density ρ_b (g/cm^3),0.5959,0.1567
-,3,Porosity φ (%),0.7245,0.1286
-,4,P-wave velocity V_P (m/s),0.7706,0.0461
-,5,Grain density ρ_g (g/cm^3),0.7996,0.0289
-,6,Permeability k (m^2),0.8153,0.0157
-,7,Thermal diffusivity α (× 10^-6 m^2/s),0.8262,0.0110
-,8,Specific heat capacity c_p (J/kg·K),0.8367,0.0105
-,9,Magnetic susceptibility χ (× 10^-3 SI),0.8422,0.0055
-,10,Cohesion c (MPa),0.8435,0.0013
-Dynamic Young's modulus (GPa),1,Specific heat capacity c_p (J/kg·K),0.1724,0.1724
-,2,Porosity φ (%),0.2484,0.0760
-,3,Grain density ρ_g (g/cm^3),0.3946,0.1462
-,4,Thermal conductivity λ (W/m·K),0.4610,0.0664
-,5,Poisson ratio ν,0.5004,0.0393
-,6,Magnetic susceptibility χ (× 10^-3 SI),0.5266,0.0262
-,7,UCS (MPa),0.5454,0.0188
-,8,Static Young's modulus E_s (GPa),0.5595,0.0141
-,9,Tensile strength σ_t (MPa),0.5655,0.0060
-,10,Electrical resistivity ρ_e (·m),0.5696,0.0041
+Porosity (%),1,Bulk density ρ_b (g/cm^3),0.6071,0.6071
+,2,Grain density ρ_g (g/cm^3),0.6786,0.0715
+,3,Depth (m),0.7414,0.0628
+,4,UCS (MPa),0.7757,0.0343
+,5,Thermal conductivity λ (W/m·K),0.7954,0.0197
+,6,P-wave velocity V_P (m/s),0.8082,0.0128
+,7,Static Young's modulus E_s (GPa),0.8155,0.0073
+,8,Specific heat capacity c_p (J/kg·K),0.8191,0.0036
+Bulk density (g/cm^3),1,Porosity φ (%),0.5075,0.5075
+,2,Grain density ρ_g (g/cm^3),0.8212,0.3138
+,3,Permeability k (m^2),0.8516,0.0304
+,4,P-wave velocity V_P (m/s),0.8711,0.0195
+,5,Thermal conductivity λ (W/m·K),0.8884,0.0173
+,6,Depth (m),0.8991,0.0107
+,7,UCS (MPa),0.9123,0.0133
+,8,Specific heat capacity c_p (J/kg·K),0.9169,0.0046
+Grain density (g/cm^3),1,Bulk density ρ_b (g/cm^3),0.3840,0.3840
+,2,Porosity φ (%),0.5561,0.1721
+,3,Depth (m),0.7355,0.1794
+,4,Specific heat capacity c_p (J/kg·K),0.7762,0.0406
+,5,Permeability k (m^2),0.8009,0.0247
+,6,Thermal conductivity λ (W/m·K),0.8087,0.0079
+,7,Tensile strength σ_t (MPa),0.8143,0.0056
+,8,Thermal diffusivity α (× 10^-6 m^2/s),0.8183,0.0040
+Permeability (m^2),1,Porosity φ (%),0.2832,0.2832
+,2,Bulk density ρ_b (g/cm^3),0.4334,0.1502
+,3,Depth (m),0.5412,0.1078
+,4,Grain density ρ_g (g/cm^3),0.6287,0.0874
+,5,Specific heat capacity c_p (J/kg·K),0.6728,0.0442
+,6,Thermal diffusivity α (× 10^-6 m^2/s),0.6975,0.0247
+,7,P-wave velocity V_P (m/s),0.7107,0.0132
+,8,Thermal conductivity λ (W/m·K),0.7186,0.0079
+,9,UCS (MPa),0.7252,0.0066
+,10,Tensile strength σ_t (MPa),0.7284,0.0033
+Thermal conductivity (W/(m·K)),1,Thermal diffusivity α (× 10^-6 m^2/s),0.4101,0.4101
+,2,Bulk density ρ_b (g/cm^3),0.5264,0.1164
+,3,Specific heat capacity c_p (J/kg·K),0.6158,0.0894
+,4,Grain density ρ_g (g/cm^3),0.6835,0.0677
+,5,Depth (m),0.7133,0.0298
+,6,Porosity φ (%),0.7346,0.0214
+,7,P-wave velocity V_P (m/s),0.7602,0.0256
+,8,Magnetic susceptibility χ (× 10^-3 SI),0.7655,0.0052
+,9,Poisson ratio ν,0.7675,0.0021
+Thermal diffusivity (10^-6 m^2/s),1,Specific heat capacity c_p (J/kg·K),0.5101,0.5101
+,2,Thermal conductivity λ (W/m·K),0.6200,0.1100
+,3,Porosity φ (%),0.7408,0.1207
+,4,Grain density ρ_g (g/cm^3),0.7787,0.0379
+,5,Permeability k (m^2),0.7988,0.0201
+,6,Bulk density ρ_b (g/cm^3),0.8097,0.0109
+,7,P-wave velocity V_P (m/s),0.8174,0.0078
+,8,Tensile strength σ_t (MPa),0.8128,-0.0046
+Specific heat (J/(kg·K)),1,Depth (m),0.0009,0.0009
+,2,Thermal diffusivity α (× 10^-6 m^2/s),0.0034,0.0025
+,3,Grain density ρ_g (g/cm^3),0.2855,0.2821
+,4,Thermal conductivity λ (W/m·K),0.5228,0.2373
+,5,Porosity φ (%),0.6730,0.1502
+,6,Bulk density ρ_b (g/cm^3),0.7124,0.0394
+,7,Poisson ratio ν,0.7225,0.0101
+,8,Permeability k (m^2),0.7255,0.0030
+P-wave velocity (m/s),1,S-wave velocity V_S (m/s),0.6222,0.6222
+,2,Poisson ratio ν,0.7507,0.1285
+,3,Porosity φ (%),0.8178,0.0671
+,4,Grain density ρ_g (g/cm^3),0.8687,0.0509
+,5,Thermal conductivity λ (W/m·K),0.8947,0.0259
+,6,UCS (MPa),0.9105,0.0158
+,7,Static Young's modulus E_s (GPa),0.9131,0.0026
+S-wave velocity (m/s),1,P-wave velocity V_P (m/s),0.7700,0.7700
+,2,Poisson ratio ν,0.9269,0.1569
+,3,Grain density ρ_g (g/cm^3),0.9488,0.0219
+,4,Thermal conductivity λ (W/m·K),0.9562,0.0074
+,5,Porosity φ (%),0.9591,0.0029
+UCS (MPa),1,Porosity φ (%),0.3354,0.3354
+,2,Static Young's modulus E_s (GPa),0.5525,0.2172
+,3,P-wave velocity V_P (m/s),0.6685,0.1160
+,4,Grain density ρ_g (g/cm^3),0.7269,0.0584
+,5,Thermal conductivity λ (W/m·K),0.7572,0.0303
+,6,S-wave velocity V_S (m/s),0.7731,0.0158
+,7,Poisson ratio ν,0.7859,0.0129
+,8,Bulk density ρ_b (g/cm^3),0.7976,0.0117
+,9,Permeability k (m^2),0.8052,0.0075
+,10,Specific heat capacity c_p (J/kg·K),0.8143,0.0091
+,11,Tensile strength σ_t (MPa),0.8221,0.0079
+,12,Depth (m),0.8199,-0.0022
+Static Young's modulus (GPa),1,UCS (MPa),0.3869,0.3869
+,2,Bulk density ρ_b (g/cm^3),0.5830,0.1961
+,3,Porosity φ (%),0.7376,0.1546
+,4,P-wave velocity V_P (m/s),0.7829,0.0453
+,5,Thermal conductivity λ (W/m·K),0.8102,0.0273
+,6,Permeability k (m^2),0.8188,0.0086
+,7,Grain density ρ_g (g/cm^3),0.8293,0.0105
+,8,Cohesion c (MPa),0.8369,0.0075
+,9,S-wave velocity V_S (m/s),0.8376,0.0007
+Dynamic Young's modulus (GPa),1,Specific heat capacity c_p (J/kg·K),0.1808,0.1808
+,2,Porosity φ (%),0.2535,0.0727
+,3,Grain density ρ_g (g/cm^3),0.3969,0.1434
+,4,Thermal conductivity λ (W/m·K),0.4650,0.0682
+,5,Poisson ratio ν,0.5138,0.0487
+,6,Magnetic susceptibility χ (× 10^-3 SI),0.5409,0.0271
+,7,UCS (MPa),0.5564,0.0156
+,8,Tensile strength σ_t (MPa),0.5692,0.0127
+,9,Static Young's modulus E_s (GPa),0.5736,0.0044
 Poisson ratio (-),1,Specific heat capacity c_p (J/kg·K),0.0128,0.0128
 ,2,Static Young's modulus E_s (GPa),0.0450,0.0321
 ,3,UCS (MPa),0.0751,0.0301
@@ -117,19 +118,17 @@ Tensile strength (MPa),1,Thermal conductivity λ (W/m·K),0.3279,0.3279
 ,8,UCS (MPa),0.6842,0.0464
 ,9,Thermal diffusivity α (× 10^-6 m^2/s),0.6954,0.0112
 ,10,Depth (m),0.6962,0.0008
-Friction angle (^),1,Static Young's modulus E_s (GPa),0.2107,0.2107
-,2,Thermal conductivity λ (W/m·K),0.3671,0.1564
-,3,Cohesion c (MPa),0.4950,0.1278
-,4,P-wave velocity V_P (m/s),0.5231,0.0282
-,5,Poisson ratio ν,0.5486,0.0255
-,6,Thermal diffusivity α (× 10^-6 m^2/s),0.5738,0.0252
-,7,Depth (m),0.5774,0.0036
-Cohesion (MPa),1,UCS (MPa),0.5318,0.5318
-,2,Thermal diffusivity α (× 10^-6 m^2/s),0.5976,0.0657
-,3,P-wave velocity V_P (m/s),0.6818,0.0843
-,4,Tensile strength σ_t (MPa),0.6988,0.0170
-,5,Bulk density ρ_b (g/cm^3),0.7181,0.0192
-,6,Static Young's modulus E_s (GPa),0.7081,-0.0100
+Friction angle (^),1,P-wave velocity V_P (m/s),0.2218,0.2218
+,2,Cohesion c (MPa),0.4479,0.2261
+,3,UCS (MPa),0.6265,0.1786
+,4,Tensile strength σ_t (MPa),0.7166,0.0901
+,5,S-wave velocity V_S (m/s),0.7566,0.0400
+,6,Depth (m),0.7566,0.0000
+Cohesion (MPa),1,UCS (MPa),0.5670,0.5670
+,2,Friction angle (°),0.7618,0.1948
+,3,Thermal diffusivity α (× 10^-6 m^2/s),0.8145,0.0527
+,4,Poisson ratio ν,0.8345,0.0200
+,5,Depth (m),0.8227,-0.0118
 Magnetic susceptibility (10^-3 SI),1,Specific heat capacity c_p (J/kg·K),0.4625,0.4625
 ,2,Grain density ρ_g (g/cm^3),0.5914,0.1290
 ,3,Thermal diffusivity α (× 10^-6 m^2/s),0.6343,0.0429

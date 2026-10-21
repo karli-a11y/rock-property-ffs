@@ -1,10 +1,10 @@
 """
 minimal_set_figures.py — Figures and table of the minimal-set analysis.
 
-Reads the outputs of minimal_set_search.py and minimal_set_accuracy.py and
-draws the score of all procedure combinations (paper Fig. 10) and the
-accuracy of the properties the minimal set does not deliver (Fig. 11), and
-writes Supplementary Table SD as LaTeX.
+Reads the outputs of minimal_set_search.py, minimal_set_accuracy.py and
+best_model_uncertainty.py and draws the score of all procedure combinations
+(paper Fig. 10) and the accuracy of the properties the minimal set does not
+deliver (Fig. 11), and writes Supplementary Table SD as LaTeX.
 
 Output: results/figures/Fig_minimal_set_search.png
         results/figures/Fig_BM_minimal_set.png
@@ -165,11 +165,45 @@ def fig_accuracy(acc):
     save(fig, "Fig_BM_minimal_set.png")
 
 
+SYMBOL_UNIT = {  # symbol of Table 1 and the unit of the prediction interval
+    "vs_dry_ms": r"$V_S$ (m/s)", "bulk_density_gcm3": r"$\rho_b$ (g/cm$^3$)",
+    "vp_dry_ms": r"$V_P$ (m/s)", "poisson_ratio": r"$\nu$",
+    "td_dry_1e6m2s": r"$\alpha$ ($10^{-6}$\,m$^2$/s)", "porosity_pct": r"$\phi$ (\%)",
+    "E_static_GPa": r"$E_s$ (GPa)", "cp_JkgK": r"$c_p$ (J/(kg$\cdot$K))",
+    "ucs_MPa": r"UCS (MPa)", "tc_dry_WmK": r"$\lambda$ (W/(m$\cdot$K))",
+    "grain_density_gcm3": r"$\rho_g$ (g/cm$^3$)", "tensile_MPa": r"$\sigma_t$ (MPa)",
+    "permeability_m2": r"$\log_{10} k$ (m$^2$)", "cohesion_MPa": r"$c$ (MPa)",
+    "E_dyn_GPa": r"$E_d$ (GPa)", "friction_angle_deg": r"$\varphi$ ($^\circ$)",
+    "mag_susc_1e3si": r"$\chi$ ($10^{-3}$\,SI)",
+}
+
+
+def fmt_sd(v):
+    return f"{v:.2f}" if v >= 0.005 else "$<$0.01"
+
+
+def fmt_pi(v):
+    """About two significant digits, never in exponent notation."""
+    if v >= 10:
+        return f"{v:.0f}"
+    if v >= 1:
+        return f"{v:.1f}"
+    return f"{v:.2f}" if v >= 0.1 else f"{v:.3f}"
+
+
 def table_sd(acc):
+    from best_model_uncertainty import NAMES
     g = acc[acc["lithology"] == "Global"].copy()
     # 0 = predicted, 1 = computed exactly, 2 = measured by the minimal set
     g["block"] = g["target"].map(lambda t: 2 if t in MEASURED else 1 if t in COMPUTED else 0)
-    g = g.sort_values(["block", "best_r2"], ascending=[True, False])
+    g = g.sort_values(["block", "best_r2", "full_r2"], ascending=[True, False, False])
+    unc = TAB_DIR / "best_model_uncertainty.csv"
+    if unc.exists():
+        u = pd.read_csv(unc)
+        u = u[u["lithology"] == "Global"]
+        unc = {pool: u[u["predictor_set"] == pool].set_index("target") for pool in ("full", "minimal set")}
+    else:
+        unc = None
     lines = []
     for block, part in g.groupby("block"):
         if block == 1:
@@ -177,9 +211,15 @@ def table_sd(acc):
         status = ["", "computed", "measured"][block]
         for r in part.itertuples():
             share = 100 * r.best_r2 / r.full_r2
-            lines.append(f"{name(r.target)} & {status} & {r.best_model} & "
-                         f"{r.n:,} & {r.best_r2:.2f} & {r.full_r2:.2f} & {share:.0f} \\\\"
-                         .replace(",", "{,}"))
+            cells = [SYMBOL_UNIT[r.target], status, r.best_model, f"{r.n:,}".replace(",", "{,}")]
+            if unc:
+                m, f = unc["minimal set"].loc[NAMES[r.target]], unc["full"].loc[NAMES[r.target]]
+                cells += [rf"{r.best_r2:.2f}\,$\pm$\,{fmt_sd(m.r2_sd)}",
+                          rf"{r.full_r2:.2f}\,$\pm$\,{fmt_sd(f.r2_sd)}", f"{share:.0f}",
+                          rf"$\pm${fmt_pi(m.pi90)} / {fmt_pi(f.pi90)}"]
+            else:
+                cells += [f"{r.best_r2:.2f}", f"{r.full_r2:.2f}", f"{share:.0f}"]
+            lines.append(" & ".join(cells) + r" \\")
     caption = (
         r"Supplementary Table~SD. Accuracy with the minimal measurement set on the "
         r"global dataset. For each target the hyperparameter-tuned best-model comparison "
@@ -196,16 +236,29 @@ def table_sd(acc):
         r"$\lambda$, and $\alpha$ only (circularity rule). The share is the minimal-set "
         r"$R^2$ as a percentage of the full-set value."
     )
+    header = r"Target & Minimal set & Family & $n$ & $R^2$ minimal & $R^2$ full & Share (\%) \\"
+    colspec = "lcccccc"
+    if unc:
+        caption += (
+            r" $R^2$ is given as the mean $\pm$ standard deviation over the outer folds. The "
+            r"last column gives the half-width of the 90\,\% prediction interval (PI), the "
+            r"90\,\% quantile of the absolute out-of-fold errors, for the minimal and the full "
+            r"predictor set. Targets are given by their symbols of Table~\ref{tab:variables} "
+            r"and the unit of the interval, which for porosity is percentage points and for "
+            r"permeability orders of magnitude.")
+        header = header.replace(r" \\", r" & 90\,\% PI, min./full \\")
+        colspec = "lccccccl"
     tex = "\n".join([
         r"\begin{table}[tbp]",
         r"\centering",
         r"\caption{" + caption + "}",
         r"\label{tab:supp-minimal-set}",
         r"\footnotesize",
+        r"\setlength{\tabcolsep}{4pt}",
         r"\renewcommand{\arraystretch}{1.15}",
-        r"\begin{tabular}{lcccccc}",
+        r"\begin{tabular}{" + colspec + "}",
         r"\toprule",
-        r"Target & Minimal set & Family & $n$ & $R^2$ minimal & $R^2$ full & Share (\%) \\",
+        header,
         r"\midrule",
         *lines,
         r"\bottomrule",

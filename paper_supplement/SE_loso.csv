@@ -1,786 +1,786 @@
 held_out_source,target,target_key,best_model,n_train,n_holdout,n_predictors,cv_r2_train_pool,holdout_r2,delta_r2
-AMPEDEK::Ampedek2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19125,162,17,0.9075,0.84,-0.0675
-AMPEDEK::Ampedek2024,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4483,409,15,0.6033,-1.1484,-1.7517
-AMPEDEK::Ampedek2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21022,200,16,0.8156,0.8736,0.058
+AMPEDEK::Ampedek2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19119,162,17,0.907,0.8543,-0.0527
+AMPEDEK::Ampedek2024,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4476,409,15,0.6083,-1.2256,-1.8339
+AMPEDEK::Ampedek2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21016,200,16,0.7757,0.8043,0.0286
 AMPEDEK::Ampedek2024,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5720,392,12,0.4796,-0.9121,-1.3917
-AMPEDEK::Ampedek2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6982,428,17,0.9191,0.9198,0.0007
-AMPEDEK::Ampedek2024,Poisson ratio $\nu$,poisson_ratio,RF,4829,428,17,0.8251,0.7534,-0.0717
-AMPEDEK::Ampedek2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19670,156,17,0.8289,-0.7608,-1.5897
-AMPEDEK::Ampedek2024,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5118,428,17,0.9611,0.9208,-0.0403
-AMPEDEK::Ampedek2024,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9076,128,16,0.7161,0.3378,-0.3782
-AMPEDEK::Ampedek2024,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1916,94,15,0.8345,-2.0352,-2.8697
-AMPEDEK::Ampedek2024,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,844,62,16,0.6916,-0.3494,-1.0409
-AMPEDEK::Ampedek2024,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11716,392,16,0.7031,-1.2544,-1.9575
-AMPEDEK::Ampedek2024,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7829,382,16,0.8707,-3.3661,-4.2368
-AMPEDEK::Ampedek2024,UCS (MPa),ucs_MPa,RF,2987,154,15,0.783,-0.6523,-1.4353
-AMPEDEK::Baer2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19251,36,17,0.9077,0.8116,-0.096
-AMPEDEK::Baer2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21186,36,16,0.8128,0.9255,0.1127
-AMPEDEK::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9168,36,16,0.7236,0.6147,-0.1089
-AMPEDEK::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12072,36,16,0.7032,0.536,-0.1672
-AMPEDEK::Bär2019,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19255,32,17,0.9068,0.8678,-0.039
-AMPEDEK::Bär2019,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.8129,0.6465,-0.1664
-AMPEDEK::Bär2019,Permeability $k$ (m²),permeability_m2,KNN,9830,171,14,0.675,-0.7142,-1.3892
-AMPEDEK::Bär2019,Porosity $\phi$ (%),porosity_pct,XGBoost,19794,32,17,0.8326,-5.4363,-6.269
-AMPEDEK::Bär2019,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9163,41,16,0.7217,0.4769,-0.2447
-AMPEDEK::Bär2019,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11895,213,16,0.6989,0.1847,-0.5142
-AMPEDEK::Bär2019,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8013,198,16,0.8568,0.2808,-0.576
-AMPEDEK::Bär2019,UCS (MPa),ucs_MPa,RF,3066,75,16,0.788,0.7445,-0.0435
-AMPEDEK::Hoffmann2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19123,164,17,0.9055,0.9916,0.0861
-AMPEDEK::Hoffmann2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4763,129,15,0.5686,0.2822,-0.2864
-AMPEDEK::Hoffmann2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21058,164,16,0.8147,0.9925,0.1778
-AMPEDEK::Hoffmann2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7281,129,17,0.9191,0.9911,0.072
-AMPEDEK::Hoffmann2015,Permeability $k$ (m²),permeability_m2,KNN,9957,44,14,0.6749,-0.207,-0.8819
-AMPEDEK::Hoffmann2015,Poisson ratio $\nu$,poisson_ratio,RF,5127,130,17,0.838,0.9582,0.1201
-AMPEDEK::Hoffmann2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19662,164,17,0.8282,-3.3382,-4.1663
-AMPEDEK::Hoffmann2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5417,129,17,0.9601,0.9752,0.0151
-AMPEDEK::Hoffmann2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9112,92,16,0.7203,0.6541,-0.0662
-AMPEDEK::Hoffmann2015,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1941,69,16,0.825,-1.5945,-2.4195
-AMPEDEK::Hoffmann2015,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.7184,0.404,-0.3144
-AMPEDEK::Hoffmann2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12028,80,16,0.7056,0.2757,-0.4299
-AMPEDEK::Hoffmann2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8133,78,16,0.8391,0.9567,0.1175
-AMPEDEK::Hoffmann2015,UCS (MPa),ucs_MPa,RF,3002,139,16,0.77,0.777,0.0069
-AMPEDEK::Klaeske2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,54,17,0.9076,-0.7563,-1.6639
-AMPEDEK::Klaeske2010,Permeability $k$ (m²),permeability_m2,KNN,9590,411,14,0.6627,-9.1694,-9.8321
-AMPEDEK::Klaeske2010,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8701,503,16,0.7154,0.6104,-0.1049
-AMPEDEK::Klaeske2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11605,503,16,0.7051,0.5841,-0.1209
-AMPEDEK::Klaeske2010,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7762,449,16,0.8417,0.9207,0.0789
-AMPEDEK::Klumbach2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19253,34,17,0.907,-0.2707,-1.1777
-AMPEDEK::Klumbach2010,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1976,34,16,0.8366,-0.1474,-0.984
-AMPEDEK::Klumbach2010,UCS (MPa),ucs_MPa,RF,3107,34,16,0.7793,0.2261,-0.5532
-AMPEDEK::Lambert2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,41,17,0.9063,0.9894,0.0831
-AMPEDEK::Lambert2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4852,40,15,0.5769,-0.1519,-0.7288
-AMPEDEK::Lambert2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.8125,0.9883,0.1758
-AMPEDEK::Lambert2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7315,95,17,0.9216,0.7868,-0.1348
-AMPEDEK::Lambert2016,Poisson ratio $\nu$,poisson_ratio,RF,5208,49,17,0.8371,0.7563,-0.0807
-AMPEDEK::Lambert2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19785,41,17,0.8317,-0.6048,-1.4365
-AMPEDEK::Lambert2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5451,95,17,0.9612,0.8275,-0.1337
-AMPEDEK::Lambert2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9163,41,16,0.7219,0.4501,-0.2718
-AMPEDEK::Lambert2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8170,41,16,0.8403,-0.2609,-1.1012
-AMPEDEK::Lambert2016,UCS (MPa),ucs_MPa,RF,3093,48,16,0.7853,0.2232,-0.562
-AMPEDEK::Maire2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,44,17,0.9077,0.919,0.0114
-AMPEDEK::Maire2014,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4848,44,15,0.5746,0.2303,-0.3443
-AMPEDEK::Maire2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21178,44,16,0.8122,0.9891,0.1769
-AMPEDEK::Maire2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7366,44,17,0.9198,-0.1203,-1.0401
-AMPEDEK::Maire2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,44,17,0.8259,0.7095,-0.1165
-AMPEDEK::Maire2014,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5502,44,17,0.9623,-0.2098,-1.1721
-AMPEDEK::Maire2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9160,44,16,0.7196,0.1964,-0.5232
-AMPEDEK::Maire2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12063,45,16,0.7089,-3.6353,-4.3442
-AMPEDEK::Maire2014,UCS (MPa),ucs_MPa,RF,3111,30,16,0.775,0.9446,0.1696
-AMPEDEK::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19171,116,17,0.9068,0.928,0.0212
-AMPEDEK::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21079,143,16,0.816,0.7064,-0.1096
-AMPEDEK::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7364,46,17,0.9199,0.2652,-0.6547
-AMPEDEK::Other,Permeability $k$ (m²),permeability_m2,KNN,9960,41,14,0.6763,-1.2166,-1.8929
-AMPEDEK::Other,Poisson ratio $\nu$,poisson_ratio,RF,5180,77,17,0.8417,0.0434,-0.7983
-AMPEDEK::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19724,102,17,0.8283,0.3683,-0.4601
-AMPEDEK::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9088,116,16,0.7335,-0.1001,-0.8336
-AMPEDEK::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1974,36,16,0.8493,-0.1433,-0.9926
-AMPEDEK::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11953,155,16,0.7047,0.539,-0.1657
-AMPEDEK::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8163,48,16,0.8302,0.9249,0.0947
-AMPEDEK::Vogel2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4832,60,15,0.5708,0.271,-0.2999
-AMPEDEK::Vogel2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7350,60,17,0.9201,0.9969,0.0767
-AMPEDEK::Vogel2016,Poisson ratio $\nu$,poisson_ratio,RF,5197,60,17,0.8308,0.9973,0.1666
-AMPEDEK::Vogel2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5486,60,17,0.9573,0.9996,0.0423
-AMPEDEK::Weinert2021,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19000,287,17,0.9053,0.9619,0.0566
-AMPEDEK::Weinert2021,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4295,597,15,0.5328,0.0578,-0.4751
-AMPEDEK::Weinert2021,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20855,367,16,0.8163,0.7126,-0.1038
-AMPEDEK::Weinert2021,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6816,594,17,0.9138,0.9788,0.0649
-AMPEDEK::Weinert2021,Poisson ratio $\nu$,poisson_ratio,RF,4661,596,17,0.8161,0.9498,0.1337
-AMPEDEK::Weinert2021,Porosity $\phi$ (%),porosity_pct,XGBoost,19552,274,17,0.8253,0.1913,-0.634
-AMPEDEK::Weinert2021,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,4952,594,17,0.9554,0.9914,0.036
-AMPEDEK::Weinert2021,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8982,222,16,0.7217,0.7517,0.03
-AMPEDEK::Weinert2021,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11511,597,16,0.7026,0.3419,-0.3607
-AMPEDEK::Weinert2021,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7614,597,16,0.8434,0.3189,-0.5245
-AMPEDEK::Welsch2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19104,183,17,0.9051,0.9638,0.0586
-AMPEDEK::Welsch2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21013,209,16,0.8152,0.9223,0.1071
-AMPEDEK::Welsch2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7359,51,17,0.9205,0.9972,0.0768
-AMPEDEK::Welsch2015,Poisson ratio $\nu$,poisson_ratio,RF,5205,52,17,0.8363,0.9165,0.0802
-AMPEDEK::Welsch2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19659,167,17,0.8267,0.095,-0.7317
-AMPEDEK::Welsch2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5495,51,17,0.9598,0.9998,0.0401
-AMPEDEK::Welsch2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9105,99,16,0.72,0.8881,0.1681
-AMPEDEK::Welsch2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12000,108,16,0.7016,0.8983,0.1968
-AMPEDEK::Welsch2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8103,108,16,0.8528,0.9505,0.0978
-AbuDhabiEvaporite2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19147,140,17,0.9074,-12.8923,-13.7997
-AbuDhabiEvaporite2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21084,138,16,0.8112,-44.0979,-44.9091
-AbuDhabiEvaporite2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7375,35,17,0.926,-9.1347,-10.0606
-AbuDhabiEvaporite2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19688,138,17,0.8272,-0.5001,-1.3273
-AbuDhabiEvaporite2024,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,780,126,16,0.6498,-15.6987,-16.3485
-AbuDhabiEvaporite2024,UCS (MPa),ucs_MPa,RF,3036,105,16,0.7755,-29.0777,-29.8532
-CentralApennines,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,38,17,0.906,-2.7916,-3.6976
-CentralApennines,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4861,31,15,0.5651,-23.2036,-23.7686
-CentralApennines,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7379,31,17,0.9204,-20.5704,-21.4908
-CentralApennines,Poisson ratio $\nu$,poisson_ratio,RF,5221,36,17,0.8481,-1.5207,-2.3688
-CentralApennines,Porosity $\phi$ (%),porosity_pct,XGBoost,19790,36,17,0.8276,-55.8375,-56.6651
-ChainePuysHeap2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7365,45,17,0.9193,-0.1753,-1.0946
-ChainePuysHeap2024,Permeability $k$ (m²),permeability_m2,KNN,9956,45,14,0.6718,-3.2723,-3.9442
-ChainePuysHeap2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19781,45,17,0.8282,0.0238,-0.8044
-ChainePuysHeap2024,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9174,30,16,0.705,-17.5618,-18.2668
-ChainePuysHeap2024,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1969,41,16,0.8353,-0.4458,-1.2811
-ChainePuysHeap2024,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12078,30,16,0.7013,-196.9302,-197.6315
-ChainePuysHeap2024,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8181,30,16,0.8112,-275.062,-275.8731
-ChainePuysHeap2024,UCS (MPa),ucs_MPa,RF,3100,41,16,0.7728,-0.007,-0.7797
-Cornwall_Turan2024::Casanova2020,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19225,62,17,0.9061,-3.0205,-3.9265
-Cornwall_Turan2024::Casanova2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4831,61,15,0.5798,-0.4644,-1.0442
-Cornwall_Turan2024::Casanova2020,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21178,44,16,0.8127,-3.723,-4.5357
-Cornwall_Turan2024::Casanova2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7355,55,17,0.9211,0.6353,-0.2858
-Cornwall_Turan2024::Casanova2020,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,44,17,0.8294,-38.4425,-39.2719
-Cornwall_Turan2024::Casanova2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5491,55,17,0.9605,0.2567,-0.7039
-Cornwall_Turan2024::Casanova2020,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9162,42,16,0.7159,0.8814,0.1656
-Cornwall_Turan2024::Casanova2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12065,43,16,0.7069,0.0931,-0.6138
-Cornwall_Turan2024::Casanova2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8168,43,16,0.85,0.7482,-0.1018
-Cornwall_Turan2024::Freundt2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4862,30,15,0.5684,-0.7302,-1.2985
-Cornwall_Turan2024::Freundt2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7380,30,17,0.92,0.3981,-0.5219
-Cornwall_Turan2024::Freundt2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5516,30,17,0.9595,0.4283,-0.5312
-Cornwall_Turan2024::Freundt2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12078,30,16,0.7034,-0.1184,-0.8218
-Cornwall_Turan2024::Freundt2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8181,30,16,0.8107,0.9316,0.1209
-Cornwall_Turan2024::Turan2024_thisStudy,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19174,113,17,0.9061,-0.0783,-0.9844
-Cornwall_Turan2024::Turan2024_thisStudy,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21092,130,16,0.8181,-0.5165,-1.3346
-Cornwall_Turan2024::Turan2024_thisStudy,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7280,130,17,0.925,-0.2925,-1.2176
-Cornwall_Turan2024::Turan2024_thisStudy,Porosity $\phi$ (%),porosity_pct,XGBoost,19711,115,17,0.8324,-0.546,-1.3784
-Cornwall_Turan2024::Turan2024_thisStudy,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5416,130,17,0.979,0.1341,-0.845
-Cornwall_Turan2024::Turan2024_thisStudy,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9108,96,16,0.7223,0.4879,-0.2344
-Cornwall_Turan2024::Turan2024_thisStudy,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11993,115,16,0.7002,0.3869,-0.3133
-Cornwall_Turan2024::Turan2024_thisStudy,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8093,118,16,0.8359,0.6627,-0.1732
-ESReviews2024_VolcGeotherm::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19163,124,17,0.9093,0.6372,-0.2721
-ESReviews2024_VolcGeotherm::Other,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4850,42,15,0.5731,0.3528,-0.2202
-ESReviews2024_VolcGeotherm::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7297,113,17,0.9227,0.6409,-0.2818
-ESReviews2024_VolcGeotherm::Other,Permeability $k$ (m²),permeability_m2,KNN,9934,67,14,0.6732,-0.4808,-1.1539
-ESReviews2024_VolcGeotherm::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19683,143,17,0.8313,0.4176,-0.4137
-ESReviews2024_VolcGeotherm::Other,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5475,71,17,0.9606,0.7383,-0.2223
-ESReviews2024_VolcGeotherm::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1980,30,16,0.837,0.4829,-0.3541
-ESReviews2024_VolcGeotherm::Other,UCS (MPa),ucs_MPa,RF,3057,84,16,0.7782,0.6236,-0.1546
-GenevaBasin,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7263,147,17,0.9173,-0.0784,-0.9957
-GenevaBasin,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5421,125,17,0.961,0.7889,-0.172
-GenevaBasin,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,822,84,16,0.6891,-3.2175,-3.9067
-GenevaBasin,UCS (MPa),ucs_MPa,RF,3005,136,16,0.7876,-13.3371,-14.1247
-GlobalDB::Aretz2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18884,403,17,0.9073,0.9379,0.0305
-GlobalDB::Aretz2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20820,402,16,0.8172,0.739,-0.0782
-GlobalDB::Aretz2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19423,403,17,0.8307,0.9351,0.1044
-GlobalDB::Aretz2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8823,381,16,0.7099,0.913,0.2032
-GlobalDB::Aretz2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11705,403,16,0.6989,0.6354,-0.0635
-GlobalDB::Aretz2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7830,381,16,0.8203,0.9587,0.1384
-GlobalDB::Baer2012,Permeability $k$ (m²),permeability_m2,KNN,9967,34,14,0.676,-2.2948,-2.9708
-GlobalDB::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9168,36,16,0.7211,-1.6913,-2.4124
-GlobalDB::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12071,37,16,0.7048,-0.0032,-0.7081
-GlobalDB::Betten2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,40,17,0.9063,-0.0553,-0.9617
-GlobalDB::Betten2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21182,40,16,0.8159,0.6858,-0.1301
-GlobalDB::Betten2015,Permeability $k$ (m²),permeability_m2,KNN,9961,40,14,0.6735,-3.2947,-3.9682
-GlobalDB::Betten2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.8363,0.8471,0.0108
-GlobalDB::Betten2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9164,40,16,0.7172,-0.0296,-0.7468
-GlobalDB::Betten2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8171,40,16,0.8359,-0.1466,-0.9825
-GlobalDB::Biewer2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19193,94,17,0.9085,0.73,-0.1785
-GlobalDB::Biewer2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21128,94,16,0.8122,0.9331,0.1209
-GlobalDB::Biewer2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19733,93,17,0.8245,-6.5006,-7.3252
-GlobalDB::Biewer2017,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9111,93,16,0.7247,-0.0048,-0.7295
-GlobalDB::Biewer2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8118,93,16,0.8279,-0.7988,-1.6268
-GlobalDB::Brettreich2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19199,88,17,0.9081,0.6639,-0.2443
-GlobalDB::Brettreich2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21134,88,16,0.8138,0.9854,0.1717
-GlobalDB::Brettreich2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19738,88,17,0.8292,-3.205,-4.0342
-GlobalDB::Brettreich2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9150,54,16,0.7257,-0.4591,-1.1848
-GlobalDB::Brettreich2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8157,54,16,0.8386,-7.3129,-8.1516
-GlobalDB::CSIRO2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18784,503,17,0.9072,0.4184,-0.4888
-GlobalDB::CSIRO2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,18475,2747,16,0.858,-0.1829,-1.041
-GlobalDB::CSIRO2007,Permeability $k$ (m²),permeability_m2,KNN,7045,2956,14,0.6236,-8.201,-8.8246
-GlobalDB::CSIRO2007,Porosity $\phi$ (%),porosity_pct,XGBoost,16802,3024,17,0.8328,0.0102,-0.8226
-GlobalDB::Czarnota2009,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19173,114,17,0.9073,0.9294,0.0221
-GlobalDB::Czarnota2009,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21108,114,16,0.8156,0.8382,0.0225
-GlobalDB::Czarnota2009,Porosity $\phi$ (%),porosity_pct,XGBoost,19712,114,17,0.8277,0.5776,-0.2501
-GlobalDB::Eagleton2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18749,538,17,0.9086,0.9434,0.0349
-GlobalDB::Eagleton2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20684,538,16,0.816,0.847,0.031
-GlobalDB::Eagleton2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19288,538,17,0.8273,0.8166,-0.0107
-GlobalDB::ElDakak2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19229,58,17,0.9075,0.7836,-0.1239
-GlobalDB::ElDakak2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21164,58,16,0.8143,-11.7588,-12.5731
-GlobalDB::ElDakak2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19768,58,17,0.8272,0.9149,0.0878
-GlobalDB::ElDakak2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9146,58,16,0.7287,-9.7854,-10.5141
-GlobalDB::Esteban2022,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19250,37,17,0.9081,-2.3386,-3.2467
-GlobalDB::Esteban2022,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6772,-3.3555,-4.0328
-GlobalDB::Esteban2022,Porosity $\phi$ (%),porosity_pct,XGBoost,19789,37,17,0.8363,-6.9189,-7.7552
-GlobalDB::FridleifsonVilmundardottir1998,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19204,83,17,0.908,-280.6967,-281.6047
-GlobalDB::FridleifsonVilmundardottir1998,Permeability $k$ (m²),permeability_m2,KNN,9918,83,14,0.6693,1.0,0.3307
-GlobalDB::FridleifsonVilmundardottir1998,Porosity $\phi$ (%),porosity_pct,XGBoost,19743,83,17,0.8263,0.5787,-0.2476
-GlobalDB::Fuchs2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19215,72,17,0.9069,-0.9026,-1.8096
-GlobalDB::Fuchs2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21150,72,16,0.8146,-0.4129,-1.2275
-GlobalDB::Fuchs2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19752,74,17,0.8271,-3.4793,-4.3064
-GlobalDB::Fuchs2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12034,74,16,0.6968,-3.0644,-3.7612
-GlobalDB::Gudmundsson1995,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18950,337,17,0.9039,-0.024,-0.9278
-GlobalDB::Gudmundsson1995,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21015,207,16,0.8154,0.8889,0.0735
-GlobalDB::Gudmundsson1995,Permeability $k$ (m²),permeability_m2,KNN,9747,254,14,0.6667,0.964,0.2973
-GlobalDB::Gudmundsson1995,Porosity $\phi$ (%),porosity_pct,XGBoost,19489,337,17,0.8432,-0.1729,-1.0161
-GlobalDB::Hawke1971b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19252,35,17,0.9059,0.8117,-0.0942
-GlobalDB::Hawke1971b,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21187,35,16,0.8122,0.6689,-0.1433
-GlobalDB::Hawke1971b,Porosity $\phi$ (%),porosity_pct,XGBoost,19791,35,17,0.8346,0.1783,-0.6564
-GlobalDB::Hoffmann2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19125,162,17,0.9068,0.9648,0.058
-GlobalDB::Hoffmann2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21060,162,16,0.8136,0.9967,0.1831
-GlobalDB::Hoffmann2015,Permeability $k$ (m²),permeability_m2,KNN,9957,44,14,0.6756,-8.3654,-9.0411
-GlobalDB::Hoffmann2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19664,162,17,0.8246,-11.5393,-12.3639
-GlobalDB::Hoffmann2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9114,90,16,0.726,-0.6801,-1.4062
-GlobalDB::Hoffmann2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8135,76,16,0.8551,0.5207,-0.3343
-GlobalDB::Hone1987,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19224,63,17,0.9056,0.9812,0.0756
-GlobalDB::Hone1987,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21159,63,16,0.8167,0.9647,0.148
-GlobalDB::Hone1987,Porosity $\phi$ (%),porosity_pct,XGBoost,19763,63,17,0.8264,-7.6651,-8.4915
-GlobalDB::Kahraman2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19252,35,17,0.9069,0.9566,0.0498
-GlobalDB::Kahraman2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.817,-0.0189,-0.8359
-GlobalDB::Kahraman2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19785,41,17,0.8324,-1.5177,-2.3501
-GlobalDB::Kassab2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,38,17,0.9069,-7.1702,-8.0771
-GlobalDB::Kassab2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21184,38,16,0.8176,0.7984,-0.0192
-GlobalDB::Kassab2015,Permeability $k$ (m²),permeability_m2,KNN,9963,38,14,0.6734,-0.7302,-1.4037
-GlobalDB::Kassab2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19788,38,17,0.8283,-0.7051,-1.5334
-GlobalDB::Konzack2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,54,17,0.9058,0.8806,-0.0251
-GlobalDB::Konzack2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21168,54,16,0.8147,0.9535,0.1389
-GlobalDB::Konzack2015,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6762,-0.1232,-0.7994
-GlobalDB::Konzack2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19772,54,17,0.8298,0.9481,0.1183
-GlobalDB::Konzack2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9151,53,16,0.732,-3.5009,-4.2329
-GlobalDB::Konzack2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8158,53,16,0.8132,0.2165,-0.5967
-GlobalDB::Lambert2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,40,17,0.9049,0.9889,0.084
-GlobalDB::Lambert2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21182,40,16,0.815,0.9941,0.1791
-GlobalDB::Lambert2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.834,-5.9338,-6.7678
-GlobalDB::Lambert2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9164,40,16,0.7174,0.0886,-0.6289
-GlobalDB::Lambert2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8171,40,16,0.8351,0.3069,-0.5282
-GlobalDB::Maire2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,44,17,0.9069,0.8695,-0.0374
-GlobalDB::Maire2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21178,44,16,0.813,0.9927,0.1797
-GlobalDB::Maire2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,44,17,0.827,-2.1485,-2.9755
-GlobalDB::Maire2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9160,44,16,0.7223,-1.301,-2.0233
-GlobalDB::Maire2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12064,44,16,0.7061,-9.4121,-10.1182
-GlobalDB::Manghnani2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19138,149,17,0.9068,0.2289,-0.678
-GlobalDB::Manghnani2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21073,149,16,0.8114,-0.6742,-1.4857
-GlobalDB::Manghnani2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19677,149,17,0.8258,0.9297,0.104
-GlobalDB::Moiseenko1968b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19250,37,17,0.9058,0.9559,0.0501
-GlobalDB::Moiseenko1968b,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9167,37,16,0.7177,0.8457,0.1281
-GlobalDB::Moiseenko1968b,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12071,37,16,0.7037,1.0,0.2963
-GlobalDB::Moiseenko1968b,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8176,35,16,0.7465,0.9956,0.249
-GlobalDB::Mueller2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19197,90,17,0.905,0.9575,0.0524
-GlobalDB::Mueller2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21132,90,16,0.816,-11.9938,-12.8098
-GlobalDB::Mueller2014,Permeability $k$ (m²),permeability_m2,KNN,9919,82,14,0.67,-1.5508,-2.2209
-GlobalDB::Mueller2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19736,90,17,0.8277,0.9794,0.1517
-GlobalDB::Mueller2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9114,90,16,0.7191,-3.8319,-4.5509
-GlobalDB::Mueller2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8120,91,16,0.8289,-2.6486,-3.4774
-GlobalDB::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19075,212,17,0.9071,0.73,-0.1771
-GlobalDB::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21013,209,16,0.8176,0.1961,-0.6216
-GlobalDB::Other,Permeability $k$ (m²),permeability_m2,KNN,9874,127,14,0.684,-0.3122,-0.9962
-GlobalDB::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19556,270,17,0.8254,0.7118,-0.1135
-GlobalDB::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9147,57,16,0.7295,0.0775,-0.652
-GlobalDB::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8157,54,16,0.8045,0.3643,-0.4402
-GlobalDB::Reyer2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,50,17,0.9056,0.6796,-0.226
-GlobalDB::Reyer2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21172,50,16,0.8171,0.7268,-0.0902
-GlobalDB::Reyer2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19776,50,17,0.8282,0.9253,0.0971
-GlobalDB::Roach2025,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18664,623,17,0.9028,0.9134,0.0107
-GlobalDB::Roach2025,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20599,623,16,0.8098,0.8911,0.0813
-GlobalDB::Roach2025,Porosity $\phi$ (%),porosity_pct,XGBoost,19203,623,17,0.8226,-0.962,-1.7845
-GlobalDB::Sandkuehler2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19229,58,17,0.9073,0.8919,-0.0153
-GlobalDB::Sandkuehler2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21164,58,16,0.8158,0.9107,0.0949
-GlobalDB::Sandkuehler2015,Permeability $k$ (m²),permeability_m2,KNN,9945,56,14,0.674,0.4863,-0.1877
-GlobalDB::Sandkuehler2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19768,58,17,0.8275,0.9285,0.101
-GlobalDB::Sandkuehler2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9146,58,16,0.7291,-3.8159,-4.545
-GlobalDB::Sandkuehler2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8153,58,16,0.8445,-0.0637,-0.9082
-GlobalDB::Schuetz2013,Porosity $\phi$ (%),porosity_pct,XGBoost,19638,188,17,0.8311,-0.6273,-1.4583
-GlobalDB::Schuetz2013,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11920,188,16,0.7187,-0.6,-1.3187
-GlobalDB::Siratovich2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19257,30,17,0.9054,0.7089,-0.1966
-GlobalDB::Siratovich2014,Permeability $k$ (m²),permeability_m2,KNN,9971,30,14,0.672,-30.8543,-31.5263
-GlobalDB::Siratovich2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19796,30,17,0.83,0.6441,-0.1859
-GlobalDB::Smith2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19254,33,17,0.9053,-3.1846,-4.0898
-GlobalDB::Smith2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21189,33,16,0.8198,0.6832,-0.1366
-GlobalDB::Smith2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19793,33,17,0.831,-0.2858,-1.1168
-GlobalDB::Weinert2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,50,17,0.9053,-1.3289,-2.2342
-GlobalDB::Weinert2014,Permeability $k$ (m²),permeability_m2,KNN,9952,49,14,0.6783,-1.0699,-1.7482
-GlobalDB::Weinert2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9154,50,16,0.7235,-18.0155,-18.739
-GlobalDB::Weinert2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8161,50,16,0.855,-54.7388,-55.5938
-GlobalDB::Weydt2018,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19207,80,17,0.9062,0.9402,0.034
-GlobalDB::Weydt2018,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21143,79,16,0.8134,0.9548,0.1414
-GlobalDB::Weydt2018,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6751,-2.3403,-3.0153
-GlobalDB::Weydt2018,Porosity $\phi$ (%),porosity_pct,XGBoost,19747,79,17,0.8279,0.4209,-0.407
-GlobalDB::Weydt2018,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12063,45,16,0.7066,0.1279,-0.5786
-GlobalDB::Weydt2018,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8167,44,16,0.8535,0.2371,-0.6164
-GlobalDB::Wyatt1984,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19036,251,17,0.9057,0.8768,-0.029
-GlobalDB::Wyatt1984,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20971,251,16,0.8192,0.7861,-0.0331
-GlobalDB::Wyatt1984,Porosity $\phi$ (%),porosity_pct,XGBoost,19575,251,17,0.8316,0.8869,0.0553
-GlobalDB::YangAplin2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19257,30,17,0.9051,0.9413,0.0362
-GlobalDB::YangAplin2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21192,30,16,0.8161,-1.099,-1.9152
-GlobalDB::YangAplin2007,Permeability $k$ (m²),permeability_m2,KNN,9971,30,14,0.6778,-66.5258,-67.2036
-GlobalDB::YangAplin2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19796,30,17,0.8318,0.7234,-0.1084
-GlobalDB::Yu2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19202,85,17,0.9065,0.1699,-0.7366
-GlobalDB::Yu2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21137,85,16,0.8149,0.9421,0.1272
-GlobalDB::Yu2017,Permeability $k$ (m²),permeability_m2,KNN,9928,73,14,0.6671,-75.3691,-76.0362
-GlobalDB::Yu2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19741,85,17,0.8263,0.9251,0.0988
-GlobalDB::Zhao2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,38,17,0.906,-5.7932,-6.6992
-GlobalDB::Zhao2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19788,38,17,0.8286,-164.761,-165.5896
-HeapViolay2021::Bubeck et al. (2017),Porosity $\phi$ (%),porosity_pct,XGBoost,19788,38,17,0.8298,-1.5138,-2.3437
-HeapViolay2021::Bubeck et al. (2017),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1972,38,16,0.8385,0.1341,-0.7043
-HeapViolay2021::Bubeck et al. (2017),UCS (MPa),ucs_MPa,RF,3103,38,16,0.7613,0.4283,-0.333
-HeapViolay2021::Di Muro et al. (2020),Porosity $\phi$ (%),porosity_pct,XGBoost,19777,49,17,0.832,0.2173,-0.6147
-HeapViolay2021::Di Muro et al. (2020),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1961,49,16,0.8411,0.4472,-0.3938
-HeapViolay2021::Di Muro et al. (2020),UCS (MPa),ucs_MPa,RF,3092,49,16,0.7668,0.4453,-0.3216
-"HeapViolay2021::Heap et al. (2020, JVGR)",Porosity $\phi$ (%),porosity_pct,XGBoost,19784,42,17,0.8279,-2.4634,-3.2913
-"HeapViolay2021::Heap et al. (2020, JVGR)",Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1968,42,16,0.8327,0.6017,-0.231
-"HeapViolay2021::Heap et al. (2020, JVGR)",UCS (MPa),ucs_MPa,RF,3099,42,16,0.7702,0.8048,0.0346
-HeapViolay2021::Modensky et al. (2018),Porosity $\phi$ (%),porosity_pct,XGBoost,19680,146,17,0.8276,-0.4895,-1.3171
-HeapViolay2021::Modensky et al. (2018),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1864,146,16,0.838,0.5183,-0.3198
-HeapViolay2021::Modensky et al. (2018),UCS (MPa),ucs_MPa,RF,2995,146,16,0.7867,0.5287,-0.258
-HeapViolay2021::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19610,216,17,0.828,0.6974,-0.1306
-HeapViolay2021::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1794,216,16,0.8228,0.8374,0.0145
-HeapViolay2021::Other,UCS (MPa),ucs_MPa,RF,2925,216,16,0.7577,0.7268,-0.0309
-"HeapViolay2021::Wyering et al. (2014, JVGR)",Porosity $\phi$ (%),porosity_pct,XGBoost,19713,113,17,0.8243,0.5112,-0.3131
-"HeapViolay2021::Wyering et al. (2014, JVGR)",Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1897,113,16,0.8431,0.4042,-0.4389
-"HeapViolay2021::Wyering et al. (2014, JVGR)",UCS (MPa),ucs_MPa,RF,3028,113,16,0.7839,-0.4533,-1.2372
-HeapViolay2021::this study,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.8295,0.3385,-0.491
-HeapViolay2021::this study,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1970,40,16,0.8411,0.5387,-0.3024
-HeapViolay2021::this study,UCS (MPa),ucs_MPa,RF,3101,40,16,0.7782,0.5277,-0.2505
-MidGerman::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,43,17,0.906,0.9959,0.0898
-MidGerman::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21179,43,16,0.8122,0.9444,0.1322
-MidGerman::Other,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6773,-8.3879,-9.0652
-MidGerman::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19784,42,17,0.8363,0.6587,-0.1777
-MidGerman::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9161,43,16,0.723,-0.4713,-1.1942
-MidGerman::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12061,47,16,0.7051,0.127,-0.5781
-MidGerman::Weinert2021_MidGerman_ref10,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,44,17,0.9066,0.9677,0.0611
-MidGerman::Weinert2021_MidGerman_ref10,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4849,43,15,0.5758,0.6232,0.0474
-MidGerman::Weinert2021_MidGerman_ref10,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21178,44,16,0.8138,0.9733,0.1595
-MidGerman::Weinert2021_MidGerman_ref10,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7367,43,17,0.9209,0.9941,0.0732
-MidGerman::Weinert2021_MidGerman_ref10,Poisson ratio $\nu$,poisson_ratio,RF,5213,44,17,0.8437,0.9457,0.1019
-MidGerman::Weinert2021_MidGerman_ref10,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,44,17,0.8254,0.6775,-0.1479
-MidGerman::Weinert2021_MidGerman_ref10,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5503,43,17,0.9606,0.9951,0.0345
-MidGerman::Weinert2021_MidGerman_ref10,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9160,44,16,0.7232,0.2292,-0.494
-MidGerman::Weinert2021_MidGerman_ref10,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12064,44,16,0.7083,-0.534,-1.2423
-MidGerman::Weinert2021_MidGerman_ref10,UCS (MPa),ucs_MPa,RF,3111,30,16,0.7738,0.9284,0.1547
-MidGerman::Weinert2021_MidGerman_ref11,Poisson ratio $\nu$,poisson_ratio,RF,5210,47,17,0.8294,-30.2698,-31.0992
-MidGerman::Weinert2021_MidGerman_ref11,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1963,47,16,0.8169,-8.0405,-8.8574
-MidGerman::Weinert2021_MidGerman_ref11,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12061,47,16,0.7032,-0.9499,-1.6531
-MidGerman::Weinert2021_MidGerman_ref11,UCS (MPa),ucs_MPa,RF,3094,47,16,0.7884,-6671.6342,-6672.4226
-MidGerman::Weinert2021_MidGerman_ref15,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4832,60,15,0.577,0.0688,-0.5081
-MidGerman::Weinert2021_MidGerman_ref15,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7350,60,17,0.9193,0.9892,0.0698
-MidGerman::Weinert2021_MidGerman_ref15,Poisson ratio $\nu$,poisson_ratio,RF,5197,60,17,0.8295,0.9969,0.1674
-MidGerman::Weinert2021_MidGerman_ref15,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5486,60,17,0.957,0.9996,0.0426
-MidGerman::Weinert2021_MidGerman_ref16,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,50,17,0.9056,0.9711,0.0654
-MidGerman::Weinert2021_MidGerman_ref16,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21172,50,16,0.8131,0.9667,0.1536
-MidGerman::Weinert2021_MidGerman_ref16,Porosity $\phi$ (%),porosity_pct,XGBoost,19776,50,17,0.8302,-0.3817,-1.2119
-MidGerman::Weinert2021_MidGerman_ref17,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19255,32,17,0.9065,0.8697,-0.0369
-MidGerman::Weinert2021_MidGerman_ref17,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.8135,0.6566,-0.1569
-MidGerman::Weinert2021_MidGerman_ref17,Permeability $k$ (m²),permeability_m2,KNN,9830,171,14,0.6745,-2.7038,-3.3783
-MidGerman::Weinert2021_MidGerman_ref17,Porosity $\phi$ (%),porosity_pct,XGBoost,19794,32,17,0.8323,-7.5226,-8.3549
-MidGerman::Weinert2021_MidGerman_ref17,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9164,40,16,0.7198,-0.2115,-0.9312
-MidGerman::Weinert2021_MidGerman_ref17,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11896,212,16,0.6986,0.177,-0.5215
-MidGerman::Weinert2021_MidGerman_ref17,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8045,166,16,0.8193,0.1576,-0.6617
-MidGerman::Weinert2021_MidGerman_ref17,UCS (MPa),ucs_MPa,RF,3066,75,16,0.7864,0.7355,-0.0509
-MidGerman::Weinert2021_MidGerman_ref18,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19133,154,17,0.9064,0.9559,0.0495
-MidGerman::Weinert2021_MidGerman_ref18,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21058,164,16,0.8135,0.8865,0.073
-MidGerman::Weinert2021_MidGerman_ref18,Porosity $\phi$ (%),porosity_pct,XGBoost,19687,139,17,0.8297,0.1602,-0.6695
-MidGerman::Weinert2021_MidGerman_ref18,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9105,99,16,0.7212,0.909,0.1879
-MidGerman::Weinert2021_MidGerman_ref18,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12000,108,16,0.7036,0.812,0.1085
-MidGerman::Weinert2021_MidGerman_ref18,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8103,108,16,0.86,0.9416,0.0815
-MidGerman::Weinert2021_MidGerman_ref2,Permeability $k$ (m²),permeability_m2,KNN,9947,54,14,0.6772,-22.2555,-22.9326
-MidGerman::Weinert2021_MidGerman_ref2,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12036,72,16,0.703,0.1879,-0.5151
-MidGerman::Weinert2021_MidGerman_ref2,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8157,54,16,0.836,0.6364,-0.1996
-MidGerman::Weinert2021_MidGerman_ref5,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4850,42,15,0.5782,-0.2931,-0.8712
-MidGerman::Weinert2021_MidGerman_ref5,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21170,52,16,0.8088,-109.6356,-110.4445
-MidGerman::Weinert2021_MidGerman_ref5,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7368,42,17,0.9209,0.9828,0.0619
-MidGerman::Weinert2021_MidGerman_ref5,Poisson ratio $\nu$,poisson_ratio,RF,5215,42,17,0.8437,0.9603,0.1166
-MidGerman::Weinert2021_MidGerman_ref5,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5504,42,17,0.9605,0.9981,0.0377
-MidGerman::Weinert2021_MidGerman_ref6,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4803,89,15,0.5768,-0.1969,-0.7737
-MidGerman::Weinert2021_MidGerman_ref6,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21133,89,16,0.8131,-0.2212,-1.0343
-MidGerman::Weinert2021_MidGerman_ref6,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7321,89,17,0.9203,0.98,0.0596
-MidGerman::Weinert2021_MidGerman_ref6,Poisson ratio $\nu$,poisson_ratio,RF,5168,89,17,0.8374,0.8531,0.0156
-MidGerman::Weinert2021_MidGerman_ref6,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5457,89,17,0.9595,0.9902,0.0307
-MidGerman::Weinert2021_MidGerman_ref6,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9115,89,16,0.7266,-0.2675,-0.9941
-MidGerman::Weinert2021_MidGerman_ref6,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12019,89,16,0.704,-0.116,-0.82
-MidGerman::Weinert2021_MidGerman_ref7,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19123,164,17,0.9052,0.9763,0.071
-MidGerman::Weinert2021_MidGerman_ref7,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4859,33,15,0.5681,0.7891,0.2211
-MidGerman::Weinert2021_MidGerman_ref7,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21058,164,16,0.8151,0.9664,0.1513
-MidGerman::Weinert2021_MidGerman_ref7,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7377,33,17,0.9199,0.9943,0.0744
-MidGerman::Weinert2021_MidGerman_ref7,Permeability $k$ (m²),permeability_m2,KNN,9957,44,14,0.6764,-0.9076,-1.584
-MidGerman::Weinert2021_MidGerman_ref7,Poisson ratio $\nu$,poisson_ratio,RF,5154,103,17,0.8445,-1.1225,-1.967
-MidGerman::Weinert2021_MidGerman_ref7,Porosity $\phi$ (%),porosity_pct,XGBoost,19662,164,17,0.8285,-5.3371,-6.1655
-MidGerman::Weinert2021_MidGerman_ref7,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5513,33,17,0.9593,0.9816,0.0223
-MidGerman::Weinert2021_MidGerman_ref7,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9112,92,16,0.7181,0.6043,-0.1139
-MidGerman::Weinert2021_MidGerman_ref7,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1935,75,16,0.828,0.0838,-0.7442
-MidGerman::Weinert2021_MidGerman_ref7,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.7228,0.4253,-0.2975
-MidGerman::Weinert2021_MidGerman_ref7,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12016,92,16,0.703,-0.41,-1.1129
-MidGerman::Weinert2021_MidGerman_ref7,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8120,91,16,0.8033,0.8673,0.064
-MidGerman::Weinert2021_MidGerman_ref7,UCS (MPa),ucs_MPa,RF,3002,139,16,0.7784,-0.0054,-0.7838
-MidGerman::Weinert2021_MidGerman_ref8,Permeability $k$ (m²),permeability_m2,KNN,9528,473,14,0.6644,-14.261,-14.9254
-MidGerman::Weinert2021_MidGerman_ref8,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8643,561,16,0.7168,0.8037,0.0869
-MidGerman::Weinert2021_MidGerman_ref8,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11547,561,16,0.7014,0.9496,0.2482
-MidGerman::Weinert2021_MidGerman_ref8,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7650,561,16,0.8436,0.8667,0.0231
-MidGerman::Weinert2021_MidGerman_ref9,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,41,17,0.9062,0.9679,0.0617
-MidGerman::Weinert2021_MidGerman_ref9,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4852,40,15,0.5776,-0.7162,-1.2939
-MidGerman::Weinert2021_MidGerman_ref9,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.8134,0.9591,0.1457
-MidGerman::Weinert2021_MidGerman_ref9,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7311,99,17,0.9203,0.9843,0.0641
-MidGerman::Weinert2021_MidGerman_ref9,Poisson ratio $\nu$,poisson_ratio,RF,5158,99,17,0.8401,0.9275,0.0874
-MidGerman::Weinert2021_MidGerman_ref9,Porosity $\phi$ (%),porosity_pct,XGBoost,19785,41,17,0.8328,-1.7782,-2.6109
-MidGerman::Weinert2021_MidGerman_ref9,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5447,99,17,0.9613,0.9955,0.0343
-MidGerman::Weinert2021_MidGerman_ref9,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9081,123,16,0.7223,0.2264,-0.4959
-MidGerman::Weinert2021_MidGerman_ref9,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11985,123,16,0.7024,-0.1131,-0.8155
-MidGerman::Weinert2021_MidGerman_ref9,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8129,82,16,0.8151,0.6981,-0.117
-MidGerman::Weinert2021_MidGerman_ref9,UCS (MPa),ucs_MPa,RF,3093,48,16,0.7829,0.274,-0.5089
-MidGerman::Weinert2021_MidGerman_thisStudy,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18931,356,17,0.907,0.8854,-0.0216
-MidGerman::Weinert2021_MidGerman_thisStudy,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4459,433,15,0.5541,0.4576,-0.0965
-MidGerman::Weinert2021_MidGerman_thisStudy,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20746,476,16,0.8136,0.7338,-0.0797
-MidGerman::Weinert2021_MidGerman_thisStudy,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6962,448,17,0.9157,0.9937,0.078
-MidGerman::Weinert2021_MidGerman_thisStudy,Poisson ratio $\nu$,poisson_ratio,RF,4808,449,17,0.8224,0.9818,0.1594
-MidGerman::Weinert2021_MidGerman_thisStudy,Porosity $\phi$ (%),porosity_pct,XGBoost,19477,349,17,0.8286,0.5169,-0.3118
-MidGerman::Weinert2021_MidGerman_thisStudy,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5098,448,17,0.9577,0.9976,0.0399
-MidGerman::Weinert2021_MidGerman_thisStudy,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8954,250,16,0.7297,-0.0235,-0.7532
-MidGerman::Weinert2021_MidGerman_thisStudy,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11701,407,16,0.699,0.6349,-0.064
-MidGerman::Weinert2021_MidGerman_thisStudy,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8124,87,16,0.8416,0.5863,-0.2553
-Mielke2017,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6745,665,17,0.9361,0.5912,-0.345
-Mielke2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19163,663,17,0.8366,0.4105,-0.4262
-Mielke2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11443,665,16,0.7251,-2.6269,-3.352
-P3::Alam2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21180,42,16,0.8176,-74.5289,-75.3464
-P3::Alam2011,Permeability $k$ (m²),permeability_m2,KNN,9959,42,14,0.6754,-1.8141,-2.4894
-P3::Alam2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19784,42,17,0.8262,-7.4565,-8.2828
-P3::Aretz2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18341,946,17,0.9071,0.6912,-0.2159
-P3::Aretz2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20275,947,16,0.8165,-3.0185,-3.835
-P3::Aretz2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7003,407,17,0.923,0.1739,-0.749
-P3::Aretz2015,Porosity $\phi$ (%),porosity_pct,XGBoost,18878,948,17,0.8298,0.7486,-0.0812
-P3::Aretz2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8434,770,16,0.7165,0.6726,-0.0439
-P3::Aretz2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11154,954,16,0.7092,0.2555,-0.4538
-P3::Aretz2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7287,924,16,0.8373,0.4847,-0.3526
-P3::Baer2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18910,377,17,0.9053,0.9395,0.0343
-P3::Baer2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20841,381,16,0.8179,0.7562,-0.0617
-P3::Baer2012,Permeability $k$ (m²),permeability_m2,KNN,9842,159,14,0.6729,0.2291,-0.4438
-P3::Baer2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19444,382,17,0.828,0.9472,0.1192
-P3::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8887,317,16,0.7227,-2.0005,-2.7232
-P3::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11724,384,16,0.7039,-0.2465,-0.9504
-P3::Betten2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,40,17,0.9057,0.4976,-0.4081
-P3::Betten2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21182,40,16,0.8199,0.7269,-0.093
-P3::Betten2015,Permeability $k$ (m²),permeability_m2,KNN,9961,40,14,0.6746,-0.7996,-1.4742
-P3::Betten2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.8279,0.8325,0.0045
-P3::Betten2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9164,40,16,0.7143,0.7929,0.0786
-P3::Betten2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12068,40,16,0.7038,-11.4274,-12.1312
-P3::Betten2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8171,40,16,0.8423,0.4777,-0.3646
-P3::Biewer2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19193,94,17,0.907,0.814,-0.0931
-P3::Biewer2017,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4799,93,15,0.5783,0.0701,-0.5082
-P3::Biewer2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21128,94,16,0.813,0.9331,0.12
-P3::Biewer2017,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7317,93,17,0.9191,0.9669,0.0478
-P3::Biewer2017,Poisson ratio $\nu$,poisson_ratio,RF,5164,93,17,0.8409,0.9461,0.1052
-P3::Biewer2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19733,93,17,0.8231,0.0191,-0.804
-P3::Biewer2017,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5453,93,17,0.9604,0.9875,0.0271
-P3::Biewer2017,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9111,93,16,0.7203,0.5209,-0.1994
-P3::Biewer2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12015,93,16,0.7013,-0.2317,-0.933
-P3::Biewer2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8118,93,16,0.8106,0.8519,0.0412
-P3::Brettreich2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19198,89,17,0.9039,0.9382,0.0343
-P3::Brettreich2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4805,87,15,0.5805,0.0475,-0.5331
-P3::Brettreich2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21133,89,16,0.816,0.8954,0.0794
-P3::Brettreich2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7320,90,17,0.9202,0.9751,0.0549
-P3::Brettreich2016,Poisson ratio $\nu$,poisson_ratio,RF,5167,90,17,0.8444,0.97,0.1256
-P3::Brettreich2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19737,89,17,0.8361,0.2331,-0.6031
-P3::Brettreich2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5456,90,17,0.9612,0.9754,0.0142
-P3::Brettreich2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9150,54,16,0.7272,0.2745,-0.4527
-P3::Brettreich2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12054,54,16,0.7004,-0.0094,-0.7098
-P3::Brettreich2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8157,54,16,0.8235,-2.4607,-3.2842
-P3::Caroll1969,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19225,62,17,0.9074,-0.0385,-0.9459
-P3::Caroll1969,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4831,61,15,0.5779,-0.1699,-0.7478
-P3::Caroll1969,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7348,62,17,0.9199,0.9064,-0.0135
-P3::Caroll1969,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5484,62,17,0.9598,0.846,-0.1138
-P3::ElDakak2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19172,115,17,0.9062,0.7358,-0.1704
-P3::ElDakak2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21107,115,16,0.8178,-7.8299,-8.6476
-P3::ElDakak2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19711,115,17,0.8299,0.5599,-0.27
-P3::ElDakak2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9090,114,16,0.7174,-0.3314,-1.0488
-P3::ElDakak2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11993,115,16,0.7032,0.2358,-0.4674
-P3::Esteban2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7364,46,17,0.9195,0.0998,-0.8197
-P3::Esteban2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19780,46,17,0.8296,0.23,-0.5996
-P3::Esteban2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12062,46,16,0.7106,-5.2998,-6.0104
-P3::Franzson2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21123,99,16,0.8168,-0.2612,-1.078
-P3::Franzson2011,Permeability $k$ (m²),permeability_m2,KNN,9902,99,14,0.6755,-0.5201,-1.1956
-P3::Franzson2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19727,99,17,0.8348,-1.2235,-2.0583
-P3::Fuchs2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19215,72,17,0.907,0.2782,-0.6288
-P3::Fuchs2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21150,72,16,0.8149,-1.4543,-2.2692
-P3::Fuchs2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19754,72,17,0.8293,-3.4897,-4.319
-P3::Fuchs2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12036,72,16,0.7134,-10.4566,-11.17
-P3::Gaertner2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19250,37,17,0.9055,-0.1068,-1.0124
-P3::Gaertner2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21184,38,16,0.8153,-27.7376,-28.5529
-P3::Gaertner2017,Permeability $k$ (m²),permeability_m2,KNN,9861,140,14,0.6797,-8.9519,-9.6316
-P3::Gaertner2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19789,37,17,0.833,0.6108,-0.2222
-P3::Gaertner2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11962,146,16,0.6935,-1.1434,-1.8369
-P3::Gaertner2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8065,146,16,0.8543,-0.3258,-1.1801
-P3::Garcia-Gutierrez2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,38,17,0.907,0.6982,-0.2089
-P3::Garcia-Gutierrez2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21184,38,16,0.8174,0.061,-0.7563
-P3::Garcia-Gutierrez2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19783,43,17,0.8259,0.6603,-0.1657
-P3::Geist2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19253,34,17,0.908,0.8295,-0.0785
-P3::Geist2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21188,34,16,0.8094,0.6689,-0.1404
-P3::Geist2011,Permeability $k$ (m²),permeability_m2,KNN,9967,34,14,0.6701,-0.7333,-1.4035
-P3::Geist2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19792,34,17,0.8299,0.5783,-0.2515
-P3::Geist2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9174,30,16,0.7213,-0.8932,-1.6145
-P3::Geist2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12074,34,16,0.7087,-4.0322,-4.7409
-P3::Heap2015b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,54,17,0.9048,0.6576,-0.2472
-P3::Heap2015b,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7356,54,17,0.9198,0.8116,-0.1083
-P3::Heap2015b,Porosity $\phi$ (%),porosity_pct,XGBoost,19772,54,17,0.8282,0.9136,0.0854
-P3::Heap2015b,UCS (MPa),ucs_MPa,RF,3105,36,16,0.7866,0.894,0.1074
-P3::Homuth2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21127,95,16,0.8161,-0.1249,-0.9411
-P3::Homuth2014,Permeability $k$ (m²),permeability_m2,KNN,9929,72,14,0.6715,-0.6496,-1.3212
-P3::Homuth2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19732,94,17,0.8341,-5.5883,-6.4224
-P3::Homuth2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12013,95,16,0.7007,-4.0447,-4.7455
-P3::Islam2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,40,17,0.9073,-1.6131,-2.5204
-P3::Islam2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21183,39,16,0.816,-6.9425,-7.7585
-P3::Islam2010,Permeability $k$ (m²),permeability_m2,KNN,9961,40,14,0.6712,-9.1705,-9.8417
-P3::Islam2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.8295,-1.393,-2.2225
-P3::Kahraman2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19252,35,17,0.9075,0.9805,0.073
-P3::Kahraman2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21181,41,16,0.8168,-0.0627,-0.8795
-P3::Kahraman2007,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7369,41,17,0.9218,-1.396,-2.3178
-P3::Kahraman2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19785,41,17,0.827,-0.2849,-1.112
-P3::Kassab2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19245,42,17,0.9067,-1.4427,-2.3494
-P3::Kassab2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21180,42,16,0.8195,0.0814,-0.7381
-P3::Kassab2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7371,39,17,0.921,-0.5159,-1.4369
-P3::Kassab2015,Permeability $k$ (m²),permeability_m2,KNN,9959,42,14,0.6715,-2.6256,-3.2972
-P3::Kassab2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19784,42,17,0.8261,-0.4479,-1.274
-P3::Klumbach2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19192,95,17,0.9097,0.2645,-0.6452
-P3::Klumbach2010,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7361,49,17,0.9188,0.5003,-0.4185
-P3::Klumbach2010,Poisson ratio $\nu$,poisson_ratio,RF,5166,91,17,0.8558,0.1218,-0.734
-P3::Klumbach2010,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1916,94,16,0.8338,0.674,-0.1598
-P3::Klumbach2010,UCS (MPa),ucs_MPa,RF,3046,95,16,0.7898,0.5798,-0.21
-P3::Konzack2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,54,17,0.9067,0.9462,0.0394
-P3::Konzack2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4851,41,15,0.5727,-3.7831,-4.3558
-P3::Konzack2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21168,54,16,0.8159,0.9539,0.138
-P3::Konzack2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7364,46,17,0.9177,0.9272,0.0094
-P3::Konzack2015,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6734,-0.914,-1.5874
-P3::Konzack2015,Poisson ratio $\nu$,poisson_ratio,RF,5216,41,17,0.8461,0.9261,0.08
-P3::Konzack2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19772,54,17,0.8312,0.8901,0.0588
-P3::Konzack2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5505,41,17,0.9611,0.9925,0.0314
-P3::Konzack2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9150,54,16,0.7257,-0.4518,-1.1775
-P3::Konzack2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12054,54,16,0.6994,-0.3258,-1.0253
-P3::Konzack2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8157,54,16,0.8278,0.3344,-0.4933
-P3::Leu2006,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18915,372,17,0.9117,-0.1218,-1.0335
-P3::Leu2006,Porosity $\phi$ (%),porosity_pct,XGBoost,19595,231,17,0.8369,-0.5848,-1.4217
-P3::Leu2006,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8877,327,16,0.7457,-5.5736,-6.3193
-P3::Leu2006,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11737,371,16,0.717,-0.7063,-1.4233
-P3::Mack2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19248,39,17,0.9107,-0.2527,-1.1634
-P3::Mack2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21183,39,16,0.8143,-4.3405,-5.1548
-P3::Mack2007,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12069,39,16,0.7018,-0.5249,-1.2267
-P3::Manghnani2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19124,163,17,0.907,0.7216,-0.1854
-P3::Manghnani2012,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4744,148,15,0.5823,-0.5518,-1.1341
-P3::Manghnani2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21072,150,16,0.8118,0.5955,-0.2162
-P3::Manghnani2012,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7247,163,17,0.9207,0.9114,-0.0093
-P3::Manghnani2012,Poisson ratio $\nu$,poisson_ratio,RF,5109,148,17,0.8415,0.9279,0.0864
-P3::Manghnani2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19676,150,17,0.8301,0.8509,0.0207
-P3::Manghnani2012,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5383,163,17,0.9587,0.9493,-0.0093
-P3::Mielke2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18891,396,17,0.8915,-0.058,-0.9494
-P3::Mielke2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20824,398,16,0.816,0.0111,-0.8049
-P3::Mielke2015,Permeability $k$ (m²),permeability_m2,KNN,9589,412,14,0.6844,-0.1588,-0.8433
-P3::Mielke2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19428,398,17,0.8063,0.8553,0.0491
-P3::Mielke2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8830,374,16,0.7173,-13.4249,-14.1422
-P3::Mielke2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11715,393,16,0.6551,-1.8535,-2.5086
-P3::Mielke2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7819,392,16,0.8163,0.0505,-0.7658
-P3::Moiseenko1965b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19250,37,17,0.9058,0.9455,0.0397
-P3::Moiseenko1965b,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9167,37,16,0.7146,0.8445,0.1299
-P3::Moiseenko1965b,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12071,37,16,0.7014,1.0,0.2986
-P3::Moiseenko1965b,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8176,35,16,0.7139,0.994,0.2801
-P3::Mueller2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19197,90,17,0.9068,0.9783,0.0715
-P3::Mueller2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21132,90,16,0.8173,-90.4398,-91.2572
-P3::Mueller2014,Permeability $k$ (m²),permeability_m2,KNN,9893,108,14,0.6681,-1.0577,-1.7258
-P3::Mueller2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19736,90,17,0.8322,0.8841,0.0519
-P3::Mueller2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9114,90,16,0.7152,-0.91,-1.6252
-P3::Mueller2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11991,117,16,0.6896,-1.3757,-2.0653
-P3::Mueller2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8094,117,16,0.8013,-1.1361,-1.9375
-P3::Nehler2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19064,223,17,0.9069,0.7369,-0.17
-P3::Nehler2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21002,220,16,0.8164,0.3325,-0.4838
-P3::Nehler2011,Permeability $k$ (m²),permeability_m2,KNN,9946,55,14,0.676,-0.4228,-1.0988
-P3::Nehler2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19607,219,17,0.8263,0.9124,0.0862
-P3::Nehler2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8984,220,16,0.7091,0.051,-0.658
-P3::Nehler2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11885,223,16,0.7106,0.0399,-0.6707
-P3::OS-95017 (1995),Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18867,420,17,0.9058,-0.9584,-1.8643
-P3::OS-95017 (1995),Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21015,207,16,0.8146,0.8882,0.0736
-P3::OS-95017 (1995),Permeability $k$ (m²),permeability_m2,KNN,9664,337,14,0.6665,0.8176,0.1512
-P3::OS-95017 (1995),Porosity $\phi$ (%),porosity_pct,XGBoost,19406,420,17,0.8457,0.1353,-0.7104
-P3::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18917,370,17,0.9134,0.6318,-0.2816
-P3::Other,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4844,48,15,0.5581,-2.8232,-3.3813
-P3::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20945,277,16,0.8149,0.5878,-0.2272
-P3::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7300,110,17,0.9231,0.6463,-0.2768
-P3::Other,Permeability $k$ (m²),permeability_m2,KNN,9786,215,14,0.6776,-0.2117,-0.8894
-P3::Other,Poisson ratio $\nu$,poisson_ratio,RF,5190,67,17,0.8469,-0.7392,-1.586
-P3::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19389,437,17,0.8326,0.6275,-0.2051
-P3::Other,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5472,74,17,0.9598,0.9324,-0.0274
-P3::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8992,212,16,0.7617,-0.2633,-1.025
-P3::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1913,97,16,0.8447,-1.3744,-2.2191
-P3::Other,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,863,43,16,0.6954,0.7462,0.0508
-P3::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11820,288,16,0.7124,-0.2785,-0.9909
-P3::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8165,46,16,0.8421,0.5389,-0.3032
-P3::Other,UCS (MPa),ucs_MPa,RF,3018,123,16,0.7862,0.7545,-0.0317
-P3::Pei2009,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19212,75,17,0.9046,0.9737,0.0691
-P3::Pei2009,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21147,75,16,0.8171,0.9367,0.1196
-P3::Pei2009,Permeability $k$ (m²),permeability_m2,KNN,9935,66,14,0.672,0.4844,-0.1876
-P3::Pei2009,Porosity $\phi$ (%),porosity_pct,XGBoost,19751,75,17,0.8276,0.9793,0.1517
-P3::Pei2009,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9129,75,16,0.7177,-7.4859,-8.2036
-P3::Pei2009,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1961,49,16,0.8275,0.3314,-0.4961
-P3::Pei2009,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12033,75,16,0.7066,-1.0438,-1.7504
-P3::Reyer2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,50,17,0.9051,0.9502,0.0451
-P3::Reyer2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21172,50,16,0.8153,-5.1533,-5.9686
-P3::Reyer2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7360,50,17,0.923,0.1569,-0.7662
-P3::Reyer2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19776,50,17,0.8284,0.8582,0.0298
-P3::Reyer2014,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1961,49,16,0.8353,0.3324,-0.5029
-P3::Reyer2014,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,857,49,16,0.6998,-5.0607,-5.7605
-P3::Reyer2014,UCS (MPa),ucs_MPa,RF,3092,49,16,0.7881,0.113,-0.6751
-P3::Sakvarelidze1973,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19252,35,17,0.9078,0.4049,-0.5029
-P3::Sakvarelidze1973,Porosity $\phi$ (%),porosity_pct,XGBoost,19791,35,17,0.8342,-0.5659,-1.4001
-P3::Sakvarelidze1973,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12073,35,16,0.7028,-0.0827,-0.7855
-P3::Sandkuehler2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19229,58,17,0.9078,0.858,-0.0498
-P3::Sandkuehler2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4839,53,15,0.5671,0.4349,-0.1323
-P3::Sandkuehler2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21164,58,16,0.8159,0.6431,-0.1727
-P3::Sandkuehler2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7361,49,17,0.9179,0.9802,0.0623
-P3::Sandkuehler2015,Permeability $k$ (m²),permeability_m2,KNN,9945,56,14,0.672,-1.3154,-1.9875
-P3::Sandkuehler2015,Poisson ratio $\nu$,poisson_ratio,RF,5205,52,17,0.8394,-0.2335,-1.0729
-P3::Sandkuehler2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19768,58,17,0.8305,0.9268,0.0963
-P3::Sandkuehler2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5497,49,17,0.9605,0.9949,0.0345
-P3::Sandkuehler2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9146,58,16,0.7308,-1.694,-2.4247
-P3::Sandkuehler2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12050,58,16,0.7072,0.3817,-0.3256
-P3::Sandkuehler2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8153,58,16,0.8462,0.4988,-0.3474
-P3::Schaeffer2018,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21126,96,16,0.8193,-0.2283,-1.0476
-P3::Schaeffer2018,Permeability $k$ (m²),permeability_m2,KNN,9906,95,14,0.6785,-7.016,-7.6945
-P3::Schaeffer2018,Porosity $\phi$ (%),porosity_pct,XGBoost,19730,96,17,0.8319,-0.272,-1.1039
-P3::Schaeffer2018,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9109,95,16,0.7278,-1.0461,-1.7739
-P3::Schaeffer2018,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12012,96,16,0.6988,0.6098,-0.0889
-P3::Schaeffer2018,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8116,95,16,0.811,0.641,-0.17
-P3::Schintgen2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19154,133,17,0.9077,0.6797,-0.228
-P3::Schintgen2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21143,79,16,0.817,0.1963,-0.6207
-P3::Schintgen2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19693,133,17,0.8278,0.6593,-0.1685
-P3::Schintgen2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11975,133,16,0.7112,-0.2791,-0.9903
-P3::Schoepflin2013,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19078,209,17,0.9089,-12.9025,-13.8114
-P3::Schoepflin2013,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4723,169,15,0.5896,-12.3332,-12.9228
-P3::Schoepflin2013,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7259,151,17,0.9192,0.9556,0.0364
-P3::Schoepflin2013,Poisson ratio $\nu$,poisson_ratio,RF,5092,165,17,0.8391,0.766,-0.0731
-P3::Schoepflin2013,Porosity $\phi$ (%),porosity_pct,XGBoost,19738,88,17,0.8291,-19.1019,-19.931
-P3::Schoepflin2013,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5396,150,17,0.9579,0.9817,0.0238
-P3::Schoepflin2013,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1975,35,16,0.837,0.3334,-0.5036
-P3::Schoepflin2013,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.719,-2.0435,-2.7625
-P3::Schoepflin2013,UCS (MPa),ucs_MPa,RF,3105,36,16,0.7873,-2.0649,-2.8522
-P3::Schubert2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,54,17,0.9076,0.7638,-0.1437
-P3::Schubert2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21168,54,16,0.8178,-0.4766,-1.2943
-P3::Schubert2011,Permeability $k$ (m²),permeability_m2,KNN,9947,54,14,0.6748,-2.6118,-3.2866
-P3::Schubert2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19772,54,17,0.8316,0.9445,0.1129
-P3::Schubert2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9149,55,16,0.7213,-1.3974,-2.1186
-P3::Schubert2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12053,55,16,0.7027,-2.034,-2.7367
-P3::Sikora2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19020,267,17,0.9068,0.7019,-0.2049
-P3::Sikora2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20955,267,16,0.8148,0.8143,-0.0005
-P3::Sikora2015,Permeability $k$ (m²),permeability_m2,KNN,9734,267,14,0.6633,-0.4334,-1.0967
-P3::Sikora2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19561,265,17,0.8286,0.4329,-0.3957
-P3::Sikora2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8941,263,16,0.7201,-26.8354,-27.5555
-P3::Sikora2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11841,267,16,0.6974,-3.8335,-4.5309
-P3::Siratovich2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19235,52,17,0.908,0.6791,-0.2289
-P3::Siratovich2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7358,52,17,0.9209,-0.4355,-1.3564
-P3::Siratovich2014,Permeability $k$ (m²),permeability_m2,KNN,9971,30,14,0.68,-192.8344,-193.5144
-P3::Siratovich2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19774,52,17,0.8248,0.562,-0.2628
-P3::Trautwein2005,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19257,30,17,0.908,-0.4354,-1.3434
-P3::Trautwein2005,Porosity $\phi$ (%),porosity_pct,XGBoost,19796,30,17,0.8259,-3.2331,-4.0591
-P3::Weinert2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19226,61,17,0.9061,-3.5467,-4.4528
-P3::Weinert2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7351,59,17,0.9199,0.9689,0.049
-P3::Weinert2014,Permeability $k$ (m²),permeability_m2,KNN,9941,60,14,0.6785,-1.1079,-1.7864
-P3::Weinert2014,Poisson ratio $\nu$,poisson_ratio,RF,5199,58,17,0.8293,0.5655,-0.2638
-P3::Weinert2014,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5487,59,17,0.96,0.9887,0.0287
-P3::Weinert2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9143,61,16,0.7175,-6.8443,-7.5618
-P3::Weinert2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12047,61,16,0.704,-6.7712,-7.4752
-P3::Weinert2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,61,16,0.8108,-16.1128,-16.9235
-P3::Welsch2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19129,158,17,0.9107,-0.5858,-1.4965
-P3::Welsch2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21093,129,16,0.8194,0.8685,0.0491
-P3::Welsch2011,Permeability $k$ (m²),permeability_m2,KNN,9843,158,14,0.6775,-0.0739,-0.7514
-P3::Welsch2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19697,129,17,0.8266,0.9339,0.1073
-P3::Welsch2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9046,158,16,0.7355,-5.2758,-6.0114
-P3::Welsch2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11950,158,16,0.6943,-3.1565,-3.8509
-P3::Weydt2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19207,80,17,0.9077,0.9534,0.0457
-P3::Weydt2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4849,43,15,0.577,0.1536,-0.4233
-P3::Weydt2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21143,79,16,0.8145,0.9411,0.1266
-P3::Weydt2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7367,43,17,0.9214,0.9766,0.0552
-P3::Weydt2016,Permeability $k$ (m²),permeability_m2,KNN,9964,37,14,0.6795,-1.0758,-1.7552
-P3::Weydt2016,Poisson ratio $\nu$,poisson_ratio,RF,5214,43,17,0.8355,0.9854,0.1498
-P3::Weydt2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19747,79,17,0.8271,0.4878,-0.3393
-P3::Weydt2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5503,43,17,0.959,0.9939,0.0349
-P3::Weydt2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12063,45,16,0.7088,-0.0877,-0.7966
-P3::Weydt2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8167,44,16,0.8342,0.4198,-0.4144
-P3::Zhao2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,40,17,0.906,-4.4644,-5.3704
-P3::Zhao2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,40,17,0.835,-86.8262,-87.6612
-P3::Zhao2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12068,40,16,0.7067,-134.3017,-135.0084
-USGS_GreatBasinPlutons::DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18771,516,17,0.9063,0.8221,-0.0842
-USGS_GreatBasinPlutons::DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20706,516,16,0.8123,0.8942,0.0819
+AMPEDEK::Ampedek2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6976,428,17,0.9197,0.9188,-0.0009
+AMPEDEK::Ampedek2024,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,4829,428,17,0.8306,0.7403,-0.0903
+AMPEDEK::Ampedek2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19663,156,17,0.8299,-1.2062,-2.0361
+AMPEDEK::Ampedek2024,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5112,428,17,0.9597,0.9212,-0.0385
+AMPEDEK::Ampedek2024,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9070,128,16,0.7186,0.327,-0.3916
+AMPEDEK::Ampedek2024,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1908,94,15,0.8404,-2.142,-2.9824
+AMPEDEK::Ampedek2024,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,844,62,16,0.6909,-0.348,-1.0388
+AMPEDEK::Ampedek2024,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11709,392,16,0.7032,-1.2754,-1.9786
+AMPEDEK::Ampedek2024,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7822,382,16,0.8598,-3.7334,-4.5932
+AMPEDEK::Ampedek2024,UCS (MPa),ucs_MPa,KNN,2979,154,15,0.7576,-0.8186,-1.5762
+AMPEDEK::Baer2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19245,36,17,0.9075,0.8251,-0.0824
+AMPEDEK::Baer2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21180,36,16,0.7705,0.9258,0.1554
+AMPEDEK::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9162,36,16,0.719,0.6222,-0.0968
+AMPEDEK::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12065,36,16,0.712,0.5354,-0.1765
+AMPEDEK::Bär2019,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,32,17,0.906,0.8585,-0.0475
+AMPEDEK::Bär2019,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.7709,0.3426,-0.4283
+AMPEDEK::Bär2019,Permeability $k$ (m²),permeability_m2,KNN,9823,171,14,0.6774,-0.7117,-1.3891
+AMPEDEK::Bär2019,Porosity $\phi$ (%),porosity_pct,XGBoost,19787,32,17,0.83,-6.6672,-7.4972
+AMPEDEK::Bär2019,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9157,41,16,0.7196,0.5168,-0.2028
+AMPEDEK::Bär2019,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11888,213,16,0.7014,0.2273,-0.4741
+AMPEDEK::Bär2019,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8006,198,16,0.8533,0.281,-0.5723
+AMPEDEK::Bär2019,UCS (MPa),ucs_MPa,KNN,3058,75,16,0.7593,0.9539,0.1946
+AMPEDEK::Hoffmann2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19117,164,17,0.9072,0.9918,0.0846
+AMPEDEK::Hoffmann2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4756,129,15,0.5742,0.2866,-0.2877
+AMPEDEK::Hoffmann2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21052,164,16,0.7714,0.9272,0.1558
+AMPEDEK::Hoffmann2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7275,129,17,0.9193,0.9918,0.0725
+AMPEDEK::Hoffmann2015,Permeability $k$ (m²),permeability_m2,KNN,9950,44,14,0.6768,-0.0752,-0.752
+AMPEDEK::Hoffmann2015,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5127,130,17,0.8346,0.9285,0.0939
+AMPEDEK::Hoffmann2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19655,164,17,0.83,-2.8722,-3.7022
+AMPEDEK::Hoffmann2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5411,129,17,0.9603,0.9761,0.0157
+AMPEDEK::Hoffmann2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9106,92,16,0.7229,0.6693,-0.0536
+AMPEDEK::Hoffmann2015,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1933,69,16,0.8278,-1.6113,-2.4391
+AMPEDEK::Hoffmann2015,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.7184,0.4201,-0.2984
+AMPEDEK::Hoffmann2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12021,80,16,0.7075,0.3246,-0.3829
+AMPEDEK::Hoffmann2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8126,78,16,0.8305,0.9597,0.1292
+AMPEDEK::Hoffmann2015,UCS (MPa),ucs_MPa,KNN,2994,139,16,0.7618,0.4128,-0.349
+AMPEDEK::Klaeske2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19227,54,17,0.9084,-0.7344,-1.6429
+AMPEDEK::Klaeske2010,Permeability $k$ (m²),permeability_m2,KNN,9583,411,14,0.6662,-9.1643,-9.8304
+AMPEDEK::Klaeske2010,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8695,503,16,0.7258,0.6269,-0.0989
+AMPEDEK::Klaeske2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11598,503,16,0.7095,0.5892,-0.1203
+AMPEDEK::Klaeske2010,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7755,449,16,0.7864,0.9222,0.1358
+AMPEDEK::Klumbach2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,34,17,0.9077,0.0863,-0.8214
+AMPEDEK::Klumbach2010,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1968,34,16,0.8435,-0.119,-0.9625
+AMPEDEK::Klumbach2010,UCS (MPa),ucs_MPa,KNN,3099,34,16,0.7592,-0.0335,-0.7927
+AMPEDEK::Lambert2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19240,41,17,0.907,0.9892,0.0822
+AMPEDEK::Lambert2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4845,40,15,0.579,-0.1432,-0.7222
+AMPEDEK::Lambert2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.7708,0.9615,0.1907
+AMPEDEK::Lambert2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7309,95,17,0.92,0.7806,-0.1394
+AMPEDEK::Lambert2016,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5208,49,17,0.8343,0.7384,-0.0959
+AMPEDEK::Lambert2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19778,41,17,0.8265,-0.5277,-1.3542
+AMPEDEK::Lambert2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5445,95,17,0.9601,0.8368,-0.1233
+AMPEDEK::Lambert2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9157,41,16,0.7208,0.4524,-0.2684
+AMPEDEK::Lambert2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8163,41,16,0.8298,-0.1735,-1.0033
+AMPEDEK::Lambert2016,UCS (MPa),ucs_MPa,KNN,3085,48,16,0.7668,-0.6843,-1.4511
+AMPEDEK::Maire2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,44,17,0.9061,0.9197,0.0135
+AMPEDEK::Maire2014,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4841,44,15,0.5744,0.1897,-0.3847
+AMPEDEK::Maire2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21172,44,16,0.7698,0.75,-0.0198
+AMPEDEK::Maire2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7360,44,17,0.9221,-0.1511,-1.0732
+AMPEDEK::Maire2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19775,44,17,0.8266,0.6942,-0.1324
+AMPEDEK::Maire2014,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5496,44,17,0.9615,-0.2391,-1.2005
+AMPEDEK::Maire2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9154,44,16,0.7237,0.1946,-0.5291
+AMPEDEK::Maire2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12056,45,16,0.7089,-3.6351,-4.344
+AMPEDEK::Maire2014,UCS (MPa),ucs_MPa,KNN,3103,30,16,0.7652,0.1315,-0.6337
+AMPEDEK::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19165,116,17,0.9052,0.9256,0.0204
+AMPEDEK::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21073,143,16,0.7718,0.5394,-0.2324
+AMPEDEK::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7358,46,17,0.9216,0.2445,-0.6771
+AMPEDEK::Other,Permeability $k$ (m²),permeability_m2,KNN,9953,41,14,0.6753,-1.2164,-1.8916
+AMPEDEK::Other,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5180,77,17,0.8469,-0.1344,-0.9814
+AMPEDEK::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19717,102,17,0.8316,0.5032,-0.3284
+AMPEDEK::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9082,116,16,0.7259,-0.1002,-0.8261
+AMPEDEK::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1966,36,16,0.8545,-0.1881,-1.0426
+AMPEDEK::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11946,155,16,0.7061,0.5386,-0.1675
+AMPEDEK::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8156,48,16,0.8234,0.9184,0.0949
+AMPEDEK::Vogel2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4825,60,15,0.5787,0.2664,-0.3123
+AMPEDEK::Vogel2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7344,60,17,0.9219,0.997,0.0751
+AMPEDEK::Vogel2016,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5197,60,17,0.8271,0.9977,0.1706
+AMPEDEK::Vogel2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5480,60,17,0.9598,0.9995,0.0397
+AMPEDEK::Weinert2021,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18994,287,17,0.9066,0.959,0.0524
+AMPEDEK::Weinert2021,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4288,597,15,0.5299,0.0468,-0.4831
+AMPEDEK::Weinert2021,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20849,367,16,0.7704,0.7047,-0.0657
+AMPEDEK::Weinert2021,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6810,594,17,0.912,0.9784,0.0664
+AMPEDEK::Weinert2021,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,4661,596,17,0.8162,0.9374,0.1212
+AMPEDEK::Weinert2021,Porosity $\phi$ (%),porosity_pct,XGBoost,19545,274,17,0.8335,0.3077,-0.5257
+AMPEDEK::Weinert2021,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,4946,594,17,0.9578,0.9918,0.034
+AMPEDEK::Weinert2021,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8976,222,16,0.7142,0.7538,0.0396
+AMPEDEK::Weinert2021,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11504,597,16,0.7035,0.3401,-0.3635
+AMPEDEK::Weinert2021,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7607,597,16,0.8439,0.3277,-0.5163
+AMPEDEK::Welsch2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19098,183,17,0.9057,0.9639,0.0582
+AMPEDEK::Welsch2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21007,209,16,0.7714,0.8661,0.0947
+AMPEDEK::Welsch2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7353,51,17,0.9204,0.9972,0.0769
+AMPEDEK::Welsch2015,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5205,52,17,0.8371,0.7967,-0.0405
+AMPEDEK::Welsch2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19652,167,17,0.8281,0.0034,-0.8246
+AMPEDEK::Welsch2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5489,51,17,0.9579,0.9997,0.0418
+AMPEDEK::Welsch2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9099,99,16,0.7256,0.886,0.1604
+AMPEDEK::Welsch2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11993,108,16,0.7063,0.8983,0.1921
+AMPEDEK::Welsch2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8096,108,16,0.8313,0.9486,0.1173
+AbuDhabiEvaporite2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19141,140,17,0.9072,-12.9108,-13.818
+AbuDhabiEvaporite2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21078,138,16,0.7682,-53.7676,-54.5358
+AbuDhabiEvaporite2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7369,35,17,0.9271,-9.3516,-10.2786
+AbuDhabiEvaporite2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19681,138,17,0.8284,-0.4906,-1.319
+AbuDhabiEvaporite2024,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,780,126,16,0.6493,-13.7294,-14.3788
+AbuDhabiEvaporite2024,UCS (MPa),ucs_MPa,KNN,3028,105,16,0.7505,-13.9767,-14.7272
+CentralApennines,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,38,17,0.9062,-2.4941,-3.4004
+CentralApennines,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4854,31,15,0.5632,-23.8487,-24.4119
+CentralApennines,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7373,31,17,0.9203,-21.2332,-22.1535
+CentralApennines,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5221,36,17,0.8438,-1.1867,-2.0305
+CentralApennines,Porosity $\phi$ (%),porosity_pct,XGBoost,19783,36,17,0.8289,-36.0965,-36.9254
+ChainePuysHeap2024,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7359,45,17,0.9206,-0.2699,-1.1905
+ChainePuysHeap2024,Permeability $k$ (m²),permeability_m2,KNN,9949,45,14,0.671,-3.0618,-3.7328
+ChainePuysHeap2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19774,45,17,0.8273,0.2713,-0.556
+ChainePuysHeap2024,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9168,30,16,0.7071,-17.4569,-18.164
+ChainePuysHeap2024,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1961,41,16,0.8387,-0.4324,-1.2711
+ChainePuysHeap2024,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12071,30,16,0.7026,-197.4421,-198.1447
+ChainePuysHeap2024,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8174,30,16,0.8381,-230.693,-231.5311
+ChainePuysHeap2024,UCS (MPa),ucs_MPa,KNN,3092,41,16,0.7339,-4.726,-5.4599
+Cornwall_Turan2024::Casanova2020,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19219,62,17,0.9072,-3.1135,-4.0207
+Cornwall_Turan2024::Casanova2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4824,61,15,0.5798,-0.5009,-1.0807
+Cornwall_Turan2024::Casanova2020,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21172,44,16,0.7732,-4.7987,-5.5718
+Cornwall_Turan2024::Casanova2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7349,55,17,0.9205,0.6354,-0.2851
+Cornwall_Turan2024::Casanova2020,Porosity $\phi$ (%),porosity_pct,XGBoost,19775,44,17,0.8286,-31.1155,-31.9441
+Cornwall_Turan2024::Casanova2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5485,55,17,0.9621,0.2827,-0.6794
+Cornwall_Turan2024::Casanova2020,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9156,42,16,0.7261,0.8765,0.1503
+Cornwall_Turan2024::Casanova2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12058,43,16,0.6969,0.0801,-0.6168
+Cornwall_Turan2024::Casanova2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8161,43,16,0.8525,0.7479,-0.1046
+Cornwall_Turan2024::Freundt2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4855,30,15,0.569,-0.7563,-1.3253
+Cornwall_Turan2024::Freundt2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7374,30,17,0.9187,0.3838,-0.535
+Cornwall_Turan2024::Freundt2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5510,30,17,0.9607,0.3464,-0.6143
+Cornwall_Turan2024::Freundt2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12071,30,16,0.7057,-0.1309,-0.8365
+Cornwall_Turan2024::Freundt2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8174,30,16,0.8376,0.8955,0.0579
+Cornwall_Turan2024::Turan2024_thisStudy,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19174,107,17,0.9066,0.1055,-0.8011
+Cornwall_Turan2024::Turan2024_thisStudy,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21092,124,16,0.7748,-0.2107,-0.9856
+Cornwall_Turan2024::Turan2024_thisStudy,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7280,124,17,0.9252,-0.5272,-1.4525
+Cornwall_Turan2024::Turan2024_thisStudy,Porosity $\phi$ (%),porosity_pct,XGBoost,19711,108,17,0.8326,0.1052,-0.7275
+Cornwall_Turan2024::Turan2024_thisStudy,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5416,124,17,0.9792,0.009,-0.9702
+Cornwall_Turan2024::Turan2024_thisStudy,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9108,90,16,0.7225,0.6968,-0.0258
+Cornwall_Turan2024::Turan2024_thisStudy,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11993,108,16,0.6993,0.4302,-0.2691
+Cornwall_Turan2024::Turan2024_thisStudy,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8093,111,16,0.8346,0.4909,-0.3436
+ESReviews2024_VolcGeotherm::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19157,124,17,0.9108,0.6381,-0.2727
+ESReviews2024_VolcGeotherm::Other,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4843,42,15,0.5711,0.3394,-0.2317
+ESReviews2024_VolcGeotherm::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7291,113,17,0.9249,0.6416,-0.2832
+ESReviews2024_VolcGeotherm::Other,Permeability $k$ (m²),permeability_m2,KNN,9927,67,14,0.6743,-0.5877,-1.262
+ESReviews2024_VolcGeotherm::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19676,143,17,0.8282,0.4199,-0.4084
+ESReviews2024_VolcGeotherm::Other,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5469,71,17,0.9617,0.7355,-0.2262
+ESReviews2024_VolcGeotherm::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1972,30,16,0.8415,0.4958,-0.3458
+ESReviews2024_VolcGeotherm::Other,UCS (MPa),ucs_MPa,KNN,3049,84,16,0.7323,0.7163,-0.016
+GenevaBasin,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7257,147,17,0.9185,-0.1307,-1.0491
+GenevaBasin,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5415,125,17,0.9603,0.7836,-0.1767
+GenevaBasin,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,822,84,16,0.6834,-2.6549,-3.3383
+GenevaBasin,UCS (MPa),ucs_MPa,KNN,2997,136,16,0.7609,-26.4046,-27.1655
+GlobalDB::Aretz2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18878,403,17,0.9063,0.9374,0.0311
+GlobalDB::Aretz2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20814,402,16,0.7721,0.2366,-0.5355
+GlobalDB::Aretz2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19416,403,17,0.8306,0.9395,0.1089
+GlobalDB::Aretz2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8817,381,16,0.7149,0.9138,0.1989
+GlobalDB::Aretz2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11698,403,16,0.6957,0.6325,-0.0632
+GlobalDB::Aretz2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7823,381,16,0.8579,0.97,0.112
+GlobalDB::Baer2012,Permeability $k$ (m²),permeability_m2,KNN,9960,34,14,0.6751,-2.2947,-2.9698
+GlobalDB::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9162,36,16,0.7178,-1.7352,-2.453
+GlobalDB::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12064,37,16,0.7089,-0.0032,-0.7121
+GlobalDB::Betten2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19241,40,17,0.9055,-0.0286,-0.9341
+GlobalDB::Betten2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21176,40,16,0.7724,0.2667,-0.5056
+GlobalDB::Betten2015,Permeability $k$ (m²),permeability_m2,KNN,9954,40,14,0.6731,-3.3111,-3.9842
+GlobalDB::Betten2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.8304,0.9117,0.0813
+GlobalDB::Betten2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9158,40,16,0.7165,-0.0226,-0.7391
+GlobalDB::Betten2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8164,40,16,0.8075,-0.0934,-0.9009
+GlobalDB::Biewer2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19187,94,17,0.9085,0.772,-0.1365
+GlobalDB::Biewer2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21122,94,16,0.7739,0.8511,0.0771
+GlobalDB::Biewer2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19726,93,17,0.8254,-8.1892,-9.0146
+GlobalDB::Biewer2017,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9105,93,16,0.7272,-0.0205,-0.7477
+GlobalDB::Biewer2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8111,93,16,0.8469,-0.9789,-1.8258
+GlobalDB::Brettreich2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19193,88,17,0.9076,0.6876,-0.22
+GlobalDB::Brettreich2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21128,88,16,0.7697,0.9359,0.1662
+GlobalDB::Brettreich2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19731,88,17,0.8271,-2.9039,-3.731
+GlobalDB::Brettreich2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9144,54,16,0.7254,-0.55,-1.2755
+GlobalDB::Brettreich2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,54,16,0.8491,-7.5266,-8.3757
+GlobalDB::CSIRO2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18778,503,17,0.9076,0.4315,-0.4761
+GlobalDB::CSIRO2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,18469,2747,16,0.8279,-0.1432,-0.9711
+GlobalDB::CSIRO2007,Permeability $k$ (m²),permeability_m2,KNN,7038,2956,14,0.6152,-8.1985,-8.8138
+GlobalDB::CSIRO2007,Porosity $\phi$ (%),porosity_pct,XGBoost,16795,3024,17,0.8347,0.0959,-0.7388
+GlobalDB::Czarnota2009,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19167,114,17,0.9085,0.9243,0.0159
+GlobalDB::Czarnota2009,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21102,114,16,0.773,0.8568,0.0838
+GlobalDB::Czarnota2009,Porosity $\phi$ (%),porosity_pct,XGBoost,19705,114,17,0.8292,0.5771,-0.2521
+GlobalDB::Eagleton2024,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18743,538,17,0.9073,0.9442,0.0369
+GlobalDB::Eagleton2024,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20678,538,16,0.7729,0.7742,0.0013
+GlobalDB::Eagleton2024,Porosity $\phi$ (%),porosity_pct,XGBoost,19281,538,17,0.8281,0.7667,-0.0614
+GlobalDB::ElDakak2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19223,58,17,0.9072,0.7087,-0.1985
+GlobalDB::ElDakak2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21158,58,16,0.7712,-32.1698,-32.941
+GlobalDB::ElDakak2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19761,58,17,0.8331,0.9428,0.1097
+GlobalDB::ElDakak2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9140,58,16,0.7246,-9.916,-10.6406
+GlobalDB::Esteban2022,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,37,17,0.9081,-2.1692,-3.0773
+GlobalDB::Esteban2022,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6733,-3.324,-3.9972
+GlobalDB::Esteban2022,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,37,17,0.8328,-10.0541,-10.887
+GlobalDB::FridleifsonVilmundardottir1998,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19198,83,17,0.906,-296.0861,-296.9921
+GlobalDB::FridleifsonVilmundardottir1998,Permeability $k$ (m²),permeability_m2,KNN,9911,83,14,0.672,1.0,0.328
+GlobalDB::FridleifsonVilmundardottir1998,Porosity $\phi$ (%),porosity_pct,XGBoost,19736,83,17,0.8263,0.5704,-0.2559
+GlobalDB::Fuchs2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19209,72,17,0.9056,-0.8398,-1.7454
+GlobalDB::Fuchs2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21144,72,16,0.7736,-0.7854,-1.559
+GlobalDB::Fuchs2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19745,74,17,0.8289,-4.4635,-5.2923
+GlobalDB::Fuchs2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12027,74,16,0.7034,-3.0645,-3.768
+GlobalDB::Gudmundsson1995,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18944,337,17,0.9041,-0.0251,-0.9292
+GlobalDB::Gudmundsson1995,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21009,207,16,0.7755,0.5768,-0.1987
+GlobalDB::Gudmundsson1995,Permeability $k$ (m²),permeability_m2,KNN,9740,254,14,0.6619,0.964,0.3021
+GlobalDB::Gudmundsson1995,Porosity $\phi$ (%),porosity_pct,XGBoost,19482,337,17,0.8438,-0.1483,-0.992
+GlobalDB::Hawke1971b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,35,17,0.9055,0.8226,-0.0829
+GlobalDB::Hawke1971b,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21181,35,16,0.7685,-0.2843,-1.0528
+GlobalDB::Hawke1971b,Porosity $\phi$ (%),porosity_pct,XGBoost,19784,35,17,0.8306,-0.0311,-0.8616
+GlobalDB::Hoffmann2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19119,162,17,0.906,0.964,0.058
+GlobalDB::Hoffmann2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21054,162,16,0.7712,0.9747,0.2034
+GlobalDB::Hoffmann2015,Permeability $k$ (m²),permeability_m2,KNN,9950,44,14,0.6789,-8.3779,-9.0568
+GlobalDB::Hoffmann2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19657,162,17,0.8324,-9.4903,-10.3226
+GlobalDB::Hoffmann2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9108,90,16,0.7215,-0.6474,-1.3689
+GlobalDB::Hoffmann2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8128,76,16,0.8455,0.5018,-0.3437
+GlobalDB::Hone1987,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19218,63,17,0.9046,0.9804,0.0758
+GlobalDB::Hone1987,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21153,63,16,0.7715,0.9513,0.1797
+GlobalDB::Hone1987,Porosity $\phi$ (%),porosity_pct,XGBoost,19756,63,17,0.8255,-7.9159,-8.7413
+GlobalDB::Kahraman2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,35,17,0.9058,0.9527,0.0468
+GlobalDB::Kahraman2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.7745,-0.1129,-0.8874
+GlobalDB::Kahraman2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19778,41,17,0.8296,-1.48,-2.3096
+GlobalDB::Kassab2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,38,17,0.9079,-7.9096,-8.8175
+GlobalDB::Kassab2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21178,38,16,0.7691,0.2172,-0.5519
+GlobalDB::Kassab2015,Permeability $k$ (m²),permeability_m2,KNN,9956,38,14,0.6728,-0.7303,-1.403
+GlobalDB::Kassab2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19781,38,17,0.8285,-0.935,-1.7635
+GlobalDB::Konzack2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19227,54,17,0.9057,0.8987,-0.007
+GlobalDB::Konzack2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21162,54,16,0.77,0.7917,0.0217
+GlobalDB::Konzack2015,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6743,-0.1229,-0.7972
+GlobalDB::Konzack2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19765,54,17,0.8307,0.9558,0.1251
+GlobalDB::Konzack2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9145,53,16,0.7329,-3.5034,-4.2363
+GlobalDB::Konzack2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8151,53,16,0.8442,0.1986,-0.6456
+GlobalDB::Lambert2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19241,40,17,0.9047,0.99,0.0853
+GlobalDB::Lambert2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21176,40,16,0.7703,0.9875,0.2172
+GlobalDB::Lambert2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.8291,-4.9453,-5.7744
+GlobalDB::Lambert2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9158,40,16,0.7218,0.0881,-0.6337
+GlobalDB::Lambert2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8164,40,16,0.8107,0.3084,-0.5024
+GlobalDB::Maire2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,44,17,0.9058,0.8413,-0.0646
+GlobalDB::Maire2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21172,44,16,0.7717,0.8645,0.0927
+GlobalDB::Maire2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19775,44,17,0.8274,-2.2955,-3.1229
+GlobalDB::Maire2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9154,44,16,0.7193,-1.4172,-2.1366
+GlobalDB::Maire2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12057,44,16,0.7043,-9.412,-10.1163
+GlobalDB::Manghnani2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19132,149,17,0.9061,0.26,-0.6461
+GlobalDB::Manghnani2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21067,149,16,0.7715,-1.2346,-2.0061
+GlobalDB::Manghnani2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19670,149,17,0.8282,0.9215,0.0933
+GlobalDB::Moiseenko1968b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,37,17,0.906,0.9444,0.0383
+GlobalDB::Moiseenko1968b,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9161,37,16,0.7133,0.8403,0.127
+GlobalDB::Moiseenko1968b,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12064,37,16,0.707,1.0,0.293
+GlobalDB::Moiseenko1968b,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8169,35,16,0.7378,0.995,0.2572
+GlobalDB::Mueller2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19191,90,17,0.9072,0.9679,0.0607
+GlobalDB::Mueller2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21126,90,16,0.7684,-9.2366,-10.005
+GlobalDB::Mueller2014,Permeability $k$ (m²),permeability_m2,KNN,9912,82,14,0.669,-1.5559,-2.2249
+GlobalDB::Mueller2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19729,90,17,0.8298,0.0615,-0.7683
+GlobalDB::Mueller2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9108,90,16,0.7172,-3.7812,-4.4984
+GlobalDB::Mueller2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8113,91,16,0.834,-1.8284,-2.6625
+GlobalDB::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19069,212,17,0.9066,0.7249,-0.1817
+GlobalDB::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21007,209,16,0.7718,0.469,-0.3029
+GlobalDB::Other,Permeability $k$ (m²),permeability_m2,KNN,9867,127,14,0.6795,-0.311,-0.9905
+GlobalDB::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19549,270,17,0.8278,0.713,-0.1149
+GlobalDB::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9141,57,16,0.7284,0.0755,-0.6529
+GlobalDB::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,54,16,0.8498,0.2764,-0.5734
+GlobalDB::Reyer2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19231,50,17,0.9074,0.7086,-0.1987
+GlobalDB::Reyer2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21166,50,16,0.7687,0.264,-0.5047
+GlobalDB::Reyer2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19769,50,17,0.8314,0.9235,0.0921
+GlobalDB::Roach2025,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18658,623,17,0.9053,0.9102,0.0048
+GlobalDB::Roach2025,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20593,623,16,0.768,0.8665,0.0985
+GlobalDB::Roach2025,Porosity $\phi$ (%),porosity_pct,XGBoost,19196,623,17,0.8239,-1.24,-2.0639
+GlobalDB::Sandkuehler2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19223,58,17,0.9062,0.8724,-0.0338
+GlobalDB::Sandkuehler2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21158,58,16,0.7716,0.6837,-0.0879
+GlobalDB::Sandkuehler2015,Permeability $k$ (m²),permeability_m2,KNN,9938,56,14,0.6742,0.4906,-0.1837
+GlobalDB::Sandkuehler2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19761,58,17,0.8324,0.9283,0.0959
+GlobalDB::Sandkuehler2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9140,58,16,0.7227,-3.7562,-4.4788
+GlobalDB::Sandkuehler2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8146,58,16,0.8131,-0.0767,-0.8898
+GlobalDB::Schuetz2013,Porosity $\phi$ (%),porosity_pct,XGBoost,19631,188,17,0.8305,-0.7079,-1.5384
+GlobalDB::Schuetz2013,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11913,188,16,0.7154,-0.5998,-1.3153
+GlobalDB::Siratovich2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19251,30,17,0.9064,0.7914,-0.115
+GlobalDB::Siratovich2014,Permeability $k$ (m²),permeability_m2,KNN,9964,30,14,0.6768,-30.4072,-31.084
+GlobalDB::Siratovich2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19789,30,17,0.8332,0.7492,-0.084
+GlobalDB::Smith2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19248,33,17,0.9056,-3.5701,-4.4757
+GlobalDB::Smith2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21183,33,16,0.7715,0.3082,-0.4633
+GlobalDB::Smith2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19786,33,17,0.8314,-0.1757,-1.007
+GlobalDB::Weinert2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19231,50,17,0.9074,-1.4425,-2.3499
+GlobalDB::Weinert2014,Permeability $k$ (m²),permeability_m2,KNN,9945,49,14,0.678,-1.0702,-1.7482
+GlobalDB::Weinert2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9148,50,16,0.725,-18.51,-19.2351
+GlobalDB::Weinert2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8154,50,16,0.8433,-55.675,-56.5183
+GlobalDB::Weydt2018,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19201,80,17,0.9057,0.9399,0.0343
+GlobalDB::Weydt2018,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21137,79,16,0.7705,0.6996,-0.0709
+GlobalDB::Weydt2018,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6759,-2.3174,-2.9933
+GlobalDB::Weydt2018,Porosity $\phi$ (%),porosity_pct,XGBoost,19740,79,17,0.8299,0.369,-0.461
+GlobalDB::Weydt2018,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12056,45,16,0.7046,0.1278,-0.5768
+GlobalDB::Weydt2018,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8160,44,16,0.8328,0.1593,-0.6735
+GlobalDB::Wyatt1984,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19030,251,17,0.9064,0.8653,-0.0411
+GlobalDB::Wyatt1984,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20965,251,16,0.7728,0.7558,-0.0169
+GlobalDB::Wyatt1984,Porosity $\phi$ (%),porosity_pct,XGBoost,19568,251,17,0.8333,0.8991,0.0659
+GlobalDB::YangAplin2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19251,30,17,0.9065,0.946,0.0396
+GlobalDB::YangAplin2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21186,30,16,0.772,-3.5594,-4.3314
+GlobalDB::YangAplin2007,Permeability $k$ (m²),permeability_m2,KNN,9964,30,14,0.6848,-66.5998,-67.2847
+GlobalDB::YangAplin2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19789,30,17,0.8298,0.6737,-0.1561
+GlobalDB::Yu2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19196,85,17,0.9054,0.1716,-0.7338
+GlobalDB::Yu2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21131,85,16,0.7724,0.8377,0.0653
+GlobalDB::Yu2017,Permeability $k$ (m²),permeability_m2,KNN,9921,73,14,0.6705,-75.3701,-76.0406
+GlobalDB::Yu2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19734,85,17,0.8301,0.93,0.0998
+GlobalDB::Zhao2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,38,17,0.9069,-6.0534,-6.9602
+GlobalDB::Zhao2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19781,38,17,0.8282,-177.7179,-178.546
+HeapViolay2021::Bubeck et al. (2017),Porosity $\phi$ (%),porosity_pct,XGBoost,19781,38,17,0.8297,-1.436,-2.2656
+HeapViolay2021::Bubeck et al. (2017),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1964,38,16,0.8398,0.1386,-0.7012
+HeapViolay2021::Bubeck et al. (2017),UCS (MPa),ucs_MPa,KNN,3095,38,16,0.7657,-0.0388,-0.8045
+HeapViolay2021::Di Muro et al. (2020),Porosity $\phi$ (%),porosity_pct,XGBoost,19770,49,17,0.8343,0.2468,-0.5875
+HeapViolay2021::Di Muro et al. (2020),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1953,49,16,0.8509,0.4271,-0.4238
+HeapViolay2021::Di Muro et al. (2020),UCS (MPa),ucs_MPa,KNN,3084,49,16,0.7649,0.5307,-0.2342
+"HeapViolay2021::Heap et al. (2020, JVGR)",Porosity $\phi$ (%),porosity_pct,XGBoost,19777,42,17,0.8325,-2.4635,-3.296
+"HeapViolay2021::Heap et al. (2020, JVGR)",Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1960,42,16,0.8349,0.5944,-0.2406
+"HeapViolay2021::Heap et al. (2020, JVGR)",UCS (MPa),ucs_MPa,KNN,3091,42,16,0.7251,0.8215,0.0964
+HeapViolay2021::Modensky et al. (2018),Porosity $\phi$ (%),porosity_pct,XGBoost,19673,146,17,0.8311,-0.4921,-1.3233
+HeapViolay2021::Modensky et al. (2018),Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1856,146,16,0.8445,0.4779,-0.3666
+HeapViolay2021::Modensky et al. (2018),UCS (MPa),ucs_MPa,KNN,2987,146,16,0.7609,0.3938,-0.3671
+HeapViolay2021::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19603,216,17,0.8306,0.6999,-0.1307
+HeapViolay2021::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1786,216,16,0.8236,0.8335,0.0099
+HeapViolay2021::Other,UCS (MPa),ucs_MPa,KNN,2917,216,16,0.7535,0.7048,-0.0488
+"HeapViolay2021::Wyering et al. (2014, JVGR)",Porosity $\phi$ (%),porosity_pct,XGBoost,19706,113,17,0.8271,0.5546,-0.2725
+"HeapViolay2021::Wyering et al. (2014, JVGR)",Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1889,113,16,0.8473,0.3889,-0.4584
+"HeapViolay2021::Wyering et al. (2014, JVGR)",UCS (MPa),ucs_MPa,KNN,3020,113,16,0.7653,-0.6456,-1.4108
+HeapViolay2021::this study,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.8336,0.3214,-0.5122
+HeapViolay2021::this study,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1962,40,16,0.842,0.4996,-0.3425
+HeapViolay2021::this study,UCS (MPa),ucs_MPa,KNN,3093,40,16,0.772,0.4175,-0.3545
+MidGerman::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19238,43,17,0.9066,0.9952,0.0887
+MidGerman::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21173,43,16,0.7698,0.9673,0.1976
+MidGerman::Other,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6756,-8.3485,-9.0241
+MidGerman::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19777,42,17,0.8339,0.4777,-0.3563
+MidGerman::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9155,43,16,0.7238,-0.5094,-1.2332
+MidGerman::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12054,47,16,0.7047,0.1318,-0.573
+MidGerman::Weinert2021_MidGerman_ref10,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19237,44,17,0.9054,0.9667,0.0613
+MidGerman::Weinert2021_MidGerman_ref10,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4842,43,15,0.5682,0.6251,0.0568
+MidGerman::Weinert2021_MidGerman_ref10,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21172,44,16,0.7735,0.164,-0.6095
+MidGerman::Weinert2021_MidGerman_ref10,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7361,43,17,0.9191,0.9941,0.075
+MidGerman::Weinert2021_MidGerman_ref10,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5213,44,17,0.8367,0.9015,0.0648
+MidGerman::Weinert2021_MidGerman_ref10,Porosity $\phi$ (%),porosity_pct,XGBoost,19775,44,17,0.8274,0.3116,-0.5158
+MidGerman::Weinert2021_MidGerman_ref10,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5497,43,17,0.9596,0.9938,0.0342
+MidGerman::Weinert2021_MidGerman_ref10,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9154,44,16,0.7223,0.262,-0.4603
+MidGerman::Weinert2021_MidGerman_ref10,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12057,44,16,0.7059,-0.6378,-1.3437
+MidGerman::Weinert2021_MidGerman_ref10,UCS (MPa),ucs_MPa,KNN,3103,30,16,0.7523,0.5282,-0.2242
+MidGerman::Weinert2021_MidGerman_ref11,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5210,47,17,0.8275,-15.6608,-16.4883
+MidGerman::Weinert2021_MidGerman_ref11,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1955,47,16,0.8279,-8.0623,-8.8902
+MidGerman::Weinert2021_MidGerman_ref11,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12054,47,16,0.6998,-0.9481,-1.6479
+MidGerman::Weinert2021_MidGerman_ref11,UCS (MPa),ucs_MPa,KNN,3086,47,16,0.7653,-8862.3449,-8863.1102
+MidGerman::Weinert2021_MidGerman_ref15,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4825,60,15,0.5756,0.0339,-0.5417
+MidGerman::Weinert2021_MidGerman_ref15,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7344,60,17,0.9217,0.9892,0.0676
+MidGerman::Weinert2021_MidGerman_ref15,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5197,60,17,0.833,0.9968,0.1638
+MidGerman::Weinert2021_MidGerman_ref15,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5480,60,17,0.9597,0.9996,0.0399
+MidGerman::Weinert2021_MidGerman_ref16,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19231,50,17,0.9065,0.9766,0.0701
+MidGerman::Weinert2021_MidGerman_ref16,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21166,50,16,0.7723,0.9683,0.196
+MidGerman::Weinert2021_MidGerman_ref16,Porosity $\phi$ (%),porosity_pct,XGBoost,19769,50,17,0.8302,-0.8643,-1.6944
+MidGerman::Weinert2021_MidGerman_ref17,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19249,32,17,0.9059,0.8743,-0.0316
+MidGerman::Weinert2021_MidGerman_ref17,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.7728,0.3396,-0.4332
+MidGerman::Weinert2021_MidGerman_ref17,Permeability $k$ (m²),permeability_m2,KNN,9823,171,14,0.6765,-2.7147,-3.3912
+MidGerman::Weinert2021_MidGerman_ref17,Porosity $\phi$ (%),porosity_pct,XGBoost,19787,32,17,0.8308,-9.7218,-10.5527
+MidGerman::Weinert2021_MidGerman_ref17,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9158,40,16,0.7152,-0.1476,-0.8627
+MidGerman::Weinert2021_MidGerman_ref17,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11889,212,16,0.6995,0.1722,-0.5273
+MidGerman::Weinert2021_MidGerman_ref17,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8038,166,16,0.8248,0.1639,-0.6609
+MidGerman::Weinert2021_MidGerman_ref17,UCS (MPa),ucs_MPa,KNN,3058,75,16,0.7556,0.923,0.1673
+MidGerman::Weinert2021_MidGerman_ref18,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19127,154,17,0.9063,0.9575,0.0512
+MidGerman::Weinert2021_MidGerman_ref18,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21052,164,16,0.7708,0.8495,0.0786
+MidGerman::Weinert2021_MidGerman_ref18,Porosity $\phi$ (%),porosity_pct,XGBoost,19680,139,17,0.8295,-0.0763,-0.9058
+MidGerman::Weinert2021_MidGerman_ref18,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9099,99,16,0.7263,0.9076,0.1813
+MidGerman::Weinert2021_MidGerman_ref18,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11993,108,16,0.7045,0.8112,0.1068
+MidGerman::Weinert2021_MidGerman_ref18,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8096,108,16,0.8304,0.9428,0.1124
+MidGerman::Weinert2021_MidGerman_ref2,Permeability $k$ (m²),permeability_m2,KNN,9940,54,14,0.6823,-22.2344,-22.9167
+MidGerman::Weinert2021_MidGerman_ref2,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12029,72,16,0.706,0.1867,-0.5193
+MidGerman::Weinert2021_MidGerman_ref2,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,54,16,0.8444,0.6364,-0.208
+MidGerman::Weinert2021_MidGerman_ref5,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4843,42,15,0.5753,-0.3848,-0.9602
+MidGerman::Weinert2021_MidGerman_ref5,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21164,52,16,0.7705,-113.2685,-114.039
+MidGerman::Weinert2021_MidGerman_ref5,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7362,42,17,0.9214,0.9772,0.0558
+MidGerman::Weinert2021_MidGerman_ref5,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5215,42,17,0.839,0.9719,0.1329
+MidGerman::Weinert2021_MidGerman_ref5,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5498,42,17,0.9602,0.9981,0.0379
+MidGerman::Weinert2021_MidGerman_ref6,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4796,89,15,0.5822,-0.207,-0.7893
+MidGerman::Weinert2021_MidGerman_ref6,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21127,89,16,0.7705,-0.0935,-0.864
+MidGerman::Weinert2021_MidGerman_ref6,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7315,89,17,0.922,0.9811,0.0591
+MidGerman::Weinert2021_MidGerman_ref6,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5168,89,17,0.8366,0.8582,0.0216
+MidGerman::Weinert2021_MidGerman_ref6,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5451,89,17,0.9608,0.9913,0.0305
+MidGerman::Weinert2021_MidGerman_ref6,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9109,89,16,0.7257,-0.3029,-1.0286
+MidGerman::Weinert2021_MidGerman_ref6,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12012,89,16,0.7035,-0.1106,-0.8141
+MidGerman::Weinert2021_MidGerman_ref7,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19117,164,17,0.9067,0.9728,0.066
+MidGerman::Weinert2021_MidGerman_ref7,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4852,33,15,0.5756,0.8058,0.2302
+MidGerman::Weinert2021_MidGerman_ref7,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21052,164,16,0.7719,0.9683,0.1964
+MidGerman::Weinert2021_MidGerman_ref7,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7371,33,17,0.921,0.9946,0.0737
+MidGerman::Weinert2021_MidGerman_ref7,Permeability $k$ (m²),permeability_m2,KNN,9950,44,14,0.6763,-0.8706,-1.5469
+MidGerman::Weinert2021_MidGerman_ref7,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5154,103,17,0.841,-0.7194,-1.5604
+MidGerman::Weinert2021_MidGerman_ref7,Porosity $\phi$ (%),porosity_pct,XGBoost,19655,164,17,0.828,-7.0321,-7.8602
+MidGerman::Weinert2021_MidGerman_ref7,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5507,33,17,0.9597,0.9794,0.0197
+MidGerman::Weinert2021_MidGerman_ref7,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9106,92,16,0.7239,0.5827,-0.1412
+MidGerman::Weinert2021_MidGerman_ref7,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1927,75,16,0.8319,0.0513,-0.7806
+MidGerman::Weinert2021_MidGerman_ref7,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.7177,0.4338,-0.2839
+MidGerman::Weinert2021_MidGerman_ref7,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12009,92,16,0.7061,-0.3866,-1.0927
+MidGerman::Weinert2021_MidGerman_ref7,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8113,91,16,0.8429,0.8819,0.039
+MidGerman::Weinert2021_MidGerman_ref7,UCS (MPa),ucs_MPa,KNN,2994,139,16,0.7657,-0.8118,-1.5775
+MidGerman::Weinert2021_MidGerman_ref8,Permeability $k$ (m²),permeability_m2,KNN,9521,473,14,0.6708,-14.2499,-14.9207
+MidGerman::Weinert2021_MidGerman_ref8,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8637,561,16,0.7242,0.8062,0.082
+MidGerman::Weinert2021_MidGerman_ref8,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11540,561,16,0.7032,0.9484,0.2452
+MidGerman::Weinert2021_MidGerman_ref8,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7643,561,16,0.85,0.865,0.015
+MidGerman::Weinert2021_MidGerman_ref9,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19240,41,17,0.907,0.9673,0.0603
+MidGerman::Weinert2021_MidGerman_ref9,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4845,40,15,0.5765,-0.7638,-1.3403
+MidGerman::Weinert2021_MidGerman_ref9,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.77,0.8793,0.1093
+MidGerman::Weinert2021_MidGerman_ref9,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7305,99,17,0.9217,0.984,0.0622
+MidGerman::Weinert2021_MidGerman_ref9,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5158,99,17,0.8374,0.831,-0.0064
+MidGerman::Weinert2021_MidGerman_ref9,Porosity $\phi$ (%),porosity_pct,XGBoost,19778,41,17,0.8268,-1.0434,-1.8701
+MidGerman::Weinert2021_MidGerman_ref9,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5441,99,17,0.96,0.9957,0.0357
+MidGerman::Weinert2021_MidGerman_ref9,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9075,123,16,0.7234,0.2215,-0.5019
+MidGerman::Weinert2021_MidGerman_ref9,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11978,123,16,0.7011,-0.1131,-0.8142
+MidGerman::Weinert2021_MidGerman_ref9,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8122,82,16,0.8206,0.6796,-0.141
+MidGerman::Weinert2021_MidGerman_ref9,UCS (MPa),ucs_MPa,KNN,3085,48,16,0.7654,-0.3064,-1.0719
+MidGerman::Weinert2021_MidGerman_thisStudy,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18925,356,17,0.9076,0.8934,-0.0142
+MidGerman::Weinert2021_MidGerman_thisStudy,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4452,433,15,0.5559,0.4658,-0.0902
+MidGerman::Weinert2021_MidGerman_thisStudy,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20740,476,16,0.7753,0.6892,-0.086
+MidGerman::Weinert2021_MidGerman_thisStudy,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6956,448,17,0.917,0.9938,0.0768
+MidGerman::Weinert2021_MidGerman_thisStudy,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,4808,449,17,0.8228,0.9736,0.1508
+MidGerman::Weinert2021_MidGerman_thisStudy,Porosity $\phi$ (%),porosity_pct,XGBoost,19470,349,17,0.8304,0.4149,-0.4154
+MidGerman::Weinert2021_MidGerman_thisStudy,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5092,448,17,0.957,0.9977,0.0407
+MidGerman::Weinert2021_MidGerman_thisStudy,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8948,250,16,0.7276,-0.0207,-0.7483
+MidGerman::Weinert2021_MidGerman_thisStudy,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11694,407,16,0.7018,0.6359,-0.066
+MidGerman::Weinert2021_MidGerman_thisStudy,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8117,87,16,0.8449,0.6352,-0.2097
+Mielke2017,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6739,665,17,0.9363,0.5941,-0.3422
+Mielke2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19156,663,17,0.8319,0.4475,-0.3844
+Mielke2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11436,665,16,0.7149,-2.6264,-3.3413
+P3::Alam2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21174,42,16,0.7732,-69.3058,-70.079
+P3::Alam2011,Permeability $k$ (m²),permeability_m2,KNN,9952,42,14,0.6788,-1.8071,-2.4858
+P3::Alam2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19777,42,17,0.8292,-5.7007,-6.5298
+P3::Aretz2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18335,946,17,0.9086,0.6954,-0.2132
+P3::Aretz2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20269,947,16,0.7764,-3.6186,-4.3951
+P3::Aretz2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,6997,407,17,0.9251,0.1753,-0.7498
+P3::Aretz2015,Porosity $\phi$ (%),porosity_pct,XGBoost,18871,948,17,0.8317,0.745,-0.0867
+P3::Aretz2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8428,770,16,0.7131,0.6741,-0.039
+P3::Aretz2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11147,954,16,0.6982,0.2542,-0.444
+P3::Aretz2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7280,924,16,0.8617,0.515,-0.3467
+P3::Baer2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18904,377,17,0.9064,0.9349,0.0285
+P3::Baer2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20835,381,16,0.7716,0.5038,-0.2678
+P3::Baer2012,Permeability $k$ (m²),permeability_m2,KNN,9835,159,14,0.6739,0.2307,-0.4432
+P3::Baer2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19437,382,17,0.828,0.9511,0.1231
+P3::Baer2012,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8881,317,16,0.7207,-2.0192,-2.7399
+P3::Baer2012,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11717,384,16,0.7072,-0.2479,-0.9552
+P3::Betten2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19241,40,17,0.9041,0.3201,-0.584
+P3::Betten2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21176,40,16,0.7751,0.0856,-0.6895
+P3::Betten2015,Permeability $k$ (m²),permeability_m2,KNN,9954,40,14,0.6748,-0.8001,-1.4749
+P3::Betten2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.8313,0.8503,0.019
+P3::Betten2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9158,40,16,0.7151,0.7989,0.0838
+P3::Betten2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12061,40,16,0.7028,-11.4274,-12.1301
+P3::Betten2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8164,40,16,0.8184,0.6035,-0.2149
+P3::Biewer2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19187,94,17,0.9063,0.8199,-0.0864
+P3::Biewer2017,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4792,93,15,0.5799,0.0583,-0.5215
+P3::Biewer2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21122,94,16,0.7732,0.8517,0.0785
+P3::Biewer2017,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7311,93,17,0.9206,0.9679,0.0473
+P3::Biewer2017,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5164,93,17,0.8361,0.9286,0.0925
+P3::Biewer2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19726,93,17,0.8276,-0.1504,-0.9779
+P3::Biewer2017,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5447,93,17,0.9606,0.9879,0.0273
+P3::Biewer2017,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9105,93,16,0.72,0.5195,-0.2004
+P3::Biewer2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12008,93,16,0.6979,-0.2316,-0.9295
+P3::Biewer2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8111,93,16,0.834,0.8267,-0.0073
+P3::Brettreich2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19192,89,17,0.9053,0.9428,0.0375
+P3::Brettreich2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4798,87,15,0.574,0.057,-0.517
+P3::Brettreich2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21127,89,16,0.7692,0.9006,0.1314
+P3::Brettreich2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7314,90,17,0.9206,0.9743,0.0537
+P3::Brettreich2016,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5167,90,17,0.835,0.9554,0.1204
+P3::Brettreich2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19730,89,17,0.8305,0.2045,-0.6259
+P3::Brettreich2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5450,90,17,0.9599,0.9781,0.0182
+P3::Brettreich2016,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9144,54,16,0.7284,0.2659,-0.4625
+P3::Brettreich2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12047,54,16,0.7075,-0.0153,-0.7229
+P3::Brettreich2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,54,16,0.861,-1.1201,-1.9811
+P3::Caroll1969,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19219,62,17,0.9096,-0.0193,-0.9289
+P3::Caroll1969,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4824,61,15,0.5801,-0.152,-0.7321
+P3::Caroll1969,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7342,62,17,0.9207,0.9108,-0.0099
+P3::Caroll1969,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5478,62,17,0.9595,0.8466,-0.1129
+P3::ElDakak2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19166,115,17,0.9074,0.7512,-0.1561
+P3::ElDakak2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21101,115,16,0.7733,-19.8652,-20.6385
+P3::ElDakak2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19704,115,17,0.8268,0.3419,-0.4849
+P3::ElDakak2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9084,114,16,0.7167,-0.233,-0.9498
+P3::ElDakak2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11986,115,16,0.7046,0.2357,-0.4688
+P3::Esteban2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7358,46,17,0.9217,0.1056,-0.816
+P3::Esteban2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19773,46,17,0.8273,0.195,-0.6324
+P3::Esteban2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12055,46,16,0.7146,-5.3011,-6.0157
+P3::Franzson2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21117,99,16,0.7752,-0.4898,-1.265
+P3::Franzson2011,Permeability $k$ (m²),permeability_m2,KNN,9895,99,14,0.6743,-0.5206,-1.1949
+P3::Franzson2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19720,99,17,0.8322,-1.7945,-2.6268
+P3::Fuchs2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19209,72,17,0.9062,0.2446,-0.6616
+P3::Fuchs2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21144,72,16,0.7695,-0.7821,-1.5515
+P3::Fuchs2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19747,72,17,0.8297,-2.9782,-3.808
+P3::Fuchs2010,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12029,72,16,0.7125,-10.4566,-11.169
+P3::Gaertner2017,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,37,17,0.9055,0.1444,-0.7612
+P3::Gaertner2017,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21178,38,16,0.7706,-27.5371,-28.3078
+P3::Gaertner2017,Permeability $k$ (m²),permeability_m2,KNN,9854,140,14,0.6734,-8.9517,-9.6252
+P3::Gaertner2017,Porosity $\phi$ (%),porosity_pct,XGBoost,19782,37,17,0.8333,0.3176,-0.5157
+P3::Gaertner2017,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11955,146,16,0.69,-1.1335,-1.8235
+P3::Gaertner2017,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8058,146,16,0.8524,-0.3348,-1.1872
+P3::Garcia-Gutierrez2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19243,38,17,0.9072,0.6864,-0.2208
+P3::Garcia-Gutierrez2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21178,38,16,0.7684,0.0151,-0.7532
+P3::Garcia-Gutierrez2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19776,43,17,0.8326,0.6469,-0.1857
+P3::Geist2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,34,17,0.908,0.8156,-0.0924
+P3::Geist2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21182,34,16,0.7683,0.1615,-0.6068
+P3::Geist2011,Permeability $k$ (m²),permeability_m2,KNN,9960,34,14,0.6715,-0.7335,-1.4049
+P3::Geist2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19785,34,17,0.8274,0.5977,-0.2296
+P3::Geist2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9168,30,16,0.7201,-1.0014,-1.7215
+P3::Geist2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12067,34,16,0.7049,-4.0331,-4.738
+P3::Heap2015b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19227,54,17,0.9062,0.6132,-0.293
+P3::Heap2015b,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7350,54,17,0.9204,0.8227,-0.0977
+P3::Heap2015b,Porosity $\phi$ (%),porosity_pct,XGBoost,19765,54,17,0.8239,0.9029,0.079
+P3::Heap2015b,UCS (MPa),ucs_MPa,KNN,3097,36,16,0.7519,0.8385,0.0867
+P3::Homuth2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21121,95,16,0.771,0.3273,-0.4436
+P3::Homuth2014,Permeability $k$ (m²),permeability_m2,KNN,9922,72,14,0.6764,-0.6475,-1.3239
+P3::Homuth2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19725,94,17,0.8339,-4.3725,-5.2064
+P3::Homuth2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12006,95,16,0.7042,-4.0436,-4.7478
+P3::Islam2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19241,40,17,0.9062,-1.533,-2.4392
+P3::Islam2010,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21177,39,16,0.7728,-6.3867,-7.1596
+P3::Islam2010,Permeability $k$ (m²),permeability_m2,KNN,9954,40,14,0.6713,-9.1712,-9.8425
+P3::Islam2010,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.83,-1.389,-2.2189
+P3::Kahraman2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,35,17,0.9077,0.9815,0.0739
+P3::Kahraman2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21175,41,16,0.7732,-0.2446,-1.0178
+P3::Kahraman2007,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7363,41,17,0.9234,-1.4527,-2.3761
+P3::Kahraman2007,Porosity $\phi$ (%),porosity_pct,XGBoost,19778,41,17,0.8316,-0.2092,-1.0409
+P3::Kassab2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19239,42,17,0.9071,-1.5101,-2.4173
+P3::Kassab2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21174,42,16,0.7739,-0.0242,-0.7981
+P3::Kassab2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7365,39,17,0.9212,-0.6781,-1.5993
+P3::Kassab2015,Permeability $k$ (m²),permeability_m2,KNN,9952,42,14,0.6746,-2.6213,-3.2959
+P3::Kassab2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19777,42,17,0.8277,-0.3592,-1.1869
+P3::Klumbach2010,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19186,95,17,0.9093,0.2859,-0.6235
+P3::Klumbach2010,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7355,49,17,0.9201,0.5412,-0.3789
+P3::Klumbach2010,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5166,91,17,0.8487,0.2838,-0.5649
+P3::Klumbach2010,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1908,94,16,0.8367,0.6833,-0.1534
+P3::Klumbach2010,UCS (MPa),ucs_MPa,KNN,3038,95,16,0.7658,0.518,-0.2478
+P3::Konzack2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19227,54,17,0.908,0.964,0.056
+P3::Konzack2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4844,41,15,0.5785,-3.5386,-4.1172
+P3::Konzack2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21162,54,16,0.7705,0.5408,-0.2297
+P3::Konzack2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7358,46,17,0.9203,0.9234,0.0031
+P3::Konzack2015,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6727,-0.9162,-1.5888
+P3::Konzack2015,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5216,41,17,0.8425,0.7518,-0.0907
+P3::Konzack2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19765,54,17,0.8264,0.935,0.1087
+P3::Konzack2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5499,41,17,0.9613,0.9912,0.0299
+P3::Konzack2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9144,54,16,0.7297,-0.4058,-1.1355
+P3::Konzack2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12047,54,16,0.7059,-0.309,-1.0149
+P3::Konzack2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8150,54,16,0.8614,0.396,-0.4655
+P3::Leu2006,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18909,372,17,0.9134,-0.1556,-1.069
+P3::Leu2006,Porosity $\phi$ (%),porosity_pct,XGBoost,19588,231,17,0.8341,-0.5314,-1.3655
+P3::Leu2006,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8871,327,16,0.7459,-5.4843,-6.2301
+P3::Leu2006,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11730,371,16,0.7155,-0.702,-1.4176
+P3::Mack2007,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19242,39,17,0.9085,-0.125,-1.0336
+P3::Mack2007,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21177,39,16,0.7756,-4.4924,-5.268
+P3::Mack2007,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12062,39,16,0.7008,-0.5249,-1.2257
+P3::Manghnani2012,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19118,163,17,0.9074,0.7178,-0.1897
+P3::Manghnani2012,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4737,148,15,0.583,-0.7126,-1.2956
+P3::Manghnani2012,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21066,150,16,0.7687,-0.3501,-1.1188
+P3::Manghnani2012,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7241,163,17,0.9208,0.9173,-0.0035
+P3::Manghnani2012,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5109,148,17,0.8385,0.9403,0.1018
+P3::Manghnani2012,Porosity $\phi$ (%),porosity_pct,XGBoost,19669,150,17,0.8303,0.8417,0.0114
+P3::Manghnani2012,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5377,163,17,0.9604,0.9491,-0.0113
+P3::Mielke2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18885,396,17,0.892,-0.0915,-0.9835
+P3::Mielke2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20818,398,16,0.7786,0.1396,-0.639
+P3::Mielke2015,Permeability $k$ (m²),permeability_m2,KNN,9582,412,14,0.6892,-0.1605,-0.8497
+P3::Mielke2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19421,398,17,0.802,0.8532,0.0512
+P3::Mielke2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8824,374,16,0.7181,-14.112,-14.8301
+P3::Mielke2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11708,393,16,0.6585,-1.8493,-2.5077
+P3::Mielke2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,7812,392,16,0.8404,-0.2589,-1.0993
+P3::Moiseenko1965b,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,37,17,0.9056,0.9505,0.0449
+P3::Moiseenko1965b,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9161,37,16,0.7172,0.8462,0.1291
+P3::Moiseenko1965b,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12064,37,16,0.7039,1.0,0.2961
+P3::Moiseenko1965b,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8169,35,16,0.7234,0.996,0.2726
+P3::Mueller2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19191,90,17,0.9075,0.9754,0.0678
+P3::Mueller2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21126,90,16,0.7727,-26.5714,-27.3441
+P3::Mueller2014,Permeability $k$ (m²),permeability_m2,KNN,9886,108,14,0.6735,-1.0793,-1.7528
+P3::Mueller2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19729,90,17,0.8299,0.6101,-0.2198
+P3::Mueller2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9108,90,16,0.7093,-1.1005,-1.8098
+P3::Mueller2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11984,117,16,0.6873,-1.3819,-2.0692
+P3::Mueller2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8087,117,16,0.849,-0.685,-1.534
+P3::Nehler2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19058,223,17,0.9073,0.7245,-0.1828
+P3::Nehler2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20996,220,16,0.7679,0.3616,-0.4064
+P3::Nehler2011,Permeability $k$ (m²),permeability_m2,KNN,9939,55,14,0.6757,-0.4232,-1.0988
+P3::Nehler2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19600,219,17,0.8238,0.8807,0.0569
+P3::Nehler2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8978,220,16,0.7107,0.0234,-0.6874
+P3::Nehler2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11878,223,16,0.7028,0.04,-0.6628
+P3::OS-95017 (1995),Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18861,420,17,0.9058,-0.8728,-1.7786
+P3::OS-95017 (1995),Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21009,207,16,0.7739,0.5594,-0.2145
+P3::OS-95017 (1995),Permeability $k$ (m²),permeability_m2,KNN,9657,337,14,0.6714,0.8178,0.1464
+P3::OS-95017 (1995),Porosity $\phi$ (%),porosity_pct,XGBoost,19399,420,17,0.8518,-0.0115,-0.8633
+P3::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18911,370,17,0.9145,0.6354,-0.2791
+P3::Other,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4837,48,15,0.569,-2.577,-3.1461
+P3::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20939,277,16,0.7718,0.4374,-0.3344
+P3::Other,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7294,110,17,0.9203,0.6715,-0.2488
+P3::Other,Permeability $k$ (m²),permeability_m2,KNN,9779,215,14,0.6779,-0.2142,-0.8921
+P3::Other,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5190,67,17,0.8421,0.2307,-0.6114
+P3::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19382,437,17,0.8314,0.6399,-0.1915
+P3::Other,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5466,74,17,0.9584,0.9321,-0.0263
+P3::Other,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8986,212,16,0.7591,-0.2697,-1.0289
+P3::Other,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1905,97,16,0.8449,-1.3076,-2.1525
+P3::Other,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,863,43,16,0.6953,0.7528,0.0575
+P3::Other,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11813,288,16,0.7147,-0.2791,-0.9937
+P3::Other,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8158,46,16,0.8458,0.5229,-0.3228
+P3::Other,UCS (MPa),ucs_MPa,KNN,3010,123,16,0.7579,0.6911,-0.0668
+P3::Pei2009,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19206,75,17,0.9081,0.9753,0.0673
+P3::Pei2009,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21141,75,16,0.7694,0.9176,0.1482
+P3::Pei2009,Permeability $k$ (m²),permeability_m2,KNN,9928,66,14,0.6697,0.4749,-0.1949
+P3::Pei2009,Porosity $\phi$ (%),porosity_pct,XGBoost,19744,75,17,0.8293,0.9848,0.1555
+P3::Pei2009,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9123,75,16,0.716,-6.7797,-7.4956
+P3::Pei2009,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1953,49,16,0.8407,0.3384,-0.5023
+P3::Pei2009,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12026,75,16,0.7115,-1.0556,-1.767
+P3::Reyer2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19231,50,17,0.9063,0.9413,0.035
+P3::Reyer2014,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21166,50,16,0.7698,-3.6529,-4.4227
+P3::Reyer2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7354,50,17,0.9234,0.1568,-0.7665
+P3::Reyer2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19769,50,17,0.8281,0.8793,0.0511
+P3::Reyer2014,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1953,49,16,0.8482,0.3114,-0.5367
+P3::Reyer2014,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,857,49,16,0.7007,-5.1867,-5.8874
+P3::Reyer2014,UCS (MPa),ucs_MPa,KNN,3084,49,16,0.7563,-0.2004,-0.9567
+P3::Sakvarelidze1973,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19246,35,17,0.9082,0.3871,-0.521
+P3::Sakvarelidze1973,Porosity $\phi$ (%),porosity_pct,XGBoost,19784,35,17,0.8317,-0.564,-1.3957
+P3::Sakvarelidze1973,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12066,35,16,0.7086,-0.0839,-0.7926
+P3::Sandkuehler2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19223,58,17,0.9053,0.9097,0.0044
+P3::Sandkuehler2015,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4832,53,15,0.5706,0.4141,-0.1566
+P3::Sandkuehler2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21158,58,16,0.7723,-0.0025,-0.7747
+P3::Sandkuehler2015,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7355,49,17,0.9199,0.98,0.0601
+P3::Sandkuehler2015,Permeability $k$ (m²),permeability_m2,KNN,9938,56,14,0.6761,-1.3226,-1.9986
+P3::Sandkuehler2015,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5205,52,17,0.8383,-0.4613,-1.2997
+P3::Sandkuehler2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19761,58,17,0.8283,0.9078,0.0795
+P3::Sandkuehler2015,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5491,49,17,0.9589,0.9948,0.0358
+P3::Sandkuehler2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9140,58,16,0.7243,-1.7124,-2.4367
+P3::Sandkuehler2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12043,58,16,0.7049,0.3828,-0.322
+P3::Sandkuehler2015,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8146,58,16,0.8615,0.4631,-0.3984
+P3::Schaeffer2018,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21120,96,16,0.7745,-0.0349,-0.8094
+P3::Schaeffer2018,Permeability $k$ (m²),permeability_m2,KNN,9899,95,14,0.6744,-7.0163,-7.6906
+P3::Schaeffer2018,Porosity $\phi$ (%),porosity_pct,XGBoost,19723,96,17,0.8333,-0.1954,-1.0287
+P3::Schaeffer2018,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9103,95,16,0.7266,-1.0387,-1.7653
+P3::Schaeffer2018,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12005,96,16,0.7033,0.6098,-0.0935
+P3::Schaeffer2018,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8109,95,16,0.858,0.6553,-0.2027
+P3::Schintgen2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19148,133,17,0.9069,0.6755,-0.2314
+P3::Schintgen2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21137,79,16,0.7696,0.3931,-0.3764
+P3::Schintgen2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19686,133,17,0.8316,0.6781,-0.1536
+P3::Schintgen2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11968,133,16,0.7125,-0.2792,-0.9917
+P3::Schoepflin2013,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19072,209,17,0.9118,-12.7011,-13.613
+P3::Schoepflin2013,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4716,169,15,0.5809,-12.4318,-13.0127
+P3::Schoepflin2013,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7253,151,17,0.9177,0.9556,0.0378
+P3::Schoepflin2013,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5092,165,17,0.8393,0.7091,-0.1302
+P3::Schoepflin2013,Porosity $\phi$ (%),porosity_pct,XGBoost,19731,88,17,0.8331,-19.2613,-20.0944
+P3::Schoepflin2013,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5390,150,17,0.9607,0.9822,0.0214
+P3::Schoepflin2013,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1967,35,16,0.8447,0.3363,-0.5084
+P3::Schoepflin2013,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,869,37,16,0.7171,-1.1613,-1.8784
+P3::Schoepflin2013,UCS (MPa),ucs_MPa,KNN,3097,36,16,0.7545,-6.9544,-7.7089
+P3::Schubert2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19227,54,17,0.9075,0.7717,-0.1359
+P3::Schubert2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21162,54,16,0.7697,0.1508,-0.619
+P3::Schubert2011,Permeability $k$ (m²),permeability_m2,KNN,9940,54,14,0.6781,-2.6118,-3.29
+P3::Schubert2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19765,54,17,0.8286,0.9491,0.1204
+P3::Schubert2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9143,55,16,0.7245,-1.3628,-2.0873
+P3::Schubert2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12046,55,16,0.7048,-2.033,-2.7378
+P3::Sikora2015,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19014,267,17,0.9089,0.7237,-0.1851
+P3::Sikora2015,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20949,267,16,0.7683,0.4815,-0.2868
+P3::Sikora2015,Permeability $k$ (m²),permeability_m2,KNN,9727,267,14,0.6685,-0.4352,-1.1036
+P3::Sikora2015,Porosity $\phi$ (%),porosity_pct,XGBoost,19554,265,17,0.8285,0.5648,-0.2637
+P3::Sikora2015,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,8935,263,16,0.7162,-26.6938,-27.41
+P3::Sikora2015,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11834,267,16,0.7002,-3.8306,-4.5308
+P3::Siratovich2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19229,52,17,0.9087,0.484,-0.4247
+P3::Siratovich2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7352,52,17,0.9226,-0.7068,-1.6294
+P3::Siratovich2014,Permeability $k$ (m²),permeability_m2,KNN,9964,30,14,0.6789,-240.9904,-241.6693
+P3::Siratovich2014,Porosity $\phi$ (%),porosity_pct,XGBoost,19767,52,17,0.8311,0.5919,-0.2392
+P3::Trautwein2005,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19251,30,17,0.9069,-0.1934,-1.1003
+P3::Trautwein2005,Porosity $\phi$ (%),porosity_pct,XGBoost,19789,30,17,0.8272,-3.9263,-4.7535
+P3::Weinert2014,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19220,61,17,0.906,-2.7163,-3.6223
+P3::Weinert2014,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7345,59,17,0.92,0.9714,0.0514
+P3::Weinert2014,Permeability $k$ (m²),permeability_m2,KNN,9934,60,14,0.6791,-1.1859,-1.865
+P3::Weinert2014,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5199,58,17,0.8325,0.5169,-0.3156
+P3::Weinert2014,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5481,59,17,0.9596,0.9884,0.0288
+P3::Weinert2014,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9137,61,16,0.7168,-7.0898,-7.8066
+P3::Weinert2014,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12040,61,16,0.7038,-6.7724,-7.4762
+P3::Weinert2014,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8143,61,16,0.8652,-22.5842,-23.4493
+P3::Welsch2011,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19123,158,17,0.9082,-0.5988,-1.5069
+P3::Welsch2011,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21087,129,16,0.7725,0.4428,-0.3297
+P3::Welsch2011,Permeability $k$ (m²),permeability_m2,KNN,9836,158,14,0.6725,-0.079,-0.7515
+P3::Welsch2011,Porosity $\phi$ (%),porosity_pct,XGBoost,19690,129,17,0.8255,0.9284,0.1029
+P3::Welsch2011,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,9040,158,16,0.7353,-5.2472,-5.9825
+P3::Welsch2011,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,11943,158,16,0.6991,-3.1553,-3.8544
+P3::Weydt2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19201,80,17,0.9069,0.9576,0.0508
+P3::Weydt2016,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4842,43,15,0.5766,0.1416,-0.435
+P3::Weydt2016,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21137,79,16,0.7716,0.7123,-0.0593
+P3::Weydt2016,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7361,43,17,0.9191,0.9784,0.0593
+P3::Weydt2016,Permeability $k$ (m²),permeability_m2,KNN,9957,37,14,0.6766,-1.0799,-1.7565
+P3::Weydt2016,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5214,43,17,0.833,0.9887,0.1556
+P3::Weydt2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19740,79,17,0.8307,0.5313,-0.2994
+P3::Weydt2016,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5497,43,17,0.9594,0.9949,0.0355
+P3::Weydt2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12056,45,16,0.7101,-0.0876,-0.7977
+P3::Weydt2016,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,8160,44,16,0.8234,0.3935,-0.4299
+P3::Zhao2016,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19241,40,17,0.9048,-4.7595,-5.6643
+P3::Zhao2016,Porosity $\phi$ (%),porosity_pct,XGBoost,19779,40,17,0.8285,-86.7623,-87.5908
+P3::Zhao2016,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12061,40,16,0.7052,-134.3147,-135.0199
+USGS_GreatBasinPlutons::DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18765,516,17,0.9064,0.8231,-0.0833
+USGS_GreatBasinPlutons::DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20700,516,16,0.7721,0.9249,0.1528
 USGS_GreatBasinPlutons::DAP,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5596,516,14,0.2038,0.1197,-0.0841
-USGS_GreatBasinPlutons::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19205,82,17,0.9064,0.8529,-0.0535
-USGS_GreatBasinPlutons::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21140,82,16,0.8153,0.8886,0.0733
+USGS_GreatBasinPlutons::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19199,82,17,0.9064,0.8561,-0.0503
+USGS_GreatBasinPlutons::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21134,82,16,0.7731,0.8912,0.1181
 USGS_GreatBasinPlutons::Other,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6030,82,14,0.4875,-0.1682,-0.6557
-USGS_MojaveREE_2020::KMD,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18920,367,17,0.9047,0.9862,0.0815
-USGS_MojaveREE_2020::KMD,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20855,367,16,0.8125,0.9583,0.1458
+USGS_MojaveREE_2020::KMD,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18914,367,17,0.9043,0.9872,0.083
+USGS_MojaveREE_2020::KMD,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20849,367,16,0.7694,0.9714,0.2019
 USGS_MojaveREE_2020::KMD,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5745,367,14,0.4362,-4.6941,-5.1304
-USGS_MojaveREE_2020::KMD,Porosity $\phi$ (%),porosity_pct,XGBoost,19459,367,17,0.8273,-0.1174,-0.9447
-USGS_MojaveREE_2020::KMD/DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18838,449,17,0.9059,0.8986,-0.0074
-USGS_MojaveREE_2020::KMD/DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20774,448,16,0.8093,0.9896,0.1803
+USGS_MojaveREE_2020::KMD,Porosity $\phi$ (%),porosity_pct,XGBoost,19452,367,17,0.8268,-0.1063,-0.9331
+USGS_MojaveREE_2020::KMD/DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18832,449,17,0.9059,0.8991,-0.0068
+USGS_MojaveREE_2020::KMD/DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20768,448,16,0.7678,0.9721,0.2043
 USGS_MojaveREE_2020::KMD/DAP,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5663,449,14,0.5302,-0.063,-0.5931
-USGS_MojaveREE_2020::KMD/DAP,Porosity $\phi$ (%),porosity_pct,XGBoost,19378,448,17,0.8322,-2.8476,-3.6798
-USGS_MojaveREE_2020::KMD/DMM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19239,48,17,0.9053,0.9911,0.0858
-USGS_MojaveREE_2020::KMD/DMM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21174,48,16,0.8155,0.9849,0.1694
+USGS_MojaveREE_2020::KMD/DAP,Porosity $\phi$ (%),porosity_pct,XGBoost,19371,448,17,0.8322,-2.7034,-3.5356
+USGS_MojaveREE_2020::KMD/DMM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19233,48,17,0.9047,0.9907,0.086
+USGS_MojaveREE_2020::KMD/DMM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21168,48,16,0.7691,0.9858,0.2167
 USGS_MojaveREE_2020::KMD/DMM,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6064,48,14,0.2628,-0.5025,-0.7654
-USGS_MojaveREE_2020::KMD/DMM,Porosity $\phi$ (%),porosity_pct,XGBoost,19778,48,17,0.8282,-5.5104,-6.3385
-USGS_MojaveREE_2020::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19118,169,17,0.9052,0.9928,0.0876
-USGS_MojaveREE_2020::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21053,169,16,0.8113,0.9857,0.1744
+USGS_MojaveREE_2020::KMD/DMM,Porosity $\phi$ (%),porosity_pct,XGBoost,19771,48,17,0.8312,-5.2891,-6.1203
+USGS_MojaveREE_2020::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19112,169,17,0.9034,0.9915,0.0882
+USGS_MojaveREE_2020::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21047,169,16,0.7666,0.9471,0.1805
 USGS_MojaveREE_2020::Other,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5947,165,14,0.4581,-0.3083,-0.7665
-USGS_MojaveREE_2020::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19657,169,17,0.8308,0.0881,-0.7428
-USGS_WesternUS_Phillips2021::AAPM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19244,43,17,0.9103,-0.3084,-1.2188
-USGS_WesternUS_Phillips2021::AAPM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21185,37,16,0.8102,0.6254,-0.1848
+USGS_MojaveREE_2020::Other,Porosity $\phi$ (%),porosity_pct,XGBoost,19650,169,17,0.8277,0.2374,-0.5903
+USGS_WesternUS_Phillips2021::AAPM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19238,43,17,0.9118,-0.3187,-1.2304
+USGS_WesternUS_Phillips2021::AAPM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21179,37,16,0.7691,0.7241,-0.0451
 USGS_WesternUS_Phillips2021::AAPM,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6068,44,14,0.3803,-0.0122,-0.3925
-USGS_WesternUS_Phillips2021::AEE,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19155,132,17,0.9061,0.8248,-0.0814
-USGS_WesternUS_Phillips2021::AEE,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21090,132,16,0.8108,0.8495,0.0387
+USGS_WesternUS_Phillips2021::AEE,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19149,132,17,0.9078,0.8272,-0.0806
+USGS_WesternUS_Phillips2021::AEE,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21084,132,16,0.7696,0.8707,0.1011
 USGS_WesternUS_Phillips2021::AEE,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5980,132,14,0.4986,-0.1431,-0.6417
-USGS_WesternUS_Phillips2021::DAJ,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19103,184,17,0.9064,0.8522,-0.0542
-USGS_WesternUS_Phillips2021::DAJ,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21038,184,16,0.8116,0.8604,0.0488
+USGS_WesternUS_Phillips2021::DAJ,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19097,184,17,0.9064,0.8515,-0.0549
+USGS_WesternUS_Phillips2021::DAJ,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21032,184,16,0.7715,0.7733,0.0018
 USGS_WesternUS_Phillips2021::DAJ,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5928,184,14,0.5217,0.0103,-0.5113
-USGS_WesternUS_Phillips2021::DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18653,634,17,0.9054,0.8064,-0.099
-USGS_WesternUS_Phillips2021::DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20585,637,16,0.8086,0.8255,0.017
+USGS_WesternUS_Phillips2021::DAP,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18647,634,17,0.907,0.8066,-0.1004
+USGS_WesternUS_Phillips2021::DAP,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20579,637,16,0.7692,0.8278,0.0585
 USGS_WesternUS_Phillips2021::DAP,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5475,637,14,0.5082,-1.252,-1.7602
-USGS_WesternUS_Phillips2021::DSS,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19123,164,17,0.909,0.7701,-0.1389
-USGS_WesternUS_Phillips2021::DSS,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21059,163,16,0.8103,0.8798,0.0695
+USGS_WesternUS_Phillips2021::DSS,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19117,164,17,0.9085,0.7693,-0.1392
+USGS_WesternUS_Phillips2021::DSS,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21053,163,16,0.7717,0.9046,0.133
 USGS_WesternUS_Phillips2021::DSS,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5948,164,14,0.5099,-0.5843,-1.0942
-USGS_WesternUS_Phillips2021::JGD,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19226,61,17,0.9055,0.9462,0.0407
-USGS_WesternUS_Phillips2021::JGD,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21161,61,16,0.8123,0.9258,0.1135
+USGS_WesternUS_Phillips2021::JGD,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19220,61,17,0.9055,0.9449,0.0394
+USGS_WesternUS_Phillips2021::JGD,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21155,61,16,0.7746,0.9265,0.1519
 USGS_WesternUS_Phillips2021::JGD,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6051,61,14,0.361,-0.4128,-0.7737
-USGS_WesternUS_Phillips2021::JMGG,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18632,655,17,0.9045,0.9164,0.0119
-USGS_WesternUS_Phillips2021::JMGG,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20565,657,16,0.8101,0.9262,0.116
+USGS_WesternUS_Phillips2021::JMGG,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18626,655,17,0.9035,0.9154,0.0118
+USGS_WesternUS_Phillips2021::JMGG,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20559,657,16,0.7618,0.92,0.1582
 USGS_WesternUS_Phillips2021::JMGG,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5455,657,14,0.4779,-0.1052,-0.5831
-USGS_WesternUS_Phillips2021::JPC,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19231,56,17,0.9066,0.8536,-0.053
-USGS_WesternUS_Phillips2021::JPC,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21165,57,16,0.813,0.8187,0.0057
+USGS_WesternUS_Phillips2021::JPC,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19225,56,17,0.9053,0.8516,-0.0537
+USGS_WesternUS_Phillips2021::JPC,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21159,57,16,0.7706,0.839,0.0684
 USGS_WesternUS_Phillips2021::JPC,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6055,57,14,0.3816,-0.1205,-0.5021
-USGS_WesternUS_Phillips2021::JR,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19253,34,17,0.9081,0.4476,-0.4605
-USGS_WesternUS_Phillips2021::JR,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21190,32,16,0.8125,0.7822,-0.0303
+USGS_WesternUS_Phillips2021::JR,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19247,34,17,0.9064,0.4495,-0.4569
+USGS_WesternUS_Phillips2021::JR,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21184,32,16,0.7658,0.8028,0.037
 USGS_WesternUS_Phillips2021::JR,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6078,34,14,0.3527,-6.9245,-7.2772
-USGS_WesternUS_Phillips2021::JTW,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19234,53,17,0.9062,0.7935,-0.1126
-USGS_WesternUS_Phillips2021::JTW,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21169,53,16,0.8135,0.687,-0.1265
+USGS_WesternUS_Phillips2021::JTW,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19228,53,17,0.9056,0.7939,-0.1117
+USGS_WesternUS_Phillips2021::JTW,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21163,53,16,0.7722,0.7509,-0.0214
 USGS_WesternUS_Phillips2021::JTW,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6059,53,14,0.2899,-0.2785,-0.5684
-USGS_WesternUS_Phillips2021::LMH,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18988,299,17,0.9054,0.893,-0.0123
-USGS_WesternUS_Phillips2021::LMH,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20923,299,16,0.8157,0.9346,0.1189
+USGS_WesternUS_Phillips2021::LMH,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18982,299,17,0.9055,0.8929,-0.0126
+USGS_WesternUS_Phillips2021::LMH,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20917,299,16,0.7706,0.9583,0.1877
 USGS_WesternUS_Phillips2021::LMH,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5813,299,14,0.4457,-1.9655,-2.4112
-USGS_WesternUS_Phillips2021::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19175,112,17,0.9059,0.9125,0.0066
-USGS_WesternUS_Phillips2021::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21109,113,16,0.8127,0.8951,0.0824
+USGS_WesternUS_Phillips2021::Other,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19169,112,17,0.9054,0.9122,0.0068
+USGS_WesternUS_Phillips2021::Other,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21103,113,16,0.7721,0.9218,0.1497
 USGS_WesternUS_Phillips2021::Other,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5999,113,14,0.4951,0.0261,-0.469
-USGS_WesternUS_Phillips2021::Phillips2021_USGS,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19168,119,17,0.9068,0.763,-0.1438
-USGS_WesternUS_Phillips2021::Phillips2021_USGS,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21103,119,16,0.8121,0.6546,-0.1575
+USGS_WesternUS_Phillips2021::Phillips2021_USGS,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19162,119,17,0.9048,0.7647,-0.1402
+USGS_WesternUS_Phillips2021::Phillips2021_USGS,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21097,119,16,0.7727,0.7579,-0.0149
 USGS_WesternUS_Phillips2021::Phillips2021_USGS,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5993,119,14,0.4847,-0.0204,-0.5051
-USGS_WesternUS_Phillips2021::RJW,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19078,209,17,0.9067,0.7868,-0.1199
-USGS_WesternUS_Phillips2021::RJW,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21011,211,16,0.8138,0.7,-0.1138
+USGS_WesternUS_Phillips2021::RJW,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19072,209,17,0.9065,0.7884,-0.1181
+USGS_WesternUS_Phillips2021::RJW,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21005,211,16,0.7724,0.7426,-0.0298
 USGS_WesternUS_Phillips2021::RJW,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5901,211,14,0.4839,-0.052,-0.5358
-USGS_WesternUS_Phillips2021::RLM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19236,51,17,0.9059,0.823,-0.0829
-USGS_WesternUS_Phillips2021::RLM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,21171,51,16,0.8143,0.903,0.0887
+USGS_WesternUS_Phillips2021::RLM,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19230,51,17,0.9065,0.8149,-0.0915
+USGS_WesternUS_Phillips2021::RLM,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,21165,51,16,0.769,0.9233,0.1543
 USGS_WesternUS_Phillips2021::RLM,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,6061,51,14,0.3116,-0.1179,-0.4294
-USGS_WesternUS_Phillips2021::VEL,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18931,356,17,0.9065,0.8829,-0.0235
-USGS_WesternUS_Phillips2021::VEL,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20866,356,16,0.8079,0.8808,0.0729
+USGS_WesternUS_Phillips2021::VEL,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,18925,356,17,0.9084,0.8824,-0.026
+USGS_WesternUS_Phillips2021::VEL,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20860,356,16,0.7678,0.8672,0.0994
 USGS_WesternUS_Phillips2021::VEL,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5756,356,14,0.5129,-0.0189,-0.5317
-Valgarður,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,20527,695,16,0.8212,-1.3111,-2.1323
-Valgarður,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7160,250,17,0.9211,0.3779,-0.5431
-Valgarður,Permeability $k$ (m²),permeability_m2,KNN,9501,500,14,0.669,0.1881,-0.4809
-Valgarður,Porosity $\phi$ (%),porosity_pct,XGBoost,19125,701,17,0.8478,0.1462,-0.7016
-Valgarður,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5446,100,17,0.9615,0.7876,-0.1739
-Valgarður,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1958,52,16,0.8442,0.1832,-0.661
-Valgarður,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,852,54,16,0.6878,0.2606,-0.4273
-Valgarður,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12054,54,16,0.6972,-15.1387,-15.8359
-Valgarður,UCS (MPa),ucs_MPa,RF,3050,91,16,0.7827,0.1721,-0.6106
-Weydt2020,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,17952,1335,16,0.8949,0.9401,0.0452
-Weydt2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,3158,1734,14,0.5949,0.1812,-0.4137
-Weydt2020,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,RF,19358,1864,16,0.8072,0.5649,-0.2423
+Valgarður,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,20521,695,16,0.7974,-0.7457,-1.5431
+Valgarður,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7154,250,17,0.9221,0.373,-0.5491
+Valgarður,Permeability $k$ (m²),permeability_m2,KNN,9494,500,14,0.6724,0.1874,-0.485
+Valgarður,Porosity $\phi$ (%),porosity_pct,XGBoost,19118,701,17,0.8499,0.1905,-0.6594
+Valgarður,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5440,100,17,0.9598,0.7787,-0.1811
+Valgarður,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1950,52,16,0.8456,0.1326,-0.713
+Valgarður,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,852,54,16,0.6873,0.227,-0.4603
+Valgarður,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,12047,54,16,0.7036,-15.141,-15.8446
+Valgarður,UCS (MPa),ucs_MPa,KNN,3042,91,16,0.7626,-0.2106,-0.9732
+Weydt2020,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,17946,1335,16,0.8951,0.9393,0.0441
+Weydt2020,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,3151,1734,14,0.5977,0.1767,-0.4209
+Weydt2020,Grain density $\rho_g$ (g/cm³),grain_density_gcm3,XGBoost,19352,1864,16,0.757,0.4473,-0.3097
 Weydt2020,Magnetic susceptibility $\chi$ ($\times 10^{-3}$ SI),mag_susc_1e3si,XGBoost,5191,921,13,-0.0303,-0.0248,0.0054
-Weydt2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,5629,1781,16,0.8938,0.8469,-0.0469
-Weydt2020,Permeability $k$ (m²),permeability_m2,KNN,8949,1052,12,0.6667,-0.1702,-0.8369
-Weydt2020,Poisson ratio $\nu$,poisson_ratio,RF,3507,1750,16,0.8216,0.7639,-0.0577
-Weydt2020,Porosity $\phi$ (%),porosity_pct,XGBoost,18593,1233,16,0.8138,0.7348,-0.079
-Weydt2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,3807,1739,16,0.9453,0.9773,0.032
-Weydt2020,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,7665,1539,16,0.7371,-7.7859,-8.5231
-Weydt2020,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1769,241,16,0.8491,-1.8646,-2.7136
-Weydt2020,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,615,291,15,0.7658,0.0633,-0.7025
-Weydt2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,10439,1669,16,0.6752,0.0696,-0.6056
-Weydt2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,6594,1617,16,0.8485,0.6683,-0.1802
-Weydt2020,UCS (MPa),ucs_MPa,RF,2677,464,16,0.806,0.1694,-0.6366
-Wyering2014_TVZ,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19156,131,17,0.9056,0.9114,0.0058
-Wyering2014_TVZ,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4767,125,15,0.5682,0.6366,0.0684
-Wyering2014_TVZ,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7284,126,17,0.9191,0.96,0.0409
-Wyering2014_TVZ,Poisson ratio $\nu$,poisson_ratio,RF,5131,126,17,0.8382,0.6927,-0.1455
-Wyering2014_TVZ,Porosity $\phi$ (%),porosity_pct,XGBoost,19695,131,17,0.8258,0.8812,0.0554
-Wyering2014_TVZ,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5420,126,17,0.9567,0.9712,0.0145
-Wyering2014_TVZ,UCS (MPa),ucs_MPa,RF,3023,118,16,0.7654,0.5397,-0.2257
+Weydt2020,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,5623,1781,16,0.8948,0.8133,-0.0815
+Weydt2020,Permeability $k$ (m²),permeability_m2,KNN,8942,1052,12,0.6673,-0.1867,-0.854
+Weydt2020,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,3507,1750,16,0.8344,0.7215,-0.1129
+Weydt2020,Porosity $\phi$ (%),porosity_pct,XGBoost,18586,1233,16,0.8178,0.7888,-0.029
+Weydt2020,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,3801,1739,16,0.9413,0.9785,0.0372
+Weydt2020,Specific heat capacity $c_p$ (J/kg·K),cp_JkgK,RF,7659,1539,16,0.7348,-8.5188,-9.2536
+Weydt2020,Static Young's modulus $E_s$ (GPa),E_static_GPa,RF,1761,241,16,0.8518,-1.7576,-2.6095
+Weydt2020,Tensile strength $\sigma_t$ (MPa),tensile_MPa,ExtraTrees,615,291,15,0.7718,0.0661,-0.7057
+Weydt2020,Thermal conductivity $\lambda$ (W/m·K),tc_dry_WmK,KNN,10432,1669,16,0.6774,0.0524,-0.625
+Weydt2020,Thermal diffusivity $\alpha$ ($\times 10^{-6}$ m²/s),td_dry_1e6m2s,ExtraTrees,6587,1617,16,0.876,0.6694,-0.2066
+Weydt2020,UCS (MPa),ucs_MPa,KNN,2669,464,16,0.7774,0.0293,-0.7481
+Wyering2014_TVZ,Bulk density $\rho_b$ (g/cm³),bulk_density_gcm3,ExtraTrees,19150,131,17,0.9048,0.914,0.0091
+Wyering2014_TVZ,Dynamic Young's modulus $E_d$ (GPa),E_dyn_GPa,RF,4760,125,15,0.5714,0.6415,0.0701
+Wyering2014_TVZ,P-wave velocity $V_P$ (m/s),vp_dry_ms,RF,7278,126,17,0.9177,0.9569,0.0392
+Wyering2014_TVZ,Poisson ratio $\nu$,poisson_ratio,ExtraTrees,5131,126,17,0.8351,0.6764,-0.1587
+Wyering2014_TVZ,Porosity $\phi$ (%),porosity_pct,XGBoost,19688,131,17,0.8245,0.8496,0.0251
+Wyering2014_TVZ,S-wave velocity $V_S$ (m/s),vs_dry_ms,ExtraTrees,5414,126,17,0.9594,0.9747,0.0153
+Wyering2014_TVZ,UCS (MPa),ucs_MPa,KNN,3015,118,16,0.7299,0.0423,-0.6876

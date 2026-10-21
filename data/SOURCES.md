@@ -21,7 +21,7 @@ reference.
 | Mielke2017 | 665 | Thermal conductivity and P-wave velocity dataset | [10.1594/PANGAEA.874146](https://doi.org/10.1594/PANGAEA.874146) |
 | HeapViolay2021 | 644 | Compilation of volcanic-rock mechanical properties | see `primary_reference` column |
 | USGS_GreatBasinPlutons | 598 | USGS Great Basin plutons petrophysics | USGS data release (see `primary_reference`) |
-| Cornwall_Turan2024 | 266 | Cornubian Batholith petrophysics | see `primary_reference` column |
+| Cornwall_Turan2024 | 258 | Cornubian Batholith petrophysics | see `primary_reference` column |
 | ESReviews2024_VolcGeotherm | 149 | Volcanic/geothermal review compilation | see `primary_reference` column |
 | GenevaBasin | 148 | Geneva Basin CERN geomechanical dataset | [10.5281/zenodo.4725585](https://doi.org/10.5281/zenodo.4725585) |
 | AbuDhabiEvaporite2024 | 143 | Abu Dhabi evaporite sequence | see `primary_reference` column |
@@ -43,10 +43,24 @@ reference.
 | NorwayNPD | (excluded) | Norwegian Petroleum Directorate porosity–permeability database, contained in the master table but excluded from all analyses | [10.5281/zenodo.4419060](https://doi.org/10.5281/zenodo.4419060) |
 
 Row counts refer to the deduplicated master table after exclusion of
-NorwayNPD (28,612 effective rows, 267 distinct primary references). The full
-per-source × lithology-class matrix is given in Supplementary Table S1 of the
-paper, and the associated journal publications of the public datasets are
+NorwayNPD (28,604 effective rows, 267 distinct primary references). The full
+per-source × lithology-class matrix is given in
+`paper_supplement/source_lithology_counts.csv`, and the associated journal publications of the public datasets are
 cited in the paper's reference list.
+
+## Corrections
+
+The following ingestion errors were corrected in the master table (October 2026):
+
+* AMPEDEK stores friction angles in degrees (26–69°) in a column named
+  "friction coefficient". The angles had been converted as if they were
+  coefficients, φ = arctan(value), which gave 87.8–89.2°. The 44 affected
+  values are restored to the original degrees.
+* Cornwall_Turan2024: the friction values of Freundt2020 are coefficients
+  μ = tan φ (1.04–1.43) and are now converted to degrees (46–55°). The eight
+  summary rows at the end of the source sheet (min, max, average, median,
+  number, standard deviation, quartiles) had been read as samples and are
+  removed.
 
 Each original database remains under the licence of its publisher. Users who
 redistribute subsets of the master table must comply with the per-source
